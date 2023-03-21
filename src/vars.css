@@ -1,0 +1,16 @@
+:root {
+
+    --clr-dark-coral: #d87d4a;
+    --clr-first-black: #101010;
+    --clr-dark-grey: #f1f1f1;
+    --clr-light-grey: #fafafa;
+
+    --clr-light-coral: #fbaf85;
+    --clr-white: #FFFFFF;
+    --clr-second-black: #000000;
+
+    --ff-base: 'Manrope', sans-serif;
+
+    --fw-bold: 700; 
+    --fw-regular: 400;
+}
