@@ -1,11 +1,22 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './vars.css';
-import styles from './app.module.css';
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import Home from './pages/Home'
+
+
 
 function App() {
   return (
-    <div className="App">
-      <h1 className={styles.headline}>This is the start of my new project</h1>
-    </div>
+    <>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </>
   );
 }
 

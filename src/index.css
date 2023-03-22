@@ -61,3 +61,8 @@ body {
 }
 
 
+.subtitle {
+  font-size: 13px;
+  text-transform: uppercase;
+  font-size: var(--fw-bold);
+}

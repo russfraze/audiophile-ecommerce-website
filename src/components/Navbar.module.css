@@ -1,0 +1,7 @@
+.navBar {
+    width: 100vw;
+    height: 90px;
+    background-color: var(--clr-first-black);
+
+    display: flex;
+}
