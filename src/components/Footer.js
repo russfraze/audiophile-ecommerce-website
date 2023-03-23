@@ -6,7 +6,7 @@ import { ReactComponent as Instagram } from '../assets/shared/desktop/icon-insta
 
 function Footer() {
     return (
-        <footer className={styles.footer}>
+        <footer className={`${styles.footer} ${'flex_group_column'}`}>
             <Logo />
             <p className='subtitle'>Home</p>
             <p className='subtitle'>Headphones</p>

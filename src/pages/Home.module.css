@@ -1,0 +1,8 @@
+.headerImage {
+    
+    height: 400px;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../assets/home/mobile/image-header.jpg');
+}

@@ -5,3 +5,8 @@
 
     display: flex;
 }
+
+
+.navBar ul {
+    display: none;
+}
