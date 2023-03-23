@@ -1,8 +1,18 @@
 .headerImage {
     
-    height: 400px;
-    width: 100vw;
-    background-size: cover;
+    /* height: 400px;
+    width: 100vw; */
+    
+    background-size: contain;
     background-repeat: no-repeat;
     background-image: url('../assets/home/mobile/image-header.jpg');
+}
+
+img {
+    visibility: hidden;
+}
+
+.headerImage_content {
+    position: absolute;
+    top: 20%;
 }
