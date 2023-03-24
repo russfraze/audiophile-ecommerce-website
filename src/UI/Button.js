@@ -4,7 +4,7 @@ import styles from './Button.module.css'
 function Button(props) {
     return (
         <button 
-        className={styles.buttonMain} 
+        className={`${props.alt ? styles.buttonAlt : styles.buttonMain}`} 
         onClick={props.onClick}
         type={props.type || 'button'}
         >

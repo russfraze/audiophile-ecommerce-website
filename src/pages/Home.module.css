@@ -8,11 +8,15 @@
     background-image: url('../assets/home/mobile/image-header.jpg');
 }
 
-img {
+.hideImage {
     visibility: hidden;
 }
 
 .headerImage_content {
     position: absolute;
     top: 20%;
+}
+
+.bestImage {
+    border-radius: 1rem;
 }

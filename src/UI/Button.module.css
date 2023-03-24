@@ -11,6 +11,19 @@
     cursor: pointer;
 }
 
+.buttonAlt {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: var(--fw-bold);
+  letter-spacing: 1px;
+  height: 48px;
+  width: 160px;
+  background-color: var(--clr-dark-grey);
+  color: var(--clr-first-black);
+  border: 1px solid var(--clr-first-black);
+  cursor: pointer;
+}
+
 
 .buttonMain:hover,
 .buttonMain:active {
