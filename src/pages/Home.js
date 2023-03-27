@@ -1,9 +1,14 @@
 import styles from './Home.module.css'
 import Button from '../UI/Button'
+import ShopBtn from '../UI/ShopBtn'
 import headerImage from '../assets/home/mobile/image-header.jpg'
 import bestGear from '../assets/shared/mobile/image-best-gear.jpg'
 import earphones from '../assets/home/mobile/image-earphones-yx1.jpg'
 import speakerZx7 from '../assets/home/mobile/image-speaker-zx7.jpg'
+import speakerZx9 from '../assets/home/mobile/image-speaker-zx9.png'
+import headphonesOne from '../assets/shared/desktop/image-category-thumbnail-headphones.png'
+import earphonesCase from '../assets/shared/desktop/image-category-thumbnail-earphones.png'
+import circles from '../assets/home/desktop/pattern-circles.svg'
 
 
 function Home() {
@@ -11,18 +16,52 @@ function Home() {
 
     return (
         <div>
-            <div className={`${styles.headerImage} ${'flex_group_column'}`}>
-                <img className={styles.hideImage} src={headerImage} />
-                <div className={styles.headerImage_content}>
+            <header className={`${styles.headerImage} `}>
+                <img className={styles.headerImage__hide} src={headerImage} />
+                <div className={`${styles.headerImage_content} ${'flex_group_column'}`}>
                     <p className='overline'>New product</p>
-                    <h3>XX99 Mark II Headphones</h3>
-                    <p>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
+                    <h1>XX99 Mark II Headphones</h1>
+                    <p className='white75'>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
                     <Button className={'buttonMain'}>see product</Button>
                 </div>
 
+            </header>
+
+            <div className={styles.categories}>
+
+                <div className={`${styles.categories__headphones} ${'card'} ${'bG_grey'} ${'flex_group_column'}`}>
+                    <img className={styles.headphonesImage} src={headphonesOne} />
+                    <h6>headphones</h6>
+                    <ShopBtn />
+                </div>
+
+                <div className={`${styles.speakers} ${'card'} ${'bG_grey'} ${'flex_group_column'}`}>
+                    <img className src={speakerZx9} />
+                    <h6>speakers</h6>
+                    <ShopBtn />
+                </div>
+
+                <div className={`${styles.earphones} ${'card'} ${'bG_grey'} ${'flex_group_column'}`}>
+                    <img src={earphonesCase} />
+                    <h6>earphones</h6>
+                    <ShopBtn />
+                </div>
+
             </div>
-            <img src={speakerZx7}/>
-            <img src={earphones}/>
+
+            <div className={`${styles.zx9Speaker} ${'card'} ${'bG_coral'}`}>
+                <img src={speakerZx9} />
+                <img src={circles} />
+                <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
+                <Button>see product</Button>
+            </div>
+
+            <div className={`${styles.zx7Speaker} `}>
+                <h4>zx7 speaker</h4>
+                <Button alt={true}>see product</Button>
+                <img src={speakerZx7} />
+            </div>
+            <img src={earphones} />
 
             <div className='card'>
                 <h4>YX1 earphones</h4>

@@ -54,7 +54,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 
-
+/* 
 h1 {
   font-size: 56px;
   line-height: 58px;
@@ -115,7 +115,76 @@ body {
   font-size: 15px;
   font-weight: var(--fw-regular);
   color: var(--clr-dark-grey);
+} */
+
+
+
+
+/* Mobile */
+
+
+h1 {
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: 1.29px;
+  text-transform: uppercase;
+  color: var(--clr-white);
 }
+
+h2 {
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: 36px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 28px;
+  text-transform: uppercase;
+  color: var(--clr-first-black)
+}
+
+h5 {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+h6 {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.overline {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  line-height: 19px;
+  font-weight: var(--fw-regular);
+  color: var(--clr-dark-grey);
+}
+
+
+.subtitle {
+  font-size: 13px;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  line-height: 19px;
+  letter-spacing: 1px;
+}
+
+
+body {
+  font-family: var(--ff-base);
+  font-size: 15px;
+  font-weight: var(--fw-regular);
+  line-height: 25px;
+}
+
 
 
 /* Utilities */
@@ -128,6 +197,29 @@ body {
 }
 
 .card {
-  background-color: var(--clr-dark-grey);
   border-radius: 1rem;
+  margin: 1.5rem;
 }
+
+.bG_grey {
+  background-color: var(--clr-dark-grey);
+}
+
+.bG_coral {
+  background-color: var(--clr-dark-coral);
+}
+
+/* body text styles */
+
+.black50 {
+  color: var(--clr-second-black);
+  opacity: 50%;
+}
+
+.white75 {
+  color: var(--clr-white);
+  opacity: 75%;
+}
+
+/* overline text styles */
+

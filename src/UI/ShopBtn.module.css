@@ -1,0 +1,21 @@
+.ShopBtn {
+    display: flex;
+    align-items: center;
+    background-color: var(--clr-dark-grey);
+    border: none;
+    gap: 10px;
+}
+
+.ShopBtn img {
+    height: 12px;
+}
+
+.ShopBtn p {
+    color: var(--clr-second-black);
+    text-transform: uppercase;
+    opacity: 50%;
+    font-size: 13px;
+    letter-spacing: 1px;;
+    font-weight: var(--fw-bold);
+}
+

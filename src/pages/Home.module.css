@@ -1,22 +1,85 @@
+@import '../vars.css';
+
+
+
 .headerImage {
-    
-    /* height: 400px;
-    width: 100vw; */
     
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url('../assets/home/mobile/image-header.jpg');
+    
 }
 
-.hideImage {
+/* .headerImage__hide {
     visibility: hidden;
-}
+} */
 
 .headerImage_content {
     position: absolute;
-    top: 20%;
+    top: 175px;
+    padding: 1.5rem;
+    gap: 1.5rem;
 }
+
+
+
+
+
+
+
+
+
+.categories__headphones {
+    margin-top: 130px;
+    height: 165px;
+}
+
+.headphonesImage {
+    position: relative;
+    bottom: 55px;
+    height: 150px;
+    
+}
+
+.categories__headphones h6 {
+    position: relative;
+    bottom: 65px;
+
+}
+
+.categories__headphones button {
+    position: relative;
+    bottom: 50px;
+}
+
+.height {
+
+}
+
+
+
+
+
+
 
 .bestImage {
     border-radius: 1rem;
+}
+
+
+.zx7Speaker h4{
+    position: relative;
+    top: 200px;
+    left: 45px;
+}
+
+.zx7Speaker Button{
+    position: relative;
+    top: 240px;
+    left: 45px;
+}
+
+
+.zx9Speaker img{
+    height: 60px;
 }
