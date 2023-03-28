@@ -52,27 +52,36 @@ function Home() {
             <div className={`${styles.zx9Speaker} ${'card'} ${'bG_coral'}`}>
                 <div className={`${styles.zx9Speaker__content} ${'flex_group_column'}`}>
                     <img className={styles.zx9Speaker__image} src={speakerZx9} />
-                    <h1>zx9<br/>speaker</h1>
+                    <h1>zx9<br />speaker</h1>
                     <img className={styles.circles} src={circles} />
-                    <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
-                    <Button>see product</Button>
+                    <p className='white75'>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
+                    <Button rev={true} >see product</Button>
                 </div>
             </div>
 
-            <div className={`${styles.zx7Speaker} ${'card'}`}>
+            <div className={`${styles.zx7Speaker}`}>
+                <div className='zx7Speaker__content'></div>
                 <h4>zx7 speaker</h4>
                 <Button alt={true}>see product</Button>
                 <img src={speakerZx7} />
             </div>
 
-            <img src={earphones} className={`${styles.earphones__image} ${'card'}`} />
+            <section>
 
-            <div className='card'>
-                <h4>YX1 earphones</h4>
-                <Button alt={true}>see product</Button>
+                <div className={styles.earphonesImage}>
+                    <img src={earphones} />
+                </div>
+
+                <div className={styles.earphones__content}>
+                    <h4>YX1 earphones</h4>
+                    <Button alt={true}>see product</Button>
+                </div>
+
+            </section>
+
+            <div className={styles.bestImage}>
+                <img src={bestGear} />
             </div>
-
-            <img className={styles.bestImage} src={bestGear} />
 
             <h4>Bringing you the best audio gear</h4>
             <p> Located at the heart of New York City, Audiophile is the premier store for high end headphones,
