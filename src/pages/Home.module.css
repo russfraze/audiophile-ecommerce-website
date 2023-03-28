@@ -3,16 +3,14 @@
 
 
 .headerImage {
-    
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url('../assets/home/mobile/image-header.jpg');
-    
 }
 
-/* .headerImage__hide {
-    visibility: hidden;
-} */
+.headerImage__hide {
+    overflow: hidden;
+}
 
 .headerImage_content {
     position: absolute;
@@ -44,7 +42,6 @@
 .categories__headphones h6 {
     position: relative;
     bottom: 65px;
-
 }
 
 .categories__headphones button {
@@ -52,13 +49,72 @@
     bottom: 50px;
 }
 
-.height {
 
+
+.categories__speakers {
+    margin-top: 65px;
+    height: 165px;
+}
+
+.speakersImage {
+    position: relative;
+    bottom: 55px;
+    height: 101px;
 }
 
 
 
+.categories__earphones {
+    margin-top: 65px;
+    height: 165px;
+}
 
+.earphonesImage {
+    position: relative;
+    bottom: 45px;
+    height: 150px;
+}
+
+.categories__earphones h6 {
+    position: relative;
+    bottom: 65px;
+}
+
+.categories__earphones button {
+    position: relative;
+    bottom: 50px;
+}
+
+
+
+.zx9Speaker {
+    /* padding-top: 145px; */
+    position: relative;
+}
+
+.zx9Speaker__content {
+    gap: 1.5rem;
+    padding: 3.5rem 1rem;
+}
+
+.zx9Speaker__image {
+    /* position: relative;
+    top: 100px; */
+    height: 195px;
+}
+
+.circles {
+    position: absolute;
+    bottom: 160px;
+    min-height: 550px;
+    min-width: 550px;
+}
+
+
+
+.earphones__image {
+    width: 327px;
+}
 
 
 
@@ -80,6 +136,3 @@
 }
 
 
-.zx9Speaker img{
-    height: 60px;
-}

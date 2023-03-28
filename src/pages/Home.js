@@ -35,14 +35,14 @@ function Home() {
                     <ShopBtn />
                 </div>
 
-                <div className={`${styles.speakers} ${'card'} ${'bG_grey'} ${'flex_group_column'}`}>
-                    <img className src={speakerZx9} />
+                <div className={`${styles.categories__speakers} ${'card'} ${'bG_grey'} ${'flex_group_column'}`}>
+                    <img className={styles.speakersImage} src={speakerZx9} />
                     <h6>speakers</h6>
                     <ShopBtn />
                 </div>
 
-                <div className={`${styles.earphones} ${'card'} ${'bG_grey'} ${'flex_group_column'}`}>
-                    <img src={earphonesCase} />
+                <div className={`${styles.categories__earphones} ${'card'} ${'bG_grey'} ${'flex_group_column'}`}>
+                    <img className={styles.earphonesImage} src={earphonesCase} />
                     <h6>earphones</h6>
                     <ShopBtn />
                 </div>
@@ -50,24 +50,30 @@ function Home() {
             </div>
 
             <div className={`${styles.zx9Speaker} ${'card'} ${'bG_coral'}`}>
-                <img src={speakerZx9} />
-                <img src={circles} />
-                <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
-                <Button>see product</Button>
+                <div className={`${styles.zx9Speaker__content} ${'flex_group_column'}`}>
+                    <img className={styles.zx9Speaker__image} src={speakerZx9} />
+                    <h1>zx9<br/>speaker</h1>
+                    <img className={styles.circles} src={circles} />
+                    <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
+                    <Button>see product</Button>
+                </div>
             </div>
 
-            <div className={`${styles.zx7Speaker} `}>
+            <div className={`${styles.zx7Speaker} ${'card'}`}>
                 <h4>zx7 speaker</h4>
                 <Button alt={true}>see product</Button>
                 <img src={speakerZx7} />
             </div>
-            <img src={earphones} />
+
+            <img src={earphones} className={`${styles.earphones__image} ${'card'}`} />
 
             <div className='card'>
                 <h4>YX1 earphones</h4>
                 <Button alt={true}>see product</Button>
             </div>
+
             <img className={styles.bestImage} src={bestGear} />
+
             <h4>Bringing you the best audio gear</h4>
             <p> Located at the heart of New York City, Audiophile is the premier store for high end headphones,
             earphones, speakers, and audio accessories. We have a large showroom and luxury demonstration
