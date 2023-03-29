@@ -1,4 +1,5 @@
 import styles from './Footer.module.css'
+import '../vars.css'
 import { ReactComponent as Logo } from '../assets/shared/desktop/logo.svg'
 import { ReactComponent as Facebook } from '../assets/shared/desktop/icon-facebook.svg'
 import { ReactComponent as Twitter } from '../assets/shared/desktop/icon-twitter.svg'
@@ -7,18 +8,23 @@ import { ReactComponent as Instagram } from '../assets/shared/desktop/icon-insta
 function Footer() {
     return (
         <footer className={`${styles.footer} ${'flex_group_column'}`}>
-            <Logo />
-            <p className='subtitle'>Home</p>
-            <p className='subtitle'>Headphones</p>
-            <p className='subtitle'>Speakers</p>
-            <p className='subtitle'>Earphones</p>
-            <p>Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers
+            <Logo className={styles.logo}/>
+            <ul>
+                <li className='subtitle'>Home</li>
+                <li className='subtitle'>Headphones</li>
+                <li className='subtitle'>Speakers</li>
+                <li className='subtitle'>Earphones</li>
+            </ul>
+            <p className={` ${'white50'}`}>Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers
             and sound specialists who are devoted to helping you get the most out of personal audio. Come and
             visit our demo facility - we’re open 7 days a week.</p>
-            <p>Copyright 2021. All Rights Reserved</p>
-            <Facebook />
-            <Twitter />
-            <Instagram />
+            <p className={`${styles.copyRight} ${'white50'}`}>Copyright 2021. All Rights Reserved</p>
+            <div className={`${styles.socialIcons} ${'flex_group'}`}>
+                <Facebook />
+                <Twitter />
+                <Instagram />
+            </div>
+
         </footer>
     )
 }

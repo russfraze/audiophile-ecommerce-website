@@ -49,6 +49,7 @@ function Home() {
 
             </div>
 
+
             <div className={`${styles.zx9Speaker} ${'card'} ${'bG_coral'}`}>
                 <div className={`${styles.zx9Speaker__content} ${'flex_group_column'}`}>
                     <img className={styles.zx9Speaker__image} src={speakerZx9} />
@@ -59,36 +60,44 @@ function Home() {
                 </div>
             </div>
 
+
             <div className={`${styles.zx7Speaker}`}>
-                <div className='zx7Speaker__content'></div>
-                <h4>zx7 speaker</h4>
-                <Button alt={true}>see product</Button>
                 <img src={speakerZx7} />
+                <div className={styles.zx7Speaker__content}>
+                    <h4>zx7 speaker</h4>
+                    <Button alt={true}>see product</Button>
+                </div>
             </div>
 
-            <section>
+            <section className={styles.earphones}>
 
                 <div className={styles.earphonesImage}>
                     <img src={earphones} />
                 </div>
 
-                <div className={styles.earphones__content}>
+                <div className={`${styles.earphones__content} ${'card'} ${'bG_grey'}`}>
                     <h4>YX1 earphones</h4>
                     <Button alt={true}>see product</Button>
                 </div>
 
             </section>
 
-            <div className={styles.bestImage}>
-                <img src={bestGear} />
-            </div>
+            <section>
 
-            <h4>Bringing you the best audio gear</h4>
-            <p> Located at the heart of New York City, Audiophile is the premier store for high end headphones,
-            earphones, speakers, and audio accessories. We have a large showroom and luxury demonstration
-            rooms available for you to browse and experience a wide range of our products. Stop by our store
-            to meet some of the fantastic people who make Audiophile the best place to buy your portable
-            audio equipment.</p>
+                <div className={styles.bestImage}>
+                    <img src={bestGear} />
+                </div>
+
+                <div className={`${styles.bestImage__text} ${'flex_group_column'}`}>
+                    <h4>Bringing you the best audio gear</h4>
+                    <p className='black50'> Located at the heart of New York City, Audiophile is the premier store for high end headphones,
+                    earphones, speakers, and audio accessories. We have a large showroom and luxury demonstration
+                    rooms available for you to browse and experience a wide range of our products. Stop by our store
+                    to meet some of the fantastic people who make Audiophile the best place to buy your portable
+                    audio equipment.</p>
+                </div>
+
+            </section>
         </div>
 
     )

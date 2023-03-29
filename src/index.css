@@ -147,6 +147,7 @@ h3 {
 
 h4 {
   font-size: 28px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--clr-first-black)
 }
@@ -191,6 +192,10 @@ body {
 
 /* Utilities */
 
+.flex_group {
+  display: flex;
+}
+
 .flex_group_column {
   display: flex;
   flex-direction: column;
@@ -221,6 +226,11 @@ body {
 .white75 {
   color: var(--clr-white);
   opacity: 75%;
+}
+
+.white50 {
+  color: var(--clr-white);
+  opacity: 50%;
 }
 
 /* overline text styles */

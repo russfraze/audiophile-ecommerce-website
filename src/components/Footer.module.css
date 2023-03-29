@@ -2,6 +2,34 @@ footer {
     background-color: var(--clr-first-black);
 }
 
+.logo {
+    margin-top: 55px;
+}
+
+
 footer p {
     color: var(--clr-white);
+    margin: 0 1.75rem;
+}
+
+ul li {
+    /* padding: 15px; */
+    line-height: 20px;
+    margin: 15px 0;
+}
+
+ul {
+    color: var(--clr-white);
+    list-style-type: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.copyRight {
+    margin: 50px 0;
+}
+
+.socialIcons {
+    gap: 1rem;
+    margin-bottom: 40px;
 }
