@@ -9,7 +9,8 @@
 }
 
 .headerImage__hide {
-    overflow: hidden;
+    /* overflow: hidden; */
+    visibility: hidden;
 }
 
 .headerImage_content {
@@ -92,6 +93,7 @@
 .zx9Speaker {
     /* padding-top: 145px; */
     position: relative;
+    overflow: hidden;
 }
 
 .zx9Speaker__content {
@@ -107,6 +109,7 @@
 
 .circles {
     position: absolute;
+    /* clip: rect(0, 100, 100, 0); */
     bottom: 160px;
     min-height: 550px;
     min-width: 550px;
