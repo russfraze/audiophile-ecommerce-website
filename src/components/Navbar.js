@@ -6,14 +6,15 @@ import { ReactComponent as Logo} from '../assets/shared/desktop/logo.svg'
 function Navbar() {
     return (
         <nav className={styles.navBar}>
+            <Burger className={styles.burger}/>
+            <Logo className={styles.logo}/>
             <ul>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>home</li>
+                <li>headphones</li>
+                <li>speakers</li>
+                <li>earphones</li>
             </ul>
-            <Burger />
-            <Logo />
-            <CartIcon />
+            <CartIcon className={styles.cart}/>
             
         </nav>
     )
