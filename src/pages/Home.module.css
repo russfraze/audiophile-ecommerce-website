@@ -3,7 +3,7 @@
 
 
 .headerImage {
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-image: url('../assets/home/mobile/image-header.jpg');
 }
@@ -72,7 +72,7 @@
     height: 165px;
 }
 
-.earphonesImage {
+.earphonesCase {
     position: relative;
     bottom: 45px;
     height: 150px;
@@ -125,7 +125,7 @@
 
 .zx7Speaker img {
     height: auto;
-    max-width: 100%;
+    width: 100%;
     border-radius: 1rem;
 }
 
@@ -155,16 +155,17 @@
 
 .earphones {
     position: relative;
-    bottom: 80px;
+    bottom: 100px;
+    
 }
 
 .earphonesImage {
-    padding: 1.5rem;
+    padding: 0  1.5rem;
 }
 
 .earphonesImage img {
     height: auto;
-    max-width: 100%;
+    width: 100%;
     border-radius: 1rem;
 }
 
@@ -174,7 +175,7 @@
     flex-direction: column;
     gap: 2.5rem;
     padding: 3rem 1.5rem;
-    margin-top: 3.4rem;
+    /* margin-top: 3.4rem; */
 }
 
 
@@ -185,16 +186,19 @@
 
 .bestImage img {
     height: auto;
-    max-width: 100%;
+    width: 100%;
     border-radius: 1rem;
 }
 
 .bestImage__text {
     padding: 1.5rem;
     margin-bottom: 100px;
+    gap: 2rem;
 }
 
-
+.wordPop {
+    color: var(--clr-dark-coral)
+}
 
 
 

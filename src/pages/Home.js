@@ -26,7 +26,7 @@ function Home() {
                 </div>
 
             </header>
-
+   
             <div className={styles.categories}>
 
                 <div className={`${styles.categories__headphones} ${'card'} ${'bG_grey'} ${'flex_group_column'}`}>
@@ -42,7 +42,7 @@ function Home() {
                 </div>
 
                 <div className={`${styles.categories__earphones} ${'card'} ${'bG_grey'} ${'flex_group_column'}`}>
-                    <img className={styles.earphonesImage} src={earphonesCase} />
+                    <img className={styles.earphonesCase} src={earphonesCase} />
                     <h6>earphones</h6>
                     <ShopBtn />
                 </div>
@@ -89,7 +89,7 @@ function Home() {
                 </div>
 
                 <div className={`${styles.bestImage__text} ${'flex_group_column'}`}>
-                    <h4>Bringing you the best audio gear</h4>
+                    <h4>Bringing you the <span className={styles.wordPop}>best</span> audio gear</h4>
                     <p className='black50'> Located at the heart of New York City, Audiophile is the premier store for high end headphones,
                     earphones, speakers, and audio accessories. We have a large showroom and luxury demonstration
                     rooms available for you to browse and experience a wide range of our products. Stop by our store
