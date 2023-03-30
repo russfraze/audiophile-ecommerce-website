@@ -22,7 +22,24 @@
 }
 
 
+.dropdown {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 
+    position: relative;
+    top: 90px;
+    background-color: var(--clr-white);
+    width: 100%;
+    
+}
+
+.dummyObject {
+    height: 250px;
+    width: 150px;
+
+    background-color: var(--clr-dark-grey);
+}
 
 
 
