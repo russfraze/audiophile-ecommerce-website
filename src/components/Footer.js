@@ -4,14 +4,16 @@ import { ReactComponent as Logo } from '../assets/shared/desktop/logo.svg'
 import { ReactComponent as Facebook } from '../assets/shared/desktop/icon-facebook.svg'
 import { ReactComponent as Twitter } from '../assets/shared/desktop/icon-twitter.svg'
 import { ReactComponent as Instagram } from '../assets/shared/desktop/icon-instagram.svg'
+import { useNavigate } from 'react-router-dom'
 
 function Footer() {
+    const navigate = useNavigate()
     return (
         <footer className={`${styles.footer} ${'flex_group_column'}`}>
-            <Logo className={styles.logo}/>
+            <Logo className={styles.logo} />
             <ul>
                 <li className='subtitle'>Home</li>
-                <li className='subtitle'>Headphones</li>
+                <li className='subtitle' onClick={() => navigate('/headphones')}>Headphones</li>
                 <li className='subtitle'>Speakers</li>
                 <li className='subtitle'>Earphones</li>
             </ul>

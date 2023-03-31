@@ -12,10 +12,16 @@ footer p {
     margin: 0 1.75rem;
 }
 
-ul li {
+li {
     /* padding: 15px; */
     line-height: 20px;
     margin: 15px 0;
+}
+
+li:hover {
+    /* padding: 15px; */
+    cursor: pointer;
+    color: var(--clr-dark-coral)
 }
 
 ul {

@@ -3,7 +3,7 @@ import './vars.css';
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
-
+import Headphones from './pages/Headphones'
 
 
 function App() {
@@ -13,6 +13,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/headphones' element={<Headphones />} />
         </Routes>
         <Footer />
       </Router>
