@@ -26,8 +26,8 @@ function Home() {
                 </div>
 
             </header>
-   
-            <div className={styles.categories}>
+
+            {/* <div className={styles.categories}>
 
                 <div className={`${styles.categories__headphones} ${'card'} ${'bG_grey'} ${'flex_group_column'}`}>
                     <img className={styles.headphonesImage} src={headphonesOne} />
@@ -47,7 +47,33 @@ function Home() {
                     <ShopBtn />
                 </div>
 
-            </div>
+            </div> */}
+
+            <article>
+                <div className={styles.container}>
+                    <div className={`${styles.headphones} ${'bG_grey'} ${'flex_group_column'}`}>
+                        <img className={styles.headphonesImage} src={headphonesOne} />
+                        <h6>headphones</h6>
+                        <ShopBtn />
+                    </div>
+                </div>
+                <div className={styles.container}>
+                    <div className={`${styles.speakers} ${'bG_grey'} ${'flex_group_column'}`}>
+                        <img className={styles.speakersImage} src={speakerZx9} />
+                        <h6>speakers</h6>
+                        <ShopBtn />
+                    </div>
+                </div>
+                <div className={styles.container}>
+                    <div className={`${styles.earphones} ${'bG_grey'} ${'flex_group_column'}`}>
+                        <img className={styles.earphonesCase} src={earphonesCase} />
+                        <h6>earphones</h6>
+                        <ShopBtn />
+                    </div>
+                </div>
+
+
+            </article>
 
 
             <div className={`${styles.zx9Speaker} ${'card'} ${'bG_coral'}`}>
@@ -69,7 +95,7 @@ function Home() {
                 </div>
             </div>
 
-            <section className={styles.earphones}>
+            <section className={styles.yx1earphones}>
 
                 <div className={styles.earphonesImage}>
                     <img src={earphones} />

@@ -25,68 +25,114 @@
 
 
 
-.categories {
-    margin-bottom: 120px;
+
+article {
+    margin-top: 90px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    /* border: 1px black solid; */
+    padding: 0 1.5rem;
+    margin-bottom: 9%;
 }
 
 
-.categories__headphones {
-    margin-top: 130px;
-    height: 165px;
+
+
+.headphones {
+    justify-content: flex-end;
+    position: relative;
+    margin-top: 30px;
+    height: 25vh;
+    border-radius: 0.5rem;
 }
 
 .headphonesImage {
     position: relative;
-    bottom: 55px;
-    height: 150px;
-    
+    z-index: 9998;
+    bottom: 30%;
+    height: 20vh;
 }
 
-.categories__headphones h6 {
+.headphones h6 {
+    position: absolute;
+    bottom: 45px;
+    z-index: 9998;
+}
+
+.headphones button {
     position: relative;
-    bottom: 65px;
+    bottom: 10px;
+    z-index: 9998;
 }
 
-.categories__headphones button {
+
+.speakers {
+    justify-content: flex-end;
     position: relative;
-    bottom: 50px;
-}
-
-
-
-.categories__speakers {
-    margin-top: 65px;
-    height: 165px;
+    margin-top: 30px;
+    height: 25vh;
+    border-radius: 0.5rem;
 }
 
 .speakersImage {
     position: relative;
-    bottom: 55px;
-    height: 101px;
+    z-index: 9998;
+    bottom: 55%;
+    height: 15vh;
+}
+
+.speakers h6 {
+    position: absolute;
+    bottom: 45px;
+    z-index: 9998;
+}
+
+.speakers button {
+    position: relative;
+    bottom: 10px;
+    z-index: 9998;
 }
 
 
 
-.categories__earphones {
-    margin-top: 65px;
-    height: 165px;
+
+.earphones {
+    justify-content: flex-end;
+    position: relative;
+    margin-top: 30px;
+    height: 25vh;
+    border-radius: 0.5rem;
 }
 
 .earphonesCase {
     position: relative;
+    z-index: 9997;
+    height: 20vh;
+    bottom: 30%;
+}
+
+.earphones h6 {
+    position: absolute;
     bottom: 45px;
-    height: 150px;
+    z-index: 9998;
 }
 
-.categories__earphones h6 {
+.earphones button {
     position: relative;
-    bottom: 65px;
+    bottom: 10px;
+    z-index: 9998;
 }
 
-.categories__earphones button {
-    position: relative;
-    bottom: 50px;
-}
+
+
+
+
+
+
 
 
 
@@ -153,7 +199,7 @@
 }
 
 
-.earphones {
+.yx1earphones {
     position: relative;
     bottom: 100px;
     

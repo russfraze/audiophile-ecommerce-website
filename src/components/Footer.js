@@ -12,7 +12,7 @@ function Footer() {
         <footer className={`${styles.footer} ${'flex_group_column'}`}>
             <Logo className={styles.logo} />
             <ul>
-                <li className='subtitle'>Home</li>
+                <li className='subtitle' onClick={() => navigate('/')}>Home</li>
                 <li className='subtitle' onClick={() => navigate('/headphones')}>Headphones</li>
                 <li className='subtitle'>Speakers</li>
                 <li className='subtitle'>Earphones</li>
