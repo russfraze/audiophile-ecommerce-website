@@ -250,4 +250,18 @@ article {
 
 
 
+@media (min-width: 768px) {
+    .headerImage {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url('../assets/home/tablet/image-header.jpg');
+    }
+}
+
+@media (min-width: 1440px) {
+
+}  
+
+
+
 

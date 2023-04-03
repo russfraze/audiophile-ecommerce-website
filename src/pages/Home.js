@@ -2,6 +2,7 @@ import styles from './Home.module.css'
 import Button from '../UI/Button'
 import ShopBtn from '../UI/ShopBtn'
 import headerImage from '../assets/home/mobile/image-header.jpg'
+import headerImageTab from '../assets/home/tablet/image-header.jpg'
 import bestGear from '../assets/shared/mobile/image-best-gear.jpg'
 import earphones from '../assets/home/mobile/image-earphones-yx1.jpg'
 import speakerZx7 from '../assets/home/mobile/image-speaker-zx7.jpg'
@@ -17,7 +18,10 @@ function Home() {
     return (
         <div>
             <header className={`${styles.headerImage} `}>
-                <img className={styles.headerImage__hide} src={headerImage} />
+                <picture>
+                    <source media="(min-width:768px)" srcset={headerImageTab} />
+                    <img className={styles.headerImage__hide} src={headerImage} />
+                </picture>
                 <div className={`${styles.headerImage_content} ${'flex_group_column'}`}>
                     <p className='overline'>New product</p>
                     <h1>XX99 Mark II Headphones</h1>
@@ -27,27 +31,7 @@ function Home() {
 
             </header>
 
-            {/* <div className={styles.categories}>
 
-                <div className={`${styles.categories__headphones} ${'card'} ${'bG_grey'} ${'flex_group_column'}`}>
-                    <img className={styles.headphonesImage} src={headphonesOne} />
-                    <h6>headphones</h6>
-                    <ShopBtn />
-                </div>
-
-                <div className={`${styles.categories__speakers} ${'card'} ${'bG_grey'} ${'flex_group_column'}`}>
-                    <img className={styles.speakersImage} src={speakerZx9} />
-                    <h6>speakers</h6>
-                    <ShopBtn />
-                </div>
-
-                <div className={`${styles.categories__earphones} ${'card'} ${'bG_grey'} ${'flex_group_column'}`}>
-                    <img className={styles.earphonesCase} src={earphonesCase} />
-                    <h6>earphones</h6>
-                    <ShopBtn />
-                </div>
-
-            </div> */}
 
             <article>
                 <div className={styles.container}>
