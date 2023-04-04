@@ -26,6 +26,7 @@
 
 
 
+
 article {
     margin-top: 90px;
 }
@@ -225,7 +226,6 @@ article {
     flex-direction: column;
     gap: 2.5rem;
     padding: 3rem 1.5rem;
-    /* margin-top: 3.4rem; */
 }
 
 
@@ -259,6 +259,10 @@ article {
         background-size: cover;
         background-repeat: no-repeat;
         background-image: url('../assets/home/tablet/image-header.jpg');
+    }
+
+    .footerBody  {
+        padding: 0 12rem;
     }
 
     article {
@@ -320,6 +324,12 @@ article {
     .earphonesCase {
         height: 17vh;
         bottom: 10%;
+    }
+
+
+
+    .zx9Body {
+        padding: 0 11rem;
     }
 
     

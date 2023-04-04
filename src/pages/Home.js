@@ -29,7 +29,7 @@ function Home() {
                 <div className={`${styles.headerImage_content} ${'flex_group_column'}`}>
                     <p className='overline'>New product</p>
                     <h1>XX99 Mark II Headphones</h1>
-                    <p className='white75'>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
+                    <p className={`${styles.footerBody} ${'white75'}`}>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
                     <Button className={'buttonMain'}>see product</Button>
                 </div>
 
@@ -41,21 +41,21 @@ function Home() {
                 <div className={styles.container}>
                     <div className={`${styles.headphones} ${'bG_grey'} ${'flex_group_column'}`}>
                         <img className={styles.headphonesImage} src={headphonesOne} />
-                        <h6>headphones</h6>
+                        <h6 className='black'>headphones</h6>
                         <ShopBtn />
                     </div>
                 </div>
                 <div className={styles.container}>
                     <div className={`${styles.speakers} ${'bG_grey'} ${'flex_group_column'}`}>
                         <img className={styles.speakersImage} src={Zx9Thumb} />
-                        <h6>speakers</h6>
+                        <h6 className='black'>speakers</h6>
                         <ShopBtn />
                     </div>
                 </div>
                 <div className={styles.container}>
                     <div className={`${styles.earphones} ${'bG_grey'} ${'flex_group_column'}`}>
                         <img className={styles.earphonesCase} src={earphonesCase} />
-                        <h6>earphones</h6>
+                        <h6 className='black'>earphones</h6>
                         <ShopBtn />
                     </div>
                 </div>
@@ -69,7 +69,7 @@ function Home() {
                     <img className={styles.zx9Speaker__image} src={speakerZx9} />
                     <h1>zx9<br />speaker</h1>
                     <img className={styles.circles} src={circles} />
-                    <p className='white75'>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
+                    <p className={`${styles.zx9Body} ${'white75'}`}>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
                     <Button rev={true} >see product</Button>
                 </div>
             </div>
