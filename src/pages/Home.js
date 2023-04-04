@@ -4,9 +4,13 @@ import ShopBtn from '../UI/ShopBtn'
 import headerImage from '../assets/home/mobile/image-header.jpg'
 import headerImageTab from '../assets/home/tablet/image-header.jpg'
 import bestGear from '../assets/shared/mobile/image-best-gear.jpg'
+import bestGearTab from '../assets/shared/tablet/image-best-gear.jpg'
 import earphones from '../assets/home/mobile/image-earphones-yx1.jpg'
 import speakerZx7 from '../assets/home/mobile/image-speaker-zx7.jpg'
+import speakerZx7Tab from '../assets/home/tablet/image-speaker-zx7.jpg'
 import speakerZx9 from '../assets/home/mobile/image-speaker-zx9.png'
+
+import Zx9Thumb from '../assets/shared/desktop/image-category-thumbnail-speakers.png'
 import headphonesOne from '../assets/shared/desktop/image-category-thumbnail-headphones.png'
 import earphonesCase from '../assets/shared/desktop/image-category-thumbnail-earphones.png'
 import circles from '../assets/home/desktop/pattern-circles.svg'
@@ -43,7 +47,7 @@ function Home() {
                 </div>
                 <div className={styles.container}>
                     <div className={`${styles.speakers} ${'bG_grey'} ${'flex_group_column'}`}>
-                        <img className={styles.speakersImage} src={speakerZx9} />
+                        <img className={styles.speakersImage} src={Zx9Thumb} />
                         <h6>speakers</h6>
                         <ShopBtn />
                     </div>
@@ -72,7 +76,10 @@ function Home() {
 
 
             <div className={`${styles.zx7Speaker}`}>
-                <img src={speakerZx7} />
+                <picture>
+                    <source media="(min-width:768px)" srcset={speakerZx7Tab} />
+                    <img src={speakerZx7} />
+                </picture>
                 <div className={styles.zx7Speaker__content}>
                     <h4>zx7 speaker</h4>
                     <Button alt={true}>see product</Button>
@@ -95,7 +102,10 @@ function Home() {
             <section>
 
                 <div className={styles.bestImage}>
-                    <img src={bestGear} />
+                    <picture>
+                        <source media="(min-width:768px)" srcset={bestGearTab} />
+                        <img src={bestGear} />
+                    </picture>
                 </div>
 
                 <div className={`${styles.bestImage__text} ${'flex_group_column'}`}>

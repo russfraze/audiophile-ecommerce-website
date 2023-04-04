@@ -41,6 +41,10 @@ article {
 
 
 
+/* categories section */
+
+
+
 
 .headphones {
     justify-content: flex-end;
@@ -81,8 +85,8 @@ article {
 .speakersImage {
     position: relative;
     z-index: 9998;
-    bottom: 55%;
-    height: 15vh;
+    bottom: 30%;
+    height: 20vh;
 }
 
 .speakers h6 {
@@ -256,6 +260,69 @@ article {
         background-repeat: no-repeat;
         background-image: url('../assets/home/tablet/image-header.jpg');
     }
+
+    article {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1;
+        width: 100;
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    .container:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .headphones {
+        margin-top: 45px;
+        height: 15vh;
+        border-radius: 0.5rem;
+    }
+
+    .headphonesImage {
+        bottom: 20%;
+        height: 15vh;
+    }
+
+    .container:nth-child(2) {
+        grid-column-start: 2;
+        grid-column-end: 3;
+
+    }
+
+    .speakers {
+        margin-top: 45px;
+        height: 15vh;
+    }
+    
+    .speakersImage {
+        bottom: 23%;
+        height: 15vh;
+    }
+
+    .container:nth-child(3) {
+        grid-column-start: 3;
+        grid-column-end: 4;
+
+    }
+
+    .earphones {
+        margin-top: 45px;
+        height: 15vh;
+    }
+    
+    .earphonesCase {
+        height: 17vh;
+        bottom: 10%;
+    }
+
+    
 }
 
 @media (min-width: 1440px) {
