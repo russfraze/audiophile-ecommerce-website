@@ -20,7 +20,7 @@ function Home() {
 
 
     return (
-        <div>
+        <>
             <header className={`${styles.headerImage} `}>
                 <picture>
                     <source media="(min-width:768px)" srcset={headerImageTab} />
@@ -34,6 +34,8 @@ function Home() {
                 </div>
 
             </header>
+            
+        <main>
 
 
 
@@ -118,8 +120,8 @@ function Home() {
                 </div>
 
             </section>
-        </div>
-
+        </main>
+        </>
     )
 }
 
