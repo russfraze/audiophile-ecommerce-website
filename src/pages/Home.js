@@ -109,7 +109,7 @@ function Home() {
                 </div>
 
                 <div className={`${styles.bestImage__text} ${'flex_group_column'}`}>
-                    <h4>Bringing you the <span className={styles.wordPop}>best</span> audio gear</h4>
+                    <h2 className='black'>Bringing you the <span className={styles.wordPop}>best</span> audio gear</h2>
                     <p className='black50'> Located at the heart of New York City, Audiophile is the premier store for high end headphones,
                     earphones, speakers, and audio accessories. We have a large showroom and luxury demonstration
                     rooms available for you to browse and experience a wide range of our products. Stop by our store

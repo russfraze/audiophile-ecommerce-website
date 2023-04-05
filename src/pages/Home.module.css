@@ -332,6 +332,14 @@ article {
         padding: 0 11rem;
     }
 
+
+
+    .bestImage__text {
+        padding: 2rem 6rem;
+        /* margin-bottom: 100px;
+        gap: 2rem; */
+    }
+
     
 }
 
