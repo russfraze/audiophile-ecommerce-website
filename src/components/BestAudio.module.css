@@ -1,0 +1,39 @@
+
+
+.bestImage {
+    /* padding: 1.5rem; */
+}
+
+.bestImage img {
+    height: auto;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.bestImage__text {
+    padding: 1.5rem;
+    margin-bottom: 100px;
+    gap: 2rem;
+}
+
+.wordPop {
+    color: var(--clr-dark-coral)
+}
+
+
+
+
+
+@media (min-width: 768px) {
+
+
+    .bestImage__text {
+        padding: 2rem 6rem;
+    }
+
+    
+}
+
+@media (min-width: 1440px) {
+
+} 
