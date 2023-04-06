@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import Headphones from './pages/Headphones'
+import Speakers from './pages/Speakers'
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/headphones' element={<Headphones />} />
+          <Route path='/speakers' element={<Speakers />} />
         </Routes>
         <Footer />
       </Router>

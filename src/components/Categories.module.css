@@ -1,0 +1,165 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    margin-bottom: 9%;
+}
+
+
+
+
+.headphones {
+    justify-content: flex-end;
+    position: relative;
+    margin-top: 30px;
+    height: 25vh;
+    border-radius: 0.5rem;
+}
+
+.headphonesImage {
+    position: relative;
+    z-index: 9998;
+    bottom: 30%;
+    height: 20vh;
+}
+
+.headphones h6 {
+    position: absolute;
+    bottom: 45px;
+    z-index: 9998;
+}
+
+.headphones button {
+    position: relative;
+    bottom: 10px;
+    z-index: 9998;
+}
+
+
+.speakers {
+    justify-content: flex-end;
+    position: relative;
+    margin-top: 30px;
+    height: 25vh;
+    border-radius: 0.5rem;
+}
+
+.speakersImage {
+    position: relative;
+    z-index: 9998;
+    bottom: 30%;
+    height: 20vh;
+}
+
+.speakers h6 {
+    position: absolute;
+    bottom: 45px;
+    z-index: 9998;
+}
+
+.speakers button {
+    position: relative;
+    bottom: 10px;
+    z-index: 9998;
+}
+
+
+
+
+.earphones {
+    justify-content: flex-end;
+    position: relative;
+    margin-top: 30px;
+    height: 25vh;
+    border-radius: 0.5rem;
+}
+
+.earphonesCase {
+    position: relative;
+    z-index: 9997;
+    height: 20vh;
+    bottom: 30%;
+}
+
+.earphones h6 {
+    position: absolute;
+    bottom: 45px;
+    z-index: 9998;
+}
+
+.earphones button {
+    position: relative;
+    bottom: 10px;
+    z-index: 9998;
+}
+
+
+@media (min-width: 768px) {
+   
+
+    article {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1;
+        width: 100;
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    .container:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .headphones {
+        margin-top: 45px;
+        height: 15vh;
+        border-radius: 0.5rem;
+    }
+
+    .headphonesImage {
+        bottom: 20%;
+        height: 15vh;
+    }
+
+    .container:nth-child(2) {
+        grid-column-start: 2;
+        grid-column-end: 3;
+
+    }
+
+    .speakers {
+        margin-top: 45px;
+        height: 15vh;
+    }
+    
+    .speakersImage {
+        bottom: 23%;
+        height: 15vh;
+    }
+
+    .container:nth-child(3) {
+        grid-column-start: 3;
+        grid-column-end: 4;
+
+    }
+
+    .earphones {
+        margin-top: 45px;
+        height: 15vh;
+    }
+    
+    .earphonesCase {
+        height: 17vh;
+        bottom: 10%;
+    }
+
+}
+
+@media (min-width: 1440px) {
+
+}  

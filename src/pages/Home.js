@@ -3,8 +3,6 @@ import Button from '../UI/Button'
 import ShopBtn from '../UI/ShopBtn'
 import headerImage from '../assets/home/mobile/image-header.jpg'
 import headerImageTab from '../assets/home/tablet/image-header.jpg'
-import bestGear from '../assets/shared/mobile/image-best-gear.jpg'
-import bestGearTab from '../assets/shared/tablet/image-best-gear.jpg'
 import earphones from '../assets/home/mobile/image-earphones-yx1.jpg'
 import speakerZx7 from '../assets/home/mobile/image-speaker-zx7.jpg'
 import speakerZx7Tab from '../assets/home/tablet/image-speaker-zx7.jpg'
@@ -14,6 +12,7 @@ import Zx9Thumb from '../assets/shared/desktop/image-category-thumbnail-speakers
 import headphonesOne from '../assets/shared/desktop/image-category-thumbnail-headphones.png'
 import earphonesCase from '../assets/shared/desktop/image-category-thumbnail-earphones.png'
 import circles from '../assets/home/desktop/pattern-circles.svg'
+import BestAudio from '../components/BestAudio'
 
 
 function Home() {
@@ -34,7 +33,7 @@ function Home() {
                 </div>
 
             </header>
-            
+
         <main>
 
 
@@ -101,25 +100,7 @@ function Home() {
 
             </section>
 
-            <section>
-
-                <div className={styles.bestImage}>
-                    <picture>
-                        <source media="(min-width:768px)" srcset={bestGearTab} />
-                        <img src={bestGear} />
-                    </picture>
-                </div>
-
-                <div className={`${styles.bestImage__text} ${'flex_group_column'}`}>
-                    <h2 className='black'>Bringing you the <span className={styles.wordPop}>best</span> audio gear</h2>
-                    <p className='black50'> Located at the heart of New York City, Audiophile is the premier store for high end headphones,
-                    earphones, speakers, and audio accessories. We have a large showroom and luxury demonstration
-                    rooms available for you to browse and experience a wide range of our products. Stop by our store
-                    to meet some of the fantastic people who make Audiophile the best place to buy your portable
-                    audio equipment.</p>
-                </div>
-
-            </section>
+            <BestAudio />
         </main>
         </>
     )

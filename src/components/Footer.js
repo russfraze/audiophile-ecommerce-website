@@ -14,8 +14,8 @@ function Footer() {
             <ul>
                 <li className='subtitle' onClick={() => navigate('/')}>Home</li>
                 <li className='subtitle' onClick={() => navigate('/headphones')}>Headphones</li>
-                <li className='subtitle'>Speakers</li>
-                <li className='subtitle'>Earphones</li>
+                <li className='subtitle' onClick={() => navigate('/speakers')}>Speakers</li>
+                <li className='subtitle' onClick={() => navigate('/earphones')}>Earphones</li>
             </ul>
             <p className={` ${'white50'}`}>Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers
             and sound specialists who are devoted to helping you get the most out of personal audio. Come and

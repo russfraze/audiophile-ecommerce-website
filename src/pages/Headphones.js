@@ -3,6 +3,7 @@ import styles from '../pages/Headphones.module.css'
 import markTwo from '../assets/product-xx99-mark-two-headphones/mobile/image-product.jpg'
 import markOne from '../assets/product-xx99-mark-one-headphones/mobile/image-product.jpg'
 import xx59 from '../assets/product-xx59-headphones/mobile/image-product.jpg'
+import Categories from '../components/Categories'
 import BestAudio from '../components/BestAudio'
 import Button from '../UI/Button'
 
@@ -45,7 +46,7 @@ function Headphones() {
                 </p>
 
             <Button>see product</Button>
-
+            <Categories />
             <BestAudio />
         </main>
         </>
