@@ -1,5 +1,5 @@
 import styles from '../pages/Headphones.module.css'
-
+import { useNavigate } from 'react-router-dom'
 import markTwo from '../assets/product-xx99-mark-two-headphones/mobile/image-product.jpg'
 import markOne from '../assets/product-xx99-mark-one-headphones/mobile/image-product.jpg'
 import xx59 from '../assets/product-xx59-headphones/mobile/image-product.jpg'
@@ -13,6 +13,9 @@ import Button from '../UI/Button'
 
 
 function Headphones() {
+
+    const navigate = useNavigate()
+
     return (
         <>
         <header>
@@ -27,7 +30,7 @@ function Headphones() {
                 balanced depth and precision of studio-quality sound.
                 </p>
 
-            <Button>see product</Button>
+            <Button onClick={() => navigate('/headphones/markII')}>see product</Button>
 
             <img src={markOne} />
             <h2>xx99 mark I headphones</h2>
@@ -36,7 +39,7 @@ function Headphones() {
                 and music aficionados alike in studios and on the go.
                 </p>
 
-            <Button>see product</Button>
+            <Button onClick={() => navigate('/headphones/markI')}>see product</Button>
 
             <img src={xx59} />
             <h2>xx59 headphones</h2>
@@ -45,7 +48,7 @@ function Headphones() {
                 is a brilliant companion at home or on the move.
                 </p>
 
-            <Button>see product</Button>
+            <Button onClick={() => navigate('/headphones/xx59')}>see product</Button>
             <Categories />
             <BestAudio />
         </main>
