@@ -1,5 +1,5 @@
 import styles from './Earphones.module.css'
-
+import { useNavigate } from 'react-router-dom'
 import yx1 from '../assets/product-yx1-earphones/mobile/image-product.jpg'
 import Button from '../UI/Button'
 import Categories from '../components/Categories'
@@ -7,6 +7,8 @@ import BestAudio from '../components/BestAudio'
 
 
 function Earphones() {
+    const navigate = useNavigate()
+
     return (
         <>
             <header>
@@ -21,7 +23,7 @@ function Earphones() {
                     YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy 
                     environments with its active noise cancellation feature.
                 </p>
-                <Button>see product</Button>
+                <Button onClick={() => navigate('/earphones/yx1')}>see product</Button>
 
                 <Categories />
                 <BestAudio />

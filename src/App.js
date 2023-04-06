@@ -11,6 +11,7 @@ import Speakers from './pages/Speakers'
 import Zx9 from './pages/Zx9'
 import Zx7 from './pages/Zx7'
 import Earphones from './pages/Earphones'
+import Yx1 from './pages/Yx1';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path='/speakers/zx9' element={<Zx9 />} />
           <Route path='/speakers/zx7' element={<Zx7 />} />
           <Route path='/earphones' element={<Earphones />} />
+          <Route path='/earphones/yx1' element={<Yx1 />} />
         </Routes>
         <Footer />
       </Router>
