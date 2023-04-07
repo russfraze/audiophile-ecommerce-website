@@ -12,7 +12,7 @@ import Zx9 from './pages/Zx9'
 import Zx7 from './pages/Zx7'
 import Earphones from './pages/Earphones'
 import Yx1 from './pages/Yx1';
-
+   
 
 function App() {
   return (

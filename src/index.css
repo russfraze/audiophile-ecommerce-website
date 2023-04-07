@@ -77,6 +77,8 @@ h2 {
 
 h3 {
   font-size: 32px;
+  line-height: 36px;
+  letter-spacing: 1.15px;
   text-transform: uppercase;
 }
 
@@ -127,11 +129,24 @@ body {
 /* Tablet */
 
 @media (min-width: 768px) {
+
+
+  h3 {
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: 1.15px;
+    text-transform: uppercase;
+  }
+
   h6 {
     font-size: 15px;
     letter-spacing: 1.07px;
     text-transform: uppercase;
   }
+
+ 
+
+  
 }
 
 
@@ -152,6 +167,12 @@ body {
     line-height: 38.25px;
   }
 
+  h3 {
+    font-size: 24px;
+    letter-spacing: 0.86px;
+  }
+
+/* is this right? or does h6 stay the same always */
   h6 {
     font-size: 15px;
     letter-spacing: 1.07px;
