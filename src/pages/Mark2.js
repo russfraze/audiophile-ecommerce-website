@@ -24,10 +24,11 @@ function Mark2() {
                 </p>
             <h6 className='black'>$ 2,999</h6>
 
+            <div className={styles.btnGroup}>
+                <NumberButton />
 
-            <NumberButton />
-
-            <Button />
+                <Button>add to cart</Button>
+            </div>
 
 
 
@@ -51,7 +52,7 @@ function Mark2() {
 
 
             <div className={styles.inBox}>
-                
+
                 <div className='flex_group'>
                     <p className={styles.amount}>1x</p>
                     <p className='black50'>Headphone Unit</p>

@@ -5,3 +5,8 @@
     font-weight: var(--fw-bold);
     padding-right: 1.5rem;
 }
+
+.btnGroup {
+    display: flex;
+    gap: 1rem;
+}

@@ -10,16 +10,17 @@
     background-color: var(--clr-dark-grey);
 }
 
-button {
+.numBtn {
     border: none;
     background-color: var(--clr-dark-grey);
     color: gray;
+    margin: 0 15px;
 }
 
 input {
     border: none;
-    height: 45px;
+    height: 48px;
     background-color: var(--clr-dark-grey);
-    width: 20px;
-    margin: 0 30px;
+    width: 15px;
+    
 }
