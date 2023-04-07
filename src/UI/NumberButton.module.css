@@ -1,0 +1,25 @@
+
+
+.inputGroup {
+    display: flex;
+    align-items: center;
+    
+
+    
+    max-width: fit-content;
+    background-color: var(--clr-dark-grey);
+}
+
+button {
+    border: none;
+    background-color: var(--clr-dark-grey);
+    color: gray;
+}
+
+input {
+    border: none;
+    height: 45px;
+    background-color: var(--clr-dark-grey);
+    width: 20px;
+    margin: 0 30px;
+}

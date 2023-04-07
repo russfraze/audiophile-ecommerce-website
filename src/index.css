@@ -238,5 +238,9 @@ body {
   opacity: 50%;
 }
 
+.coral {
+  color: var(--clr-dark-coral)
+}
+
 /* overline text styles */
 
