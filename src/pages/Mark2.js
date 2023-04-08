@@ -9,12 +9,16 @@ import gallery3Tab from '../assets/product-xx99-mark-two-headphones/tablet/image
 import gallery1Desk from '../assets/product-xx99-mark-two-headphones/desktop/image-gallery-1.jpg'
 import gallery2Desk from '../assets/product-xx99-mark-two-headphones/desktop/image-gallery-2.jpg'
 import gallery3Desk from '../assets/product-xx99-mark-two-headphones/desktop/image-gallery-3.jpg'
+import markII from '../assets/shared/mobile/image-xx99-mark-two-headphones.jpg'
+import xx59 from '../assets/shared/mobile/image-xx59-headphones.jpg'
+import zx7 from '../assets/shared/mobile/image-zx9-speaker.jpg'
 import Button from '../UI/Button'
 import NumberButton from '../UI/NumberButton'
 
 function Mark2() {
     return (
         <main>
+            <p className='black50'>Go Back</p>
             <img src={Mark2Image} />
             <p className='overline coral'>new product</p>
             <h2 className='black'>XX99 Mark II Headphones</h2>
@@ -89,6 +93,25 @@ function Mark2() {
                 <source media="(min-width:768px)" srcset={gallery3Tab} />
                 <img src={gallery3} />
             </picture>
+
+            <section className={`${styles.alsoLike} ${'flex_group_column'}`}>
+                <h3 className='black'>you may also like</h3>
+                <picture>
+                    <img className='card' src={markII} />
+                </picture>
+                <h3 className='black'>xx99 mark I</h3>
+                <Button>see product</Button>
+                <picture>
+                    <img className='card' src={xx59} />
+                </picture>
+                <h3 className='black'>xx59</h3>
+                <Button>see product</Button>
+                <picture>
+                    <img className='card' src={zx7} />
+                </picture>
+                <h3 className='black'>zx9 speaker</h3>
+                <Button>see product</Button>
+            </section>
 
         </main>
     )

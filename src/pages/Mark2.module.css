@@ -1,5 +1,9 @@
 
+main {
+    margin-top: 90px;
+}
 
+/* should this go with component? */
 .amount {
     color: var(--clr-dark-coral);
     font-weight: var(--fw-bold);
@@ -9,4 +13,8 @@
 .btnGroup {
     display: flex;
     gap: 1rem;
+}
+
+.alsoLike {
+    gap: 2rem;
 }
