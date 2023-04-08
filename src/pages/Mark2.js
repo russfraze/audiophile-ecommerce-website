@@ -14,12 +14,14 @@ import xx59 from '../assets/shared/mobile/image-xx59-headphones.jpg'
 import zx7 from '../assets/shared/mobile/image-zx9-speaker.jpg'
 import Button from '../UI/Button'
 import NumberButton from '../UI/NumberButton'
+import Categories from '../components/Categories'
+import BestAudio from '../components/BestAudio'
 
 function Mark2() {
     return (
         <main>
             <p className='black50'>Go Back</p>
-            <img src={Mark2Image} />
+            <img className='card' src={Mark2Image} />
             <p className='overline coral'>new product</p>
             <h2 className='black'>XX99 Mark II Headphones</h2>
             <p className='black50'>The new XX99 Mark II headphones is the pinnacle of pristine audio.
@@ -81,17 +83,17 @@ function Mark2() {
 
             <picture>
                 <source media="(min-width:768px)" srcset={gallery1Tab} />
-                <img src={gallery1} />
+                <img className='card' src={gallery1} />
             </picture>
 
             <picture>
                 <source media="(min-width:768px)" srcset={gallery2Tab} />
-                <img src={gallery2} />
+                <img className='card' src={gallery2} />
             </picture>
 
             <picture>
                 <source media="(min-width:768px)" srcset={gallery3Tab} />
-                <img src={gallery3} />
+                <img className='card' src={gallery3} />
             </picture>
 
             <section className={`${styles.alsoLike} ${'flex_group_column'}`}>
@@ -112,6 +114,9 @@ function Mark2() {
                 <h3 className='black'>zx9 speaker</h3>
                 <Button>see product</Button>
             </section>
+
+            <Categories />
+            <BestAudio />
 
         </main>
     )
