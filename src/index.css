@@ -87,11 +87,14 @@ h4 {
   text-transform: uppercase;
   color: var(--clr-first-black);
   line-height: 38.25px;
+  letter-spacing: 2px;    
 }
 
 h5 {
   font-size: 24px;
   text-transform: uppercase;
+  line-height: 33px;
+  letter-spacing: 1.7px;
 }
 
 h6 {
@@ -131,6 +134,15 @@ body {
 @media (min-width: 768px) {
 
 
+  main {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem;
+    gap: 1.5rem;
+    
+  }
+
+
   h3 {
     font-size: 32px;
     line-height: 36px;
@@ -154,6 +166,14 @@ body {
 
 @media (max-width: 767px) {
 
+  main {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    
+  }
+
   h1 {
     font-size: 36px;
     line-height: 40px;
@@ -170,6 +190,7 @@ body {
   h3 {
     font-size: 24px;
     letter-spacing: 0.86px;
+    line-height: 36px;
   }
 
 /* is this right? or does h6 stay the same always */
@@ -192,6 +213,7 @@ body {
 
 
 /* Utilities */
+
 
 .flex_group {
   display: flex;

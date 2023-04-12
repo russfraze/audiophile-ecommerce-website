@@ -3,6 +3,19 @@ main {
     margin-top: 90px;
 }
 
+.purchaseInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 50px;
+}
+
+.addToCart {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
 /* should this go with component? */
 .amount {
     color: var(--clr-dark-coral);
@@ -15,6 +28,119 @@ main {
     gap: 1rem;
 }
 
+
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 20px 0;
+}
+
+
+.inBox {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 60px 0;
+}
+
+.inBox__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.gallery__lifestyle {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
 .alsoLike {
-    gap: 2rem;
+    margin-top: 100px;
+    
+}
+
+
+
+.alsoLike__product {
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+    gap: 1.5rem; 
+    padding: 1.5rem 0;
+}
+
+
+
+
+
+@media (min-width: 768px) {
+    .purchaseInfo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .addToCart {
+        width: 93vw;
+    }
+
+    .inBox {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 100px 0;
+    }
+
+    .inBox__list {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        align-content: flex-start;
+    }
+
+    .gallery {
+        flex-direction: row;
+        gap: 1rem;
+    }
+    
+    .gallery__lifestyle {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+
+
+    .alsoLike {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        /* padding-top: 100px; */
+    }
+    
+    .alsoLike__products {
+        display: flex;
+        gap: 0.75rem;
+    }
+    
+    .alsoLike__product {
+        gap: 2rem; 
+    }
+
+    
+    
+}
+
+@media (min-width: 1440px) {
+
 }

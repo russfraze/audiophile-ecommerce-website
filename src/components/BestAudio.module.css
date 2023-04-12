@@ -1,18 +1,17 @@
 
 
-.bestImage {
-    /* padding: 1.5rem; */
+.bestAudio {
+    margin: 100px 0px;
 }
 
-.bestImage img {
+.bestAudio__image img {
     height: auto;
     width: 100%;
     border-radius: 1rem;
 }
 
-.bestImage__text {
+.bestAudio__text {
     padding: 1.5rem;
-    margin-bottom: 100px;
     gap: 2rem;
 }
 
@@ -20,15 +19,16 @@
     color: var(--clr-dark-coral)
 }
 
-
+ 
 
 
 
 @media (min-width: 768px) {
 
 
-    .bestImage__text {
-        padding: 2rem 6rem;
+    .bestAudio__text {
+        padding: 3rem 4rem;
+        
     }
 
     
