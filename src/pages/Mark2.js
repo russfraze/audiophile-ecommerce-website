@@ -17,6 +17,9 @@ import zx7 from '../assets/shared/mobile/image-zx9-speaker.jpg'
 import markITab from '../assets/shared/tablet/image-xx99-mark-one-headphones.jpg'
 import xx59Tab from '../assets/shared/tablet/image-xx59-headphones.jpg'
 import zx7Tab from '../assets/shared/tablet/image-zx9-speaker.jpg'
+import markIDesk from '../assets/shared/desktop/image-xx99-mark-one-headphones.jpg'
+import xx59Desk from '../assets/shared/desktop/image-xx59-headphones.jpg'
+import zx7Desk from '../assets/shared/desktop/image-zx9-speaker.jpg'
 import Button from '../UI/Button'
 import NumberButton from '../UI/NumberButton'
 import Categories from '../components/Categories'
@@ -36,7 +39,7 @@ function Mark2() {
 
                 <div className={styles.addToCart}>
                     <p className='overline coral'>new product</p>
-                    <h4 className='black'>XX99 Mark II Headphones</h4>
+                    <h2 className='black'>XX99 Mark II Headphones</h2>
                     <p className='black50'>The new XX99 Mark II headphones is the pinnacle of pristine audio.
                     It redefines your premium headphone experience by reproducing the
                     balanced depth and precision of studio-quality sound.
@@ -131,6 +134,7 @@ function Mark2() {
                 <div className={styles.alsoLike__products}>
                     <div className={styles.alsoLike__product}>
                         <picture>
+                            <source media="(min-width:1440px)" srcset={markIDesk} />
                             <source media="(min-width:768px)" srcset={markITab} />
                             <img className='card' src={markI} />
                         </picture>
@@ -140,6 +144,7 @@ function Mark2() {
 
                     <div className={styles.alsoLike__product}>
                         <picture>
+                            <source media="(min-width:1440px)" srcset={xx59Desk} />
                             <source media="(min-width:768px)" srcset={xx59Tab} />
                             <img className='card' src={xx59} />
                         </picture>
@@ -149,6 +154,7 @@ function Mark2() {
 
                     <div className={styles.alsoLike__product}>
                         <picture>
+                            <source media="(min-width:1440px)" srcset={zx7Desk} />
                             <source media="(min-width:768px)" srcset={zx7Tab} />
                             <img className='card' src={zx7} />
                         </picture>

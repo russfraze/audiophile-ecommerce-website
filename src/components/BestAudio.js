@@ -1,6 +1,7 @@
 import styles from './BestAudio.module.css'
 import bestGear from '../assets/shared/mobile/image-best-gear.jpg'
 import bestGearTab from '../assets/shared/tablet/image-best-gear.jpg'
+import bestGearDesk from '../assets/shared/desktop/image-best-gear.jpg'
 
 
 function BestAudio() {
@@ -9,6 +10,7 @@ function BestAudio() {
 
             <div className={styles.bestAudio__image}>
                 <picture>
+                    <source media="(min-width:1440px)" srcset={bestGearDesk} />
                     <source media="(min-width:768px)" srcset={bestGearTab} />
                     <img src={bestGear} />
                 </picture>

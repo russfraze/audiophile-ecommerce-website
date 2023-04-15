@@ -97,13 +97,13 @@
 @media (min-width: 768px) {
    
 
-    article {
+    .categories {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1;
         width: 100;
         gap: 1rem;
-        padding: 1.5rem;
+        /* padding: 1.5rem; */
     }
 
     .container {

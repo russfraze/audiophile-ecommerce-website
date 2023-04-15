@@ -140,6 +140,14 @@ main {
 
 @media (min-width: 1440px) {
 
+    .purchaseInfo {
+        gap: 6rem;
+    }
+
+    .addToCart {
+        width: 60vw;
+    }
+
     .productDetails {
         display: flex;
         gap: 7rem;
@@ -149,7 +157,7 @@ main {
 
     .features {
         padding: 0;
-        width: 50%
+        width: 57%
     }
 
     .inBox {

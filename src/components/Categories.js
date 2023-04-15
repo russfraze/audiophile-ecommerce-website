@@ -6,7 +6,7 @@ import ShopBtn from '../UI/ShopBtn'
 
 function Categories() {
     return (
-        <article>
+        <article className={styles.categories}>
                 <div className={styles.container}>
                     <div className={`${styles.headphones} ${'bG_grey'} ${'flex_group_column'}`}>
                         <img className={styles.headphonesImage} src={headphonesOne} />

@@ -35,5 +35,23 @@
 }
 
 @media (min-width: 1440px) {
+    .bestAudio {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 120px;
+    }
+
+    .bestAudio__image {
+
+    }
+
+    .bestAudio__text {
+        display: flex;
+        align-items: flex-start;
+        text-align: start;
+        width: 500px;
+        padding: 100px 0;
+        
+    }
 
 } 
