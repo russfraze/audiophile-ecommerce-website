@@ -145,7 +145,8 @@ main {
     }
 
     .addToCart {
-        width: 60vw;
+        /* width: 60vw; */
+        width: 600px;
     }
 
     .productDetails {

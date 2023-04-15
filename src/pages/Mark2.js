@@ -24,8 +24,10 @@ import Button from '../UI/Button'
 import NumberButton from '../UI/NumberButton'
 import Categories from '../components/Categories'
 import BestAudio from '../components/BestAudio'
+import { productData } from '../data'
 
 function Mark2() {
+    console.log(productData[3])
     return (
         <main>
             <p className='black50'>Go Back</p>
