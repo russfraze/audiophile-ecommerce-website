@@ -29,7 +29,7 @@ import { productData } from '../data'
 function Mark2() {
     console.log(productData[3])
     return (
-        <main>
+        <main className={styles.mark2}>
             <p className='black50'>Go Back</p>
 
             <div className={styles.purchaseInfo}>
@@ -41,7 +41,7 @@ function Mark2() {
 
                 <div className={styles.addToCart}>
                     <p className='overline coral'>new product</p>
-                    <h2 className='black'>XX99 Mark II Headphones</h2>
+                    <h2 className='black'>{productData[3].name}</h2>
                     <p className='black50'>The new XX99 Mark II headphones is the pinnacle of pristine audio.
                     It redefines your premium headphone experience by reproducing the
                     balanced depth and precision of studio-quality sound.

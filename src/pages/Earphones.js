@@ -11,7 +11,7 @@ function Earphones() {
 
     return (
         <>
-            <header>
+            <header classNameq={styles.earphonesHeader}>
                 <h2>earphones</h2>
             </header>
 

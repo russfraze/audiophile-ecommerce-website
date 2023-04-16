@@ -11,7 +11,7 @@ function Speakers() {
 
     return (
         <>
-            <header>
+            <header className={styles.speakersHeader}>
                 <h2>speakers</h2>
             </header>
             <main>

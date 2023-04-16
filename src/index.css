@@ -151,7 +151,7 @@ body {
   main {
     display: flex;
     flex-direction: column;
-    padding: 1.5rem;
+    padding: 24px;
     gap: 1.5rem;
     
   }
@@ -194,7 +194,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 2.5rem;
-    gap: 1.5rem;
+    gap: 2rem;
     
   }
 
