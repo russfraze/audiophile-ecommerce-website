@@ -3,6 +3,7 @@ import Button from '../UI/Button'
 import ShopBtn from '../UI/ShopBtn'
 import headerImage from '../assets/home/mobile/image-header.jpg'
 import headerImageTab from '../assets/home/tablet/image-header.jpg'
+import headerImageDesk from '../assets/home/desktop/image-hero.jpg'
 import earphones from '../assets/home/mobile/image-earphones-yx1.jpg'
 import earphonesTab from '../assets/home/tablet/image-earphones-yx1.jpg'
 import speakerZx7 from '../assets/home/mobile/image-speaker-zx7.jpg'
@@ -24,13 +25,14 @@ function Home() {
         <>
             <header className={`${styles.headerImage} `}>
                 <picture>
+                    <source media="(min-width:1440px)" srcset={headerImageDesk} />
                     <source media="(min-width:768px)" srcset={headerImageTab} />
                     <img className={styles.headerImage__hide} src={headerImage} />
                 </picture>
-                <div className={`${styles.headerImage_content} ${'flex_group_column'}`}>
+                <div className={styles.headerImage_content}>
                     <p className='overline'>New product</p>
                     <h1>XX99 Mark II Headphones</h1>
-                    <p className={`${styles.footerBody} ${'white75'}`}>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
+                    <p className={`${styles.headerBody} ${'white75'}`}>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
                     <Button className={'buttonMain'}>see product</Button>
                 </div>
 
