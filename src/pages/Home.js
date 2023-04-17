@@ -6,9 +6,12 @@ import headerImageTab from '../assets/home/tablet/image-header.jpg'
 import headerImageDesk from '../assets/home/desktop/image-hero.jpg'
 import earphones from '../assets/home/mobile/image-earphones-yx1.jpg'
 import earphonesTab from '../assets/home/tablet/image-earphones-yx1.jpg'
+import earphonesDesk from '../assets/home/desktop/image-earphones-yx1.jpg'
 import speakerZx7 from '../assets/home/mobile/image-speaker-zx7.jpg'
 import speakerZx7Tab from '../assets/home/tablet/image-speaker-zx7.jpg'
+import speakerZx7Desktop from '../assets/home/desktop/image-speaker-zx7.jpg'
 import speakerZx9 from '../assets/home/mobile/image-speaker-zx9.png'
+import speakerZx9Desktop from '../assets/home/desktop/image-speaker-zx9.png'
 
 import Zx9Thumb from '../assets/shared/desktop/image-category-thumbnail-speakers.png'
 import headphonesOne from '../assets/shared/desktop/image-category-thumbnail-headphones.png'
@@ -70,18 +73,24 @@ function Home() {
 
 
                 <div className={`${styles.zx9Speaker} ${'card'} ${'bG_coral'}`}>
-                    <div className={`${styles.zx9Speaker__content} ${'flex_group_column'}`}>
-                        <img className={styles.zx9Speaker__image} src={speakerZx9} />
-                        <h1>zx9<br />speaker</h1>
+                    <div className={styles.zx9Speaker__content}>
+                        <picture>
+                            <source media="(min-width:1440px)" srcset={speakerZx9Desktop} />
+                            <img className={styles.zx9Speaker__image} src={speakerZx9} />
+                        </picture>
                         <img className={styles.circles} src={circles} />
-                        <p className={`${styles.zx9Body} ${'white75'}`}>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
-                        <Button rev={true} >see product</Button>
+                        <div className={styles.zx9Speaker__Txt}>
+                            <h1>zx9<br />speaker</h1>
+                            <p className={'white75'}>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
+                            <Button rev={true} >see product</Button>
+                        </div>
                     </div>
                 </div>
 
 
                 <div className={`${styles.zx7Speaker}`}>
                     <picture>
+                        <source media="(min-width:1440px)" srcset={speakerZx7Desktop} />
                         <source media="(min-width:768px)" srcset={speakerZx7Tab} />
                         <img src={speakerZx7} />
                     </picture>
@@ -94,6 +103,7 @@ function Home() {
                 <section className={styles.yx1earphones}>
 
                     <picture className={styles.earphonesImage}>
+                        <source media="(min-width:1440px)" srcset={earphonesDesk} />
                         <source media="(min-width:768px)" srcset={earphonesTab} />
                         <img src={earphones} />
                     </picture>

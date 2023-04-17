@@ -152,6 +152,10 @@ article {
 }
 
 .zx9Speaker__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     gap: 1.5rem;
     padding: 3.5rem 1rem;
 }
@@ -160,6 +164,15 @@ article {
     /* position: relative;
     top: 100px; */
     height: 195px;
+    z-index: 9998;
+}
+
+.zx9Speaker__Txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0rem 1rem;
 }
 
 .circles {
@@ -322,10 +335,16 @@ article {
     }
 
  
- 
+    
+    .zx9Speaker__Txt {
+        padding: 40px 11rem 0 11rem;
+    }
 
-    .zx9Body {
-        padding: 0 11rem;
+   
+    .circles {
+        bottom: 60px;
+        min-height: 800px;
+        min-width: 800px;
     }
 
 
@@ -362,6 +381,8 @@ article {
     
 }
 
+/* Desktop */
+
 @media (min-width: 1440px) {
     .headerImage {
         background-image: url('../assets/home/desktop/image-hero.jpg');
@@ -377,6 +398,7 @@ article {
         top: 175px;
         /* left: 100px; */
         padding-right: 700px;
+        padding-top: 100px;
         gap: 1.5rem;
 
         width: 1110px;
@@ -385,6 +407,34 @@ article {
 
     .headerBody  {
         padding: 0;
+    }
+
+    .zx9Speaker__image {
+        position: relative;
+        top: 65px;
+        padding-left: 120px;
+        height: 493px;
+    }
+
+    .zx9Speaker__content {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .zx9Speaker__Txt {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        padding: 0 90px 0 100px;
+        width: 550px;
+    }
+
+    .circles {
+        top: 0px;
+        right: 280px;
+        min-height: 1000px;
+        min-width: 1000px;
     }
 
 
