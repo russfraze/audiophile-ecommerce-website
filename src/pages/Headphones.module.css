@@ -32,7 +32,13 @@
 
 
 @media (min-width: 768px) {
-    
+    .product__info {
+        margin-top: 20px;
+    }
+
+    .product__info p {
+        padding: 0 60px;
+    }
 }
 
 @media (min-width: 1440px) {
