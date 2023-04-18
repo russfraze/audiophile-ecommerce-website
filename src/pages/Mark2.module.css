@@ -3,6 +3,10 @@
     margin-top: 90px;
 }
 
+.goBack:hover {
+    cursor: pointer;
+}
+
 .purchaseInfo {
     display: flex;
     flex-direction: column;

@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import styles from './Mark1.module.css'
 import Mark1Image from '../assets/product-xx99-mark-one-headphones/mobile/image-product.jpg'
 import Mark1ImageTab from '../assets/product-xx99-mark-one-headphones/tablet/image-product.jpg'
@@ -28,10 +29,11 @@ import { productData } from '../data'
 
 
 function Mark1() {
+    const navigate = useNavigate()
     console.log(productData[2].image.tablet)
     return (
         <main className={styles.mark1}>
-            <p className='black50'>Go Back</p>
+            <p onClick={() => navigate('/headphones')} className={`${styles.goBack} ${'black50'}`} >Go Back</p>
 
             <div className={styles.purchaseInfo}>
                 <picture>

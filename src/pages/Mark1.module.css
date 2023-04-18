@@ -3,6 +3,10 @@
     margin-top: 90px;
 }
 
+.goBack:hover {
+    cursor: pointer;
+}
+
 .mark1__image {
     border-radius: 0.5rem;
 }
