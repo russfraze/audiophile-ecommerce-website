@@ -51,19 +51,19 @@ function Headphones() {
                     </div>
                 </section>
 
-                <section className={styles.product}>
-                    <picture>
+                <section className={styles.product__b}>
+                    <picture className={styles.imageB}>
                         <source media="(min-width:1440px)" srcset={markOneDesk} />
                         <source media="(min-width:768px)" srcset={markOneTab} />
-                        <img src={markOne} />
+                        <img  src={markOne} />
                     </picture>
 
-                    <div className={styles.product__info}>
+                    <div className={styles.product__infoB}>
                         <h2 className='black'>xx99 mark I<br/> headphones</h2>
                         <p className='black50'>As the gold standard for headphones, the classic XX99 Mark I offers
                         detailed and accurate audio reproduction for audiophiles, mixing engineers,
                         and music aficionados alike in studios and on the go.
-                    </p>
+                        </p>
 
                         <Button onClick={() => navigate('/headphones/markI')}>see product</Button>
                     </div>
