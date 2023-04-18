@@ -33,7 +33,7 @@ function Zx9() {
 
     return (
         <main className={styles.zx9}>
-            <p onClick={() => navigate('/headphones')} className={`${styles.goBack} ${'black50'}`} >Go Back</p>
+            <p onClick={() => navigate('/speakers')} className={`${styles.goBack} ${'black50'}`} >Go Back</p>
 
             <div className={styles.purchaseInfo}>
                 <picture>
