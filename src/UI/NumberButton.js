@@ -20,7 +20,7 @@ function NumberButton() {
                 <div className={styles.inputGroup__btn}>
                     <button className={styles.numBtn} id='down' onClick={decrement}><span>-</span></button>
                 </div>
-                <input type='text' id='amount' value={numberInCart} />
+                <input type='text' id='amount' min='0' value={numberInCart} />
                 <div className={styles.inputGroup__btn}>
                     <button className={styles.numBtn} id='up' onClick={increment}><span>+</span></button>
                 </div>
