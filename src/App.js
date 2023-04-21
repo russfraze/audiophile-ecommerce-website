@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import CartProvider from './context/CartProvider'
 import './vars.css';
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -16,7 +17,7 @@ import Yx1 from './pages/Yx1';
 
 function App() {
   return (
-    <>
+    <CartProvider>
       <Router>
         <Navbar />
         <Routes>
@@ -33,7 +34,7 @@ function App() {
         </Routes>
         <Footer />
       </Router>
-    </>
+    </CartProvider>
   );
 }
 

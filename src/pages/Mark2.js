@@ -22,6 +22,7 @@ import markIDesk from '../assets/shared/desktop/image-xx99-mark-one-headphones.j
 import xx59Desk from '../assets/shared/desktop/image-xx59-headphones.jpg'
 import zx7Desk from '../assets/shared/desktop/image-zx9-speaker.jpg'
 import Button from '../UI/Button'
+import ProductForm from '../components/ProductForm'
 import NumberButton from '../UI/NumberButton'
 import Categories from '../components/Categories'
 import BestAudio from '../components/BestAudio'
@@ -50,11 +51,9 @@ function Mark2() {
                     </p>
                     <h6 className='black'>$ 2,999</h6>
 
-                    <div className={styles.btnGroup}>
-                        <NumberButton />
+                    <ProductForm price={''}/>
+                    {/* <NumberButton /> */}
 
-                        <Button>add to cart</Button>
-                    </div>
                 </div>
             </div>
 

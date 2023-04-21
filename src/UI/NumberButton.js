@@ -2,14 +2,16 @@ import styles from './NumberButton.module.css'
 import {useState} from 'react'
 
 function NumberButton() {
-    const [numberInCart, setNumberInCart] = useState(1)
+    const [numberInCart, setNumberInCart] = useState(0)
 
     function increment(){
         setNumberInCart(() => numberInCart + 1)
+        return numberInCart
     }
 
     function decrement() {
         setNumberInCart(() => numberInCart - 1)
+        return numberInCart
     }
  
     console.log(numberInCart)
@@ -20,7 +22,7 @@ function NumberButton() {
                 <div className={styles.inputGroup__btn}>
                     <button className={styles.numBtn} id='down' onClick={decrement}><span>-</span></button>
                 </div>
-                <input type='text' id='amount' min='0' value={numberInCart} />
+                <input type='text' id='amount' defaultValue={0} />
                 <div className={styles.inputGroup__btn}>
                     <button className={styles.numBtn} id='up' onClick={increment}><span>+</span></button>
                 </div>
