@@ -22,6 +22,7 @@ import zx9 from '../assets/shared/mobile/image-zx9-speaker.jpg'
 import zx9Tab from '../assets/shared/tablet/image-zx9-speaker.jpg'
 import zx9Desk from '../assets/shared/desktop/image-zx9-speaker.jpg'
 import Button from '../UI/Button'
+import ProductForm from '../components/ProductForm'
 import NumberButton from '../UI/NumberButton'
 import Categories from '../components/Categories'
 import BestAudio from '../components/BestAudio'
@@ -50,11 +51,7 @@ function Xx59() {
                     </p>
                     <h6 className='black'>$ 899</h6>
 
-                    <div className={styles.btnGroup}>
-                        <NumberButton />
-
-                        <Button>add to cart</Button>
-                    </div>
+                    <ProductForm name={productData[1].name} price={productData[1].price} id={productData[1].id}/>
                 </div>
             </div>
 

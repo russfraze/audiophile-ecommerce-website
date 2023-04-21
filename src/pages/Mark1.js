@@ -26,11 +26,12 @@ import NumberButton from '../UI/NumberButton'
 import Categories from '../components/Categories'
 import BestAudio from '../components/BestAudio'
 import { productData } from '../data'
+import ProductForm from '../components/ProductForm'
 
 
 function Mark1() {
     const navigate = useNavigate()
-    console.log(productData[2].image.tablet)
+    console.log(productData[2])
     return (
         <main className={styles.mark1}>
             <p onClick={() => navigate('/headphones')} className={`${styles.goBack} ${'black50'}`} >Go Back</p>
@@ -50,11 +51,7 @@ function Mark1() {
                     </p>
                     <h6 className='black'>$ 1,750</h6>
 
-                    <div className={styles.btnGroup}>
-                        <NumberButton />
-
-                        <Button>add to cart</Button>
-                    </div>
+                    <ProductForm name={productData[2].name} price={productData[2].price} id={productData[2].id}/>
                 </div>
             </div>
 
