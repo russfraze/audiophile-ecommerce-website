@@ -51,7 +51,7 @@ function Mark2() {
                     </p>
                     <h6 className='black'>$ 2,999</h6>
 
-                    <ProductForm price={''}/>
+                    <ProductForm name={productData[3].name} price={productData[3].price} id={productData[3].id}/>
                     {/* <NumberButton /> */}
 
                 </div>

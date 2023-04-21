@@ -3,7 +3,7 @@ import CartContext from './CartContext'
 
 
 const cartDefault = {
-    items: [],
+    products: [],
     totalAmount: 0,
 }
 
@@ -11,7 +11,34 @@ const cartDefault = {
 const cartReducer = (state, action) => {
 
     if (action.type === 'ADD_PRODUCT'){
-        console.log('add item')
+        console.log('add item', action.product.name, action.product.price, action.product.amount)
+
+        const newTotalAmount = state.totalAmount + action.product.price * action.product.amount
+
+        const existingCartProductsIndex = state.products.findIndex(product => product.id == action.product.id)
+        console.log('EPI', typeof(existingCartProductsIndex))
+
+
+        const existingCartProduct = state.products[existingCartProductsIndex]
+      
+        
+        let updatedProducts
+
+        if (existingCartProduct) {
+            const updatedProduct = {
+                ...existingCartProduct,
+                amount: existingCartProduct.amount + action.product.amount
+            }
+            updatedProducts = [...state.products]
+            updatedProducts[existingCartProductsIndex] = updatedProduct
+        } else {
+            updatedProducts = state.products.concat(action.product)
+        }
+
+        return {
+            products: updatedProducts,
+            totalAmount: newTotalAmount
+        }
     }
 
     if (action.type === 'REMOVE_PRODUCT'){
@@ -34,7 +61,7 @@ const CartProvider = ({children}) => {
     }
 
     const cartContext = {
-        items: cart.items,
+        products: cart.products,
         totalAmount: cart.totalAmount,
         addProduct: addProductHandler, 
         removeProduct: removeProductHandler

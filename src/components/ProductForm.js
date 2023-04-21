@@ -4,15 +4,20 @@ import CartContext from '../context/CartContext'
 import NumberButton from '../UI/NumberButton'
 import Button from '../UI/Button'
 
-function ProductForm() {
+function ProductForm({name, price, id}) {
     const [numberInCart, setNumberInCart] = useState(0)
     const cartData = useContext(CartContext)
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log('dis dat cart', numberInCart)
+        console.log('dis dat cart', numberInCart, name, id)
 
-        cartData.addProduct()
+        cartData.addProduct({
+            name: name,
+            price: price,
+            amount: numberInCart,
+            id: id
+        })
     }
 
     function increment(){
@@ -35,7 +40,7 @@ function ProductForm() {
                     <div className={styles.inputGroup__btn}>
                         <span className={styles.numBtn} id='down' onClick={decrement}><span>-</span></span>
                     </div>
-                    <input type='text' id='amount' defaultValue={0} value={numberInCart} />
+                    <input type='text' id='amount' value={numberInCart} />
                     <div className={styles.inputGroup__btn}>
                         <span className={styles.numBtn} id='up' onClick={increment}><span>+</span></span>
                     </div>
