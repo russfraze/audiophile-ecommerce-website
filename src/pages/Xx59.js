@@ -30,7 +30,7 @@ import { productData } from '../data'
 
 function Xx59() {
     const navigate = useNavigate()
-    console.log(productData[1].image.tablet)
+    console.log(productData)
 
     return (
         <main className={styles.xx59}>

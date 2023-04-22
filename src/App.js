@@ -24,11 +24,15 @@ function App() {
     setShowCart(false)
   }
 
+  const showCartHandler = () => {
+    setShowCart(true)
+  }
+
   return (
     <CartProvider>
         {showCart && <Cart hide={hideCartHandler}/>}
       <Router>
-        <Navbar />
+        <Navbar show={showCartHandler}/>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/headphones' element={<Headphones />} />

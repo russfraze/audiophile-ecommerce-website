@@ -1,0 +1,14 @@
+@import '../../vars.css';
+
+.cartItem {
+    display: flex;
+}
+
+.name {
+    color: var(--clr-second-black);
+}
+
+.total {
+    color: var(--clr-second-black);
+    opacity: 50%;
+}

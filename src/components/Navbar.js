@@ -6,7 +6,7 @@ import { ReactComponent as Logo } from '../assets/shared/desktop/logo.svg'
 
 
 
-function Navbar() {
+function Navbar({show}) {
     const [navIsOpen, setNavIsOpen] = useState(false)
 
     const burgerClick = () => {
@@ -25,7 +25,7 @@ function Navbar() {
                     <li>speakers</li>
                     <li>earphones</li>
                 </ul>
-                <CartIcon className={styles.cart} />
+                <CartIcon onClick={show} className={styles.cart} />
 
             </nav>
             { navIsOpen ? <div className={styles.dropdown} >
