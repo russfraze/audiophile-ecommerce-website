@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import {useState} from 'react'
 import CartProvider from './context/CartProvider'
 import './vars.css';
+import Cart from './components/cart/Cart'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -16,8 +18,15 @@ import Yx1 from './pages/Yx1';
    
 
 function App() {
+  const [showCart, setShowCart] = useState(true)
+
+  const hideCartHandler = () => {
+    setShowCart(false)
+  }
+
   return (
     <CartProvider>
+        {showCart && <Cart hide={hideCartHandler}/>}
       <Router>
         <Navbar />
         <Routes>
