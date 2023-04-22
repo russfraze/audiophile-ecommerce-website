@@ -34,16 +34,16 @@ function CartForm({name, price, id}) {
     console.log(numberInCart)
     
 
-    return <form>
+    return <form onSubmit={handleSubmit}>
         <div>
             <div className={styles.formGroup}>
                 <div className={styles.inputGroup}>
                     <div className={styles.inputGroup__btn}>
-                        <span className={styles.numBtn} id='down' onClick={decrement}><span>-</span></span>
+                        <button className={styles.numBtn} id='down' onClick={decrement}><span>-</span></button>
                     </div>
                     <input type='text' id='amount' value={numberInCart} />
                     <div className={styles.inputGroup__btn}>
-                        <span className={styles.numBtn} id='up' onClick={increment}><span>+</span></span>
+                        <button className={styles.numBtn} id='up' onClick={increment}><span>+</span></button>
                     </div>
                 </div>
             </div>

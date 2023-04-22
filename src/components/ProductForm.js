@@ -16,6 +16,7 @@ function ProductForm({name, price, id}) {
             name: name,
             price: price,
             amount: numberInCart,
+            total: numberInCart * price,
             id: id
         })
     }

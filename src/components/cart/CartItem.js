@@ -10,7 +10,7 @@ function CartItem({ image, name, total, id }) {
                 <p className={styles.total}>{total}</p>
             </div>
             <p>{id}</p>
-            <CartForm />
+            <CartForm name={name} />
         </li>
     )
 }

@@ -7,13 +7,14 @@ import CartContext from '../../context/CartContext'
 function Cart(props) {
     const cartData = useContext(CartContext)
     console.log('CART', cartData.products)
+
     return (
         <Modal hide={props.hide}>
             <div className={styles.numRemove}>
                 <p>Cart(3)</p>
                 <p>Remove all</p>
             </div>
-            {cartData.products.map(item => <CartItem name={item.name} id={item.id} total={item.price} />)}
+            {cartData.products.map(item => <CartItem name={item.name} id={item.id} total={item.total} />)}
             <div className={styles.total}>
                 <p></p>
                 <p></p>
