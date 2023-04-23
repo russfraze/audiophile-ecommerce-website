@@ -5,7 +5,7 @@ import CartContext from '../../context/CartContext'
 
 
 
-function CartForm({name, price, id}) {
+function CartForm({name, price, id, amount }) {
     const [numberInCart, setNumberInCart] = useState(0)
     const cartData = useContext(CartContext)
 
@@ -13,25 +13,29 @@ function CartForm({name, price, id}) {
         e.preventDefault()
         console.log('dis dat cart', numberInCart, name, id)
 
+      
+
+        // cartData.removeProduct(id)
+    }
+
+    function increment(){
+        setNumberInCart(() => numberInCart + 1)
         cartData.addProduct({
             name: name,
             price: price,
             amount: numberInCart,
             id: id
         })
-    }
-
-    function increment(){
-        setNumberInCart(() => numberInCart + 1)
         return numberInCart
     }
 
     function decrement() {
         setNumberInCart(() => numberInCart - 1)
+        cartData.removeProduct(id)
         return numberInCart
     }
  
-    console.log(numberInCart)
+    console.log('NUMBER IN CART FORM',numberInCart)
     
 
     return <form onSubmit={handleSubmit}>
@@ -41,7 +45,7 @@ function CartForm({name, price, id}) {
                     <div className={styles.inputGroup__btn}>
                         <button className={styles.numBtn} id='down' onClick={decrement}><span>-</span></button>
                     </div>
-                    <input type='text' id='amount' value={numberInCart} />
+                    <input type='text' id='amount' value={amount} />
                     <div className={styles.inputGroup__btn}>
                         <button className={styles.numBtn} id='up' onClick={increment}><span>+</span></button>
                     </div>

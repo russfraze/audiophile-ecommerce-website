@@ -12,3 +12,32 @@
     color: var(--clr-second-black);
     opacity: 50%;
 }
+
+
+
+/* inc dec button */
+
+.inputGroup {
+    display: flex;
+    align-items: center;
+    
+
+    
+    max-width: fit-content;
+    background-color: var(--clr-dark-grey);
+}
+
+.numBtn {
+    border: none;
+    background-color: var(--clr-dark-grey);
+    color: gray;
+    margin: 0 15px;
+}
+
+input {
+    border: none;
+    height: 48px;
+    background-color: var(--clr-dark-grey);
+    width: 15px;
+    
+}

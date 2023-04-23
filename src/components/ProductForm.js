@@ -10,7 +10,7 @@ function ProductForm({name, price, id}) {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log('dis dat cart', numberInCart, name, id)
+        // console.log('dis dat cart', numberInCart, name, id)
 
         cartData.addProduct({
             name: name,
@@ -23,12 +23,12 @@ function ProductForm({name, price, id}) {
 
     function increment(){
         setNumberInCart(() => numberInCart + 1)
-        return numberInCart
+        // return numberInCart
     }
 
     function decrement() {
         setNumberInCart(() => numberInCart - 1)
-        return numberInCart
+        // return numberInCart
     }
  
     console.log(numberInCart)

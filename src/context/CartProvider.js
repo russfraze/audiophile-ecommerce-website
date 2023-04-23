@@ -15,6 +15,8 @@ const cartReducer = (state, action) => {
 
         const newTotalAmount = state.totalAmount + action.product.price * action.product.amount
 
+        const newProductAmount = action.product.price * action.product.amount
+
         const existingCartProductsIndex = state.products.findIndex(product => product.id == action.product.id)
         console.log('EPI', typeof(existingCartProductsIndex))
 
@@ -27,7 +29,8 @@ const cartReducer = (state, action) => {
         if (existingCartProduct) {
             const updatedProduct = {
                 ...existingCartProduct,
-                amount: existingCartProduct.amount + action.product.amount
+                amount: existingCartProduct.amount + 1,
+                total: existingCartProduct.total + action.product.price
             }
             updatedProducts = [...state.products]
             updatedProducts[existingCartProductsIndex] = updatedProduct
@@ -43,6 +46,32 @@ const cartReducer = (state, action) => {
 
     if (action.type === 'REMOVE_PRODUCT'){
         console.log('remove item')
+
+        const productIndex = state.products.findIndex(product => product.id === action.id)
+        console.log( 'REMOVE INDEX', productIndex)
+
+        const productToUpdate = state.products[productIndex]
+
+        const UpdatedTotalAmount = state.totalAmount - productToUpdate.price
+        
+        let updatedProducts
+
+        if(productToUpdate.amount === 1) {
+            updatedProducts = state.products.filter((product) => product.id !== action.product.id )
+        } else {
+            const updatedProduct = {
+                ...productToUpdate,
+                amount: productToUpdate.amount -1,
+                total: productToUpdate.price * (productToUpdate.amount -1)
+            }
+            updatedProducts = [...state.products]
+            updatedProducts[productIndex] = updatedProduct
+        }
+
+        return {
+            products: updatedProducts,
+            totalAmount: UpdatedTotalAmount
+        }
     }
     return cartDefault
 }
