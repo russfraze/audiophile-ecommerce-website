@@ -2,3 +2,15 @@
     display: flex;
     justify-content: space-between;
 }
+
+.cartLength {
+    font-weight: var(--fw-bold);
+}
+
+.removeAll {
+    
+}
+
+.removeAll:hover {
+    cursor: pointer;
+}

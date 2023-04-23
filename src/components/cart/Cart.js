@@ -1,5 +1,4 @@
 import { useContext } from 'react'
-import { Link } from 'react-router-dom'
 import styles from './Cart.module.css'
 import Modal from '../../UI/Modal'
 import Button from '../../UI/Button'
@@ -8,6 +7,8 @@ import CartContext from '../../context/CartContext'
 
 function Cart(props) {
     const cartData = useContext(CartContext)
+
+    const cartLength = cartData.products.length
 
     // const navigate = useNavigate()
 
@@ -19,11 +20,15 @@ function Cart(props) {
         cartData.addProduct(item)
     }
 
+    const cartRemoveAllHaldler = () => {
+        cartData.removeAll()
+    }
+
     return (
         <Modal hide={props.hide}>
             <div className={styles.numRemove}>
-                <p>Cart(3)</p>
-                <p>Remove all</p>
+                <p className={`${styles.cartLength} black`}>{`CART (${cartLength})`}</p>
+                <p className={`${styles.removeAll} black50`} onClick={cartRemoveAllHaldler}>Remove all</p>
             </div>
             {cartData.products.map(item =>
                 <CartItem

@@ -10,7 +10,7 @@ const cartDefault = {
 
 const cartReducer = (state, action) => {
 
-    if (action.type === 'ADD_PRODUCT'){
+    if (action.type === 'ADD_PRODUCT') {
         console.log('add item', action.product.name, action.product.price, action.product.amount)
 
         const newTotalAmount = state.totalAmount + action.product.price * action.product.amount
@@ -42,7 +42,7 @@ const cartReducer = (state, action) => {
         }
     }
 
-    if (action.type === 'REMOVE_PRODUCT'){
+    if (action.type === 'REMOVE_PRODUCT') {
         console.log('remove item')
 
         const productIndex = state.products.findIndex(product => product.id === action.id)
@@ -71,6 +71,13 @@ const cartReducer = (state, action) => {
             totalAmount: UpdatedTotalAmount
         }
     }
+
+    if (action.type === 'REMOVE_ALL') {
+        return {
+            products: [],
+            totalAmount: 0
+        }
+    }
     return cartDefault
 }
 
@@ -87,11 +94,16 @@ const CartProvider = ({children}) => {
         dispatchCart({type: 'REMOVE_PRODUCT', id: id})
     }
 
+    const removeAllHandler = () => {
+        dispatchCart({type: 'REMOVE_ALL'})
+    }
+
     const cartContext = {
         products: cart.products,
         totalAmount: cart.totalAmount,
         addProduct: addProductHandler, 
-        removeProduct: removeProductHandler
+        removeProduct: removeProductHandler,
+        removeAll: removeAllHandler
     }
 
     return <CartContext.Provider
