@@ -18,9 +18,7 @@ const cartReducer = (state, action) => {
         const newProductAmount = action.product.price * action.product.amount
 
         const existingCartProductsIndex = state.products.findIndex(product => product.id == action.product.id)
-        console.log('EPI', typeof(existingCartProductsIndex))
-
-
+        
         const existingCartProduct = state.products[existingCartProductsIndex]
       
         
@@ -57,7 +55,7 @@ const cartReducer = (state, action) => {
         let updatedProducts
 
         if(productToUpdate.amount === 1) {
-            updatedProducts = state.products.filter((product) => product.id !== action.product.id )
+            updatedProducts = state.products.filter((product) => product.id !== action.id )
         } else {
             const updatedProduct = {
                 ...productToUpdate,
