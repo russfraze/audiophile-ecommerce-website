@@ -24,6 +24,9 @@ function Cart(props) {
         cartData.removeAll()
     }
 
+
+    
+
     return (
         <Modal hide={props.hide}>
             <div className={styles.numRemove}>
