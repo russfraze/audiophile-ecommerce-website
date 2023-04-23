@@ -11,6 +11,19 @@
     cursor: pointer;
 }
 
+.buttonStretch {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: var(--fw-bold);
+  letter-spacing: 1px;
+  height: 48px;
+  width: 100%;
+  background-color: var(--clr-dark-coral);
+  color: var(--clr-white);
+  border: none;
+  cursor: pointer;
+}
+
 .buttonAlt {
   text-transform: uppercase;
   font-size: 13px;

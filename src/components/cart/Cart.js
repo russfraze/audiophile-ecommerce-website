@@ -1,12 +1,15 @@
 import { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import styles from './Cart.module.css'
 import Modal from '../../UI/Modal'
+import Button from '../../UI/Button'
 import CartItem from '../cart/CartItem'
 import CartContext from '../../context/CartContext'
 
 function Cart(props) {
     const cartData = useContext(CartContext)
-    console.log('CART', cartData.products)
+
+    // const navigate = useNavigate()
 
     const cartProductRemoveHandler = (id) => {
         cartData.removeProduct(id)
@@ -29,12 +32,17 @@ function Cart(props) {
                     total={item.total}
                     amount={item.amount}
                     onRemove={cartProductRemoveHandler.bind(null, item.id)}
-                    onAdd={cartProductAddHandler.bind(null,item)}
+                    onAdd={cartProductAddHandler.bind(null, item)}
                 />)}
             <div className={styles.total}>
                 <p></p>
                 <p></p>
             </div>
+
+            <a href='/checkout'>
+                <Button  stretch={true}>checkout</Button>
+            </a>
+
         </Modal>
     )
 }

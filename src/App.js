@@ -3,6 +3,7 @@ import {useState} from 'react'
 import CartProvider from './context/CartProvider'
 import './vars.css';
 import Cart from './components/cart/Cart'
+import Checkout from './pages/Checkout'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -18,7 +19,7 @@ import Yx1 from './pages/Yx1';
    
 
 function App() {
-  const [showCart, setShowCart] = useState(true)
+  const [showCart, setShowCart] = useState(false)
 
   const hideCartHandler = () => {
     setShowCart(false)
@@ -44,6 +45,7 @@ function App() {
           <Route path='/speakers/zx7' element={<Zx7 />} />
           <Route path='/earphones' element={<Earphones />} />
           <Route path='/earphones/yx1' element={<Yx1 />} />
+          <Route path='/checkout' element={<Checkout />} />
         </Routes>
         <Footer />
       </Router>
