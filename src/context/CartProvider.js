@@ -105,6 +105,7 @@ const CartProvider = ({children}) => {
         removeProduct: removeProductHandler,
         removeAll: removeAllHandler
     }
+    
 
     return <CartContext.Provider
     value={cartContext}>

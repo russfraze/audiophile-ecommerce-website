@@ -2,6 +2,14 @@
 
 .cartItem {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cartItem__image {
+    height: 64px;
+    border-radius: 0.5rem;
 }
 
 .name {
@@ -21,9 +29,9 @@
     display: flex;
     align-items: center;
     
-
+    margin: 1rem 0;
     
-    max-width: fit-content;
+    /* max-width: fit-content; */
     background-color: var(--clr-dark-grey);
 }
 

@@ -5,6 +5,9 @@ import Button from '../../UI/Button'
 import CartItem from '../cart/CartItem'
 import CartContext from '../../context/CartContext'
 
+
+
+
 function Cart(props) {
     const cartData = useContext(CartContext)
 
@@ -24,9 +27,11 @@ function Cart(props) {
         cartData.removeAll()
     }
 
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
 
-    
-
+    const totalFormat = numberWithCommas(cartData.totalAmount)
     return (
         <Modal hide={props.hide}>
             <div className={styles.numRemove}>
@@ -43,8 +48,8 @@ function Cart(props) {
                     onAdd={cartProductAddHandler.bind(null, item)}
                 />)}
             <div className={styles.total}>
-                <p></p>
-                <p></p>
+                <p className='black50'>TOTAL</p>
+                <p className='black'>{`$${totalFormat}`}</p>
             </div>
 
             <a href='/checkout'>
