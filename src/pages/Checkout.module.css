@@ -3,8 +3,12 @@
 .checkout {
     display: flex;
     margin-top: 90px;
-    height: 800px;
     width: 100%;
+    background-color: var(--clr-dark-grey);
+}
+
+.checkout__panel {
+    padding: 1.5rem;
     background-color: var(--clr-white);
 }
 
@@ -12,6 +16,21 @@
     width: 100%;
     padding: 0.5rem;
     border-radius: 0.5rem;
-    border: 1px solid var(--clr-dark-coral)
+    border: 1px solid var(--clr-darker-grey)
 }
 
+.checkout__inputGroup--error input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--clr-error-red)
+}
+
+.checkout__labelError {
+    display: flex;
+    justify-content: space-between;
+}
+
+.error {
+    color: var(--clr-error-red)
+}
