@@ -45,7 +45,7 @@ function CartForm({name, price, id, amount }) {
                     <div className={styles.inputGroup__btn}>
                         <button className={styles.numBtn} id='down' onClick={decrement}><span>-</span></button>
                     </div>
-                    <input type='text' id='amount' value={amount} />
+                    <input className={styles.formGroup__input} type='text' id='amount' value={amount} />
                     <div className={styles.inputGroup__btn}>
                         <button className={styles.numBtn} id='up' onClick={increment}><span>+</span></button>
                     </div>

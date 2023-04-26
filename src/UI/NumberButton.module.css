@@ -17,10 +17,9 @@
     margin: 0 15px;
 }
 
-input {
+.formGroup__input {
     border: none;
     height: 48px;
     background-color: var(--clr-dark-grey);
     width: 15px;
-    
 }

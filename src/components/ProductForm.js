@@ -41,7 +41,7 @@ function ProductForm({name, price, id}) {
                     <div className={styles.inputGroup__btn}>
                         <span className={styles.numBtn} id='down' onClick={decrement}><span>-</span></span>
                     </div>
-                    <input type='text' id='amount' value={numberInCart} />
+                    <input className={styles.formGroup__input} type='text' id='amount' value={numberInCart} />
                     <div className={styles.inputGroup__btn}>
                         <span className={styles.numBtn} id='up' onClick={increment}><span>+</span></span>
                     </div>
