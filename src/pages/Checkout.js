@@ -2,49 +2,48 @@ import { useState, useRef } from 'react'
 import styles from './Checkout.module.css'
 import Button from '../UI/Button'
 function Checkout() {
-    const nameInputRef = useRef()
+    
+
     const [enteredName, setEnteredName] = useState('')
-    const [nameIsValid, setNameIsValid] = useState(false)
     const [nameTouched, setNameTouched] = useState(false)
+    const nameIsValid = enteredName.trim() !== ''
+    const enteredNameIsInvalid = !nameIsValid && nameTouched
+
+
 
     const [emailIsValid, setEmailIsValid] = useState(false)
     const [phoneIsValid, setPhoneIsValid] = useState(false)
 
     
- 
-    
     const nameInputChangeHandler = (e) => {
-        
+        setEnteredName(e.target.value)
+
     }
     
+    const nameInputBlurHandler = (e) => {
+        setNameTouched(true)
+    }
+
     const submitHandler = (e) => {
         e.preventDefault()
         
-        
-        
-        if(enteredNameValue.trim().length === 0){
-            setNameIsValid(false)
-            return
-        }
-        const enteredNameValue = nameInputRef.current.value
-
-        console.log(enteredNameValue)
-
-    }
-
-    const nameInputBlurHandler = (e) => {
         setNameTouched(true)
-
-        const enteredNameValue = nameInputRef.current.value
         
-        if(enteredNameValue.trim().length === 0){
-            setNameIsValid(false)
+        
+        if(!nameIsValid){
+            
             return
         }
+
+        console.log(enteredName)
+
+        setEnteredName('')
+
+        setNameTouched(false)
     }
 
-    const enteredNameIsInvalid = !nameIsValid && nameTouched
-
+    
+    
     return (
         <main className={styles.checkout}>
 
@@ -59,7 +58,7 @@ function Checkout() {
                                 <label className='black' htmlFor='name'>Name</label>
                                 {enteredNameIsInvalid && <p className={styles.error}>Please enter your name</p>}
                             </div>
-                            <input onBlur={nameInputBlurHandler} ref={nameInputRef} type='text' />
+                            <input onBlur={nameInputBlurHandler} onChange={nameInputChangeHandler} type='text' value={enteredName}/>
                         </div>
 
                         <div className={styles.checkout__inputGroup}>
