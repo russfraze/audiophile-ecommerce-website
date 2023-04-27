@@ -9,7 +9,7 @@ function Checkout() {
     const nameIsValid = enteredName.trim() !== ''
     const enteredNameIsInvalid = !nameIsValid && nameTouched
 
-
+    
 
     const [emailIsValid, setEmailIsValid] = useState(false)
     const [phoneIsValid, setPhoneIsValid] = useState(false)
