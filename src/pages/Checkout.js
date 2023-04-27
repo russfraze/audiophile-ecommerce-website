@@ -1,49 +1,85 @@
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import styles from './Checkout.module.css'
 import Button from '../UI/Button'
 function Checkout() {
-    
+
 
     const [enteredName, setEnteredName] = useState('')
     const [nameTouched, setNameTouched] = useState(false)
     const nameIsValid = enteredName.trim() !== ''
     const enteredNameIsInvalid = !nameIsValid && nameTouched
 
-    
+    const [enteredEmail, setEnteredEmail] = useState('')
+    const [emailTouched, setEmailTouched] = useState(false)
+    const emailIsValid = enteredEmail.trim() !== '' && enteredEmail.includes('@')
+    const enteredEmailIsInvalid = !emailIsValid && emailTouched
 
-    const [emailIsValid, setEmailIsValid] = useState(false)
-    const [phoneIsValid, setPhoneIsValid] = useState(false)
+    const [enteredPhone, setEnteredPhone] = useState('')
+    const [phoneTouched, setPhoneTouched] = useState(false)
+    const phoneIsValid = enteredPhone.trim().length == 10
+    const enteredPhoneIsInvalid = !phoneIsValid && phoneTouched
 
-    
+
+
+
     const nameInputChangeHandler = (e) => {
         setEnteredName(e.target.value)
 
     }
-    
+
     const nameInputBlurHandler = (e) => {
         setNameTouched(true)
     }
 
-    const submitHandler = (e) => {
-        e.preventDefault()
-        
-        setNameTouched(true)
-        
-        
-        if(!nameIsValid){
-            
-            return
-        }
 
-        console.log(enteredName)
+    //email handeler fucntions:
 
-        setEnteredName('')
-
-        setNameTouched(false)
+    const emailInputChangeHandeler = (e) => {
+        setEnteredEmail(e.target.value)
     }
 
-    
-    
+    const emailInputBlurHandeler = (e) => {
+        setEmailTouched(true)
+    }
+
+    //phone handeler functions:
+
+    const phoneInputChangeHandeler = (e) => {
+        setEnteredPhone(e.target.value)
+    }
+
+    const phoneInputBlurHandeler = (e) => {
+        setPhoneTouched(true)
+    }
+
+    const submitHandler = (e) => {
+        e.preventDefault()
+
+        setNameTouched(true)
+        setEmailTouched(true)
+
+        if (!nameIsValid) {
+            return
+        }
+        setEnteredName('')
+
+        if (!emailIsValid) {
+            return
+        }
+        setEnteredEmail('')
+
+
+        console.log(enteredName)
+        console.log(enteredEmail)
+
+
+
+
+        setNameTouched(false)
+        setEmailTouched(false)
+    }
+
+
     return (
         <main className={styles.checkout}>
 
@@ -53,22 +89,24 @@ function Checkout() {
                     <div>
                         <p className='coral'>BILLING DETAILS</p>
 
-                        <div className={ enteredNameIsInvalid ? `${styles['checkout__inputGroup--error']}` : `${styles.checkout__inputGroup}` }>
+                        <div className={enteredNameIsInvalid ? `${styles['checkout__inputGroup--error']}` : `${styles.checkout__inputGroup}`}>
                             <div className={styles.checkout__labelError}>
                                 <label className='black' htmlFor='name'>Name</label>
                                 {enteredNameIsInvalid && <p className={styles.error}>Please enter your name</p>}
                             </div>
-                            <input onBlur={nameInputBlurHandler} onChange={nameInputChangeHandler} type='text' value={enteredName}/>
+                            <input onBlur={nameInputBlurHandler} onChange={nameInputChangeHandler} type='text' value={enteredName} />
                         </div>
 
                         <div className={styles.checkout__inputGroup}>
                             <label className='black' htmlFor='name'>Email Address</label>
-                            <input type='text' />
+                            {enteredEmailIsInvalid && <p className={styles.error}>Please enter valid email</p>}
+                            <input onBlur={emailInputBlurHandeler} type='text' onChange={emailInputChangeHandeler} value={enteredEmail} />
                         </div>
 
                         <div className={styles.checkout__inputGroup}>
                             <label className='black' htmlFor='name'>Phone Number</label>
-                            <input type='text' />
+                            {enteredPhoneIsInvalid && <p className={styles.error}>Please enter valid number</p>}
+                            <input onBlur={phoneInputBlurHandeler} type='text' onChange={phoneInputChangeHandeler} value={enteredPhone} />
                         </div>
                     </div>
 
