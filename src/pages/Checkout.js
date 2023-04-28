@@ -133,7 +133,7 @@ function Checkout() {
             return
         }
         setEnteredAddress('')
-        
+
         if (!cityIsValid) {
             return
         }
@@ -148,7 +148,7 @@ function Checkout() {
             return
         }
         setEnteredCountry('')
-        
+
         console.log(enteredName)
         console.log(enteredEmail)
         console.log(enteredPhone)
@@ -236,13 +236,17 @@ function Checkout() {
                     </div>
 
                     <p className='coral'>PAYMENT DETAILS</p>
-                    <div className={styles.checkout__inputGroup}>
-                        <label className='black' htmlFor='name'>Payment Method</label>
-                        <input type='text' />
-                    </div>
-                    <div className={styles.checkout__inputGroup}>
-                        <input type='text' />
-                    </div>
+                    <fieldset>
+                        <legend className='black' htmlFor='name'>Payment Method</legend>
+                        <div className={styles.radial__field}>
+                            <input type='radio' value='e-money' name='method' id='method1'/>
+                            <p className='black'>e-Money</p>
+                        </div>
+                        <div className={styles.radial__field}>
+                            <input type='radio' value='cash' name='method' id='method2'/>
+                            <p className='black'>Cash on Delivery</p>
+                        </div>
+                    </fieldset>
 
                     <div className={styles.checkout__inputGroup}>
                         <label className='black' htmlFor='name'>e-Money Number</label>

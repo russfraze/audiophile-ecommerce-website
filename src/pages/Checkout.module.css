@@ -34,3 +34,20 @@
 .error {
     color: var(--clr-error-red)
 }
+
+.radial__field {
+    display: flex;
+    border: 1px solid var(--clr-darker-grey);
+    gap: 1rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+    
+}
+
+
+
