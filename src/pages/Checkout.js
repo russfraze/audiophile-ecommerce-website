@@ -36,6 +36,18 @@ function Checkout() {
     const countryIsValid = enteredCountry.trim() !== ''
     const enteredCountryIsInvalid = !countryIsValid && countryTouched
 
+    const [enteredMoneyNumber, setEnteredMoneyNumber] = useState('')
+    const [moneyNumberTouched, setMoneyNumberTouched] = useState(false)
+    const moneyNumberIsValid = enteredMoneyNumber.trim().length == 9
+    const enteredMoneyNumberIsInvalid = !moneyNumberIsValid && moneyNumberTouched
+
+    const [enteredMoneyPin, setEnteredMoneyPin] = useState('')
+    const [moneyPinTouched, setMoneyPinTouched] = useState(false)
+    const moneyPinIsValid = enteredMoneyPin.trim().length == 4
+    const enteredMoneyPinIsInvalid = !moneyPinIsValid && moneyPinTouched
+
+
+
 
 
 
@@ -103,6 +115,25 @@ function Checkout() {
         setCountryTouched(true)
     }
 
+    //------------------------------------------PAYMENT
+
+    const moneyNumInputChangeHandler = (e) => {
+        setEnteredMoneyNumber(e.target.value)
+    }
+
+    const moneyNumInputBlurHandler = () => {
+        setMoneyNumberTouched(true)
+    }
+
+    const moneyPinInputChangeHandler = (e) => {
+        setEnteredMoneyPin(e.target.value)
+    }
+
+    const moneyPinInputBlurHandeler = () => {
+        setMoneyPinTouched(true)
+    }
+
+
     const submitHandler = (e) => {
         e.preventDefault()
 
@@ -113,6 +144,8 @@ function Checkout() {
         setZipTouched(true)
         setCityTouched(true)
         setCountryTouched(true)
+        setMoneyPinTouched(true)
+        setMoneyNumberTouched(true)
 
         if (!nameIsValid) {
             return
@@ -149,6 +182,16 @@ function Checkout() {
         }
         setEnteredCountry('')
 
+        if (!moneyNumberIsValid) {
+            return
+        }
+        setEnteredMoneyNumber('')
+
+        if (!moneyPinIsValid) {
+            return
+        }
+        setEnteredMoneyPin('')
+
         console.log(enteredName)
         console.log(enteredEmail)
         console.log(enteredPhone)
@@ -156,6 +199,8 @@ function Checkout() {
         console.log(enteredCity)
         console.log(enteredZip)
         console.log(enteredCountry)
+        console.log(enteredMoneyNumber)
+        console.log(enteredMoneyPin)
 
         setNameTouched(false)
         setEmailTouched(false)
@@ -164,6 +209,8 @@ function Checkout() {
         setCityTouched(false)
         setZipTouched(false)
         setCountryTouched(false)
+        setMoneyNumberTouched(false)
+        setMoneyPinTouched(false)
     }
 
 
@@ -239,23 +286,29 @@ function Checkout() {
                     <fieldset>
                         <legend className='black' htmlFor='name'>Payment Method</legend>
                         <div className={styles.radial__field}>
-                            <input type='radio' value='e-money' name='method' id='method1'/>
+                            <input type='radio' value='e-money' name='method' id='method1' />
                             <p className='black'>e-Money</p>
                         </div>
                         <div className={styles.radial__field}>
-                            <input type='radio' value='cash' name='method' id='method2'/>
+                            <input type='radio' value='cash' name='method' id='method2' />
                             <p className='black'>Cash on Delivery</p>
                         </div>
                     </fieldset>
 
                     <div className={styles.checkout__inputGroup}>
-                        <label className='black' htmlFor='name'>e-Money Number</label>
-                        <input type='text' />
+                        <div className={styles.checkout__labelError}>
+                            <label className='black' htmlFor='name'>e-Money Number</label>
+                            {enteredMoneyNumberIsInvalid && <p className={styles.error}>number error</p>}
+                        </div>
+                        <input onBlur={moneyNumInputBlurHandler} onChange={moneyNumInputChangeHandler} value={enteredMoneyNumber} type='text' />
                     </div>
 
                     <div className={styles.checkout__inputGroup}>
-                        <label className='black' htmlFor='name'>e-Money PIN</label>
-                        <input type='text' />
+                        <div className={styles.checkout__labelError}>
+                            <label className='black' htmlFor='name'>e-Money PIN</label>
+                            {enteredMoneyPinIsInvalid && <p className={styles.error}>Please enter valid country</p>}
+                        </div>
+                        <input onBlur={moneyPinInputBlurHandeler} onChange={moneyPinInputChangeHandler} value={enteredMoneyPin} type='text' />
                     </div>
 
                 </form>
