@@ -84,7 +84,6 @@
     .product {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        /* gap: 7rem; */
         margin-bottom: 100px;
     }
 
@@ -92,7 +91,6 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1;
-        /* gap: 7rem; */
         margin-bottom: 100px;
     }
 
