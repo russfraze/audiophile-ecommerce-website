@@ -2,18 +2,132 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
     margin-top: 90px;
-
     padding: 50px;
     background-color: var(--clr-second-black);
 }
 
+.earphones {
+    margin-top: 40px;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 75px;
+}
+
+.product img {
+    border-radius: 0.5rem;
+}
+
+.product__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    text-align: center;
+}
+
+.product__b {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 75px;
+}
+
+.product__b img {
+    border-radius: 0.5rem;
+}
+
+.product__infoB {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    text-align: center;
+}
+
+
 @media (min-width: 768px) {
-    
+    .headphones {
+        margin-top: 70px;
+    }
+
+    .product__info {
+        margin-top: 20px;
+    }
+
+    .product__infoB {
+        margin-top: 20px;
+    }
+
+    .product__info p {
+        padding: 0 60px;
+    }
+
+    .product__infoB p {
+        padding: 0 60px;
+    }
 }
 
 @media (min-width: 1440px) {
+    .product {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 100px;
+    }
 
+    .product__b {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1;
+        margin-bottom: 100px;
+    }
+
+    .product img {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .imageB {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    .product__infoB {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .product__info {
+        align-items: flex-start;
+        text-align: start;
+        justify-content: center;
+
+        padding-left: 100px;
+       
+    }
+
+    .product__infoB {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+
+        align-items: flex-start;
+        text-align: start;
+        justify-content: center;
+
+        padding-right: 100px;
+    }
+
+    .product__info p {
+        padding: 0;
+    }
+
+    .product__infoB p {
+        padding: 0;
+    }
     
 }
