@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigate} from 'react-router-dom' 
 import styles from './Navbar.module.css'
 import { ReactComponent as CartIcon } from '../assets/shared/desktop/icon-cart.svg'
 import { ReactComponent as Burger } from '../assets/shared/tablet/icon-hamburger.svg'
@@ -8,6 +9,8 @@ import { ReactComponent as Logo } from '../assets/shared/desktop/logo.svg'
 
 function Navbar({show}) {
     const [navIsOpen, setNavIsOpen] = useState(false)
+
+    const navigate = useNavigate()
 
     const burgerClick = () => {
         setNavIsOpen(!navIsOpen)
@@ -20,10 +23,10 @@ function Navbar({show}) {
                 <Burger onClick={burgerClick} className={styles.burger} />
                 <Logo className={styles.logo} />
                 <ul>
-                    <li>home</li>
-                    <li>headphones</li>
-                    <li>speakers</li>
-                    <li>earphones</li>
+                    <li onClick={() => navigate('/')} >home</li>
+                    <li onClick={() => navigate('/headphones')}>headphones</li>
+                    <li onClick={() => navigate('/speakers')}>speakers</li>
+                    <li onClick={() => navigate('/earphones')}>earphones</li>
                 </ul>
                 <CartIcon onClick={show} className={styles.cart} />
 

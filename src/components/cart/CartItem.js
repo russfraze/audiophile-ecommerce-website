@@ -1,8 +1,4 @@
-import {useContext} from 'react'
 import styles from './CartItem.module.css'
-import CartForm from './CartForm'
-
-
 import yx1Cart from '../../assets/cart/image-yx1-earphones.jpg'
 import xx59Cart from '../../assets/cart/image-xx59-headphones.jpg'
 import mark1Cart from '../../assets/cart/image-xx99-mark-one-headphones.jpg'
@@ -37,7 +33,7 @@ const cartImages = [
     },
 ]
 
-function CartItem({ image, name, total, id, amount, onRemove, onAdd }) {
+function CartItem({ total, id, amount, onRemove, onAdd }) {
 
     let cartImage
     let cartName

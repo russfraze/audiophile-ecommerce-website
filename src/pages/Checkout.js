@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import styles from './Checkout.module.css'
 import Button from '../UI/Button'
+import CartSummary from '../components/checkout/CartSummary'
 function Checkout() {
     const [enteredName, setEnteredName] = useState('')
     const [nameTouched, setNameTouched] = useState(false)
@@ -316,6 +317,7 @@ function Checkout() {
 
             <div className={styles.checkout__panel}>
                 <h3 className='black'>Summary</h3>
+                <CartSummary />
                 <Button onClick={submitHandler} stretch={true}>continue & pay</Button>
             </div>
         </main>

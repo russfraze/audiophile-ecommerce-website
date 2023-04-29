@@ -1,4 +1,5 @@
 import { useContext } from 'react'
+import {Link} from 'react-router-dom'
 import styles from './Cart.module.css'
 import Modal from '../../UI/Modal'
 import Button from '../../UI/Button'
@@ -52,9 +53,9 @@ function Cart(props) {
                 <p className='black'>{`$${totalFormat}`}</p>
             </div>
 
-            <a href='/checkout'>
+            <Link to='/checkout'>
                 <Button  stretch={true}>checkout</Button>
-            </a>
+            </Link>
 
         </Modal>
     )
