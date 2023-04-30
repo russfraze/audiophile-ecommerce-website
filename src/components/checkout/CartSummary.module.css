@@ -1,0 +1,22 @@
+.summaryItems {
+    padding: 1rem 0;
+}
+
+.totals {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+
+.total__item {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.total__grand {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0 1.5rem 0;
+}

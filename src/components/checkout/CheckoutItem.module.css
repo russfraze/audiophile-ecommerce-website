@@ -1,0 +1,30 @@
+@import '../../vars.css';
+
+.cartItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cartItem__image {
+    height: 64px;
+    border-radius: 0.5rem;
+}
+
+.name {
+    color: var(--clr-second-black);
+}
+
+.total {
+    color: var(--clr-second-black);
+    opacity: 50%;
+}
+
+.imageName {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+

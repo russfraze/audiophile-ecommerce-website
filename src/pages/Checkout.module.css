@@ -10,6 +10,7 @@
 .checkout__panel {
     padding: 1.5rem;
     background-color: var(--clr-white);
+    border-radius: 0.5rem;
 }
 
 .checkout__inputGroup input {
