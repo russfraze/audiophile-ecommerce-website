@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import styles from './Cart.module.css'
 import Modal from '../../UI/Modal'
 import Button from '../../UI/Button'
@@ -10,6 +10,15 @@ import CartContext from '../../context/CartContext'
 
 function Cart(props) {
     const cartData = useContext(CartContext)
+    // const [cart, setCart] = useState([])
+
+    // useEffect(() => {
+    //     const localCart = JSON.parse(localStorage.getItem('localCart'))
+    //     setCart(localCart)
+    //     console.log('local cart', localCart)
+    // },[])
+
+    
 
     const cartLength = cartData.products.length
 

@@ -1,12 +1,10 @@
-import {useReducer} from 'react'
+import {useReducer, useEffect} from 'react'
 import CartContext from './CartContext'
 
 
-const cartDefault = {
-    products: [],
-    totalAmount: 0,
-}
+const cartDefault = JSON.parse(localStorage.getItem('localCart'))
 
+console.log('CART DEFAULT', cartDefault)
 
 const cartReducer = (state, action) => {
 
@@ -105,6 +103,10 @@ const CartProvider = ({children}) => {
         removeProduct: removeProductHandler,
         removeAll: removeAllHandler
     }
+
+    useEffect(() => {
+        localStorage.setItem('localCart', JSON.stringify(cart))
+    },[cart])
     
 
     return <CartContext.Provider
