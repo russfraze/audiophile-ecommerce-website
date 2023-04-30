@@ -51,6 +51,7 @@ function Cart(props) {
                 <CartItem
                     name={item.name}
                     id={item.id}
+                    key={item.id}
                     total={item.total}
                     amount={item.amount}
                     onRemove={cartProductRemoveHandler.bind(null, item.id)}

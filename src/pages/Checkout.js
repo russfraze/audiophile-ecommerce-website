@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import styles from './Checkout.module.css'
 import Button from '../UI/Button'
 import CartSummary from '../components/checkout/CartSummary'
@@ -47,11 +47,19 @@ function Checkout() {
     const moneyPinIsValid = enteredMoneyPin.trim().length == 4
     const enteredMoneyPinIsInvalid = !moneyPinIsValid && moneyPinTouched
 
+    const [formIsValid, setFormIsValid] = useState(false)
 
+    useEffect(() => {
+        if (nameIsValid && emailIsValid && phoneIsValid && addressIsValid && zipIsValid
+            && cityIsValid && countryIsValid && moneyNumberIsValid && moneyPinIsValid ) {
+                setFormIsValid(true)
+        } else {
+            setFormIsValid(false)
+        }
+    },[nameIsValid, emailIsValid, phoneIsValid, addressIsValid, zipIsValid, cityIsValid,
+    countryIsValid, moneyNumberIsValid, moneyPinIsValid])
 
-
-
-
+    console.log('FORM IS VALID', formIsValid)
 
 
     const nameInputChangeHandler = (e) => {
@@ -318,7 +326,8 @@ function Checkout() {
             <div className={styles.checkout__panel}>
                 <h3 className='black'>Summary</h3>
                 <CartSummary />
-                <Button onClick={submitHandler} stretch={true}>continue & pay</Button>
+                {formIsValid && <Button disabled={!formIsValid} onClick={submitHandler} stretch={true}>continue & pay</Button>}
+                
             </div>
         </main>
     )
