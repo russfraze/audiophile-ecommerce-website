@@ -1,43 +1,29 @@
+import styles from './ThankYou.module.css'
 import { useContext } from 'react'
-import styles from './Cart.module.css'
 import Modal from '../../UI/Modal'
 import Button from '../../UI/Button'
 import CartItem from '../cart/CartItem'
 import CartContext from '../../context/CartContext'
+import { ReactComponent as CheckIcon} from '../../assets/checkout/icon-order-confirmation.svg'
 
-
-
-
-function Cart(props) {
+function ThankYou(props) {
     const cartData = useContext(CartContext)
 
     const cartLength = cartData.products.length
 
-    // const navigate = useNavigate()
+    // function numberWithCommas(x) {
+    //     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    // }
 
-    const cartProductRemoveHandler = (id) => {
-        cartData.removeProduct(id)
-    }
-
-    const cartProductAddHandler = (item) => {
-        cartData.addProduct(item)
-    }
-
-    const cartRemoveAllHaldler = () => {
-        cartData.removeAll()
-    }
-
-    function numberWithCommas(x) {
-        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    }
-
-    const totalFormat = numberWithCommas(cartData.totalAmount)
     return (
         <Modal hide={props.hide}>
-            <div className={styles.numRemove}>
+            {/* <div className={styles.numRemove}>
                 <p className={`${styles.cartLength} black`}>{`CART (${cartLength})`}</p>
-                <p className={`${styles.removeAll} black50`} onClick={cartRemoveAllHaldler}>Remove all</p>
-            </div>
+                <p className={`${styles.removeAll} black50`}>Remove all</p>
+            </div> */}
+            <CheckIcon />
+            <h3 className='black'>Thank you for your order</h3>
+            <p className='black50'>You will receive an email confirmation shortly.</p>
             {cartData.products.map(item =>
                 <CartItem
                     name={item.name}
@@ -45,12 +31,11 @@ function Cart(props) {
                     key={item.id}
                     total={item.total}
                     amount={item.amount}
-                    onRemove={cartProductRemoveHandler.bind(null, item.id)}
-                    onAdd={cartProductAddHandler.bind(null, item)}
+                   
                 />)}
             <div className={styles.total}>
                 <p className='black50'>TOTAL</p>
-                <p className='black'>{`$${totalFormat}`}</p>
+                {/* <p className='black'>{`$${totalFormat}`}</p> */}
             </div>
 
             <a href='/checkout'>
@@ -61,4 +46,4 @@ function Cart(props) {
     )
 }
 
-export default Cart
+export default ThankYou

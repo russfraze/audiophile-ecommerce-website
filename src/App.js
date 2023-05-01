@@ -16,10 +16,12 @@ import Zx9 from './pages/Zx9'
 import Zx7 from './pages/Zx7'
 import Earphones from './pages/Earphones'
 import Yx1 from './pages/Yx1';
+import ThankYou from './components/checkout/ThankYou';
    
 
 function App() {
   const [showCart, setShowCart] = useState(false)
+  const [showThankYou, setShowThankYou] = useState(false)
 
   const hideCartHandler = () => {
     setShowCart(false)
@@ -29,9 +31,19 @@ function App() {
     setShowCart(true)
   }
 
+  const hideThankYouHandler = () => {
+    setShowThankYou(false)
+  }
+
+  const showThankYouHandler = () => {
+    setShowThankYou(true)
+  }
+
+
   return (
     <CartProvider>
         {showCart && <Cart hide={hideCartHandler}/>}
+        {showThankYou && <ThankYou hide={hideThankYouHandler}/>}
       <Router>
         <Navbar show={showCartHandler}/>
         <Routes>
@@ -45,7 +57,7 @@ function App() {
           <Route path='/speakers/zx7' element={<Zx7 />} />
           <Route path='/earphones' element={<Earphones />} />
           <Route path='/earphones/yx1' element={<Yx1 />} />
-          <Route path='/checkout' element={<Checkout />} />
+          <Route path='/checkout' element={<Checkout show={showThankYouHandler}/>} />
         </Routes>
         <Footer />
       </Router>

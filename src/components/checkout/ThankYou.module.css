@@ -1,0 +1,21 @@
+.cartLength {
+    font-weight: var(--fw-bold);
+}
+
+.numRemove {
+    display: flex;
+    justify-content: space-between;
+}
+
+.removeAll {
+    
+}
+
+.removeAll:hover {
+    cursor: pointer;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+}

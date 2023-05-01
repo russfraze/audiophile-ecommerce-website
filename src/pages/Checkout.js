@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import styles from './Checkout.module.css'
 import Button from '../UI/Button'
 import CartSummary from '../components/checkout/CartSummary'
-function Checkout() {
+function Checkout(props) {
     const [enteredName, setEnteredName] = useState('')
     const [nameTouched, setNameTouched] = useState(false)
     const nameIsValid = enteredName.trim() !== ''
@@ -220,6 +220,8 @@ function Checkout() {
         setCountryTouched(false)
         setMoneyNumberTouched(false)
         setMoneyPinTouched(false)
+
+        props.show()
     }
 
 
