@@ -5,6 +5,7 @@ import mark1Cart from '../../assets/cart/image-xx99-mark-one-headphones.jpg'
 import mark2Cart from '../../assets/cart/image-xx99-mark-two-headphones.jpg'
 import zx7Cart from '../../assets/cart/image-zx7-speaker.jpg'
 import zx9Cart from '../../assets/cart/image-zx9-speaker.jpg'
+import numberWithCommas from '../../helpers/NumberFormat'
 
 const cartImages = [
     {
@@ -41,6 +42,8 @@ function CheckoutItem({ total, id, amount }) {
     console.log('rrr', cartImages[1].name)
     console.log('sss', id)
 
+    const totalFormat = numberWithCommas(total)
+
     if (id === 1) {
         cartImage = yx1Cart
         cartName = cartImages[0].name
@@ -73,7 +76,7 @@ function CheckoutItem({ total, id, amount }) {
                 <img className={styles.cartItem__image} src={cartImage} />
                 <div>
                     <p className={styles.name}>{cartName}</p>
-                    <p className={styles.total}>{total}</p>
+                    <p className={styles.total}>{`$${totalFormat}`}</p>
                 </div>
             </div>
 
