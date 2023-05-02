@@ -51,13 +51,13 @@ function Checkout(props) {
 
     useEffect(() => {
         if (nameIsValid && emailIsValid && phoneIsValid && addressIsValid && zipIsValid
-            && cityIsValid && countryIsValid && moneyNumberIsValid && moneyPinIsValid ) {
-                setFormIsValid(true)
+            && cityIsValid && countryIsValid && moneyNumberIsValid && moneyPinIsValid) {
+            setFormIsValid(true)
         } else {
             setFormIsValid(false)
         }
-    },[nameIsValid, emailIsValid, phoneIsValid, addressIsValid, zipIsValid, cityIsValid,
-    countryIsValid, moneyNumberIsValid, moneyPinIsValid])
+    }, [nameIsValid, emailIsValid, phoneIsValid, addressIsValid, zipIsValid, cityIsValid,
+        countryIsValid, moneyNumberIsValid, moneyPinIsValid])
 
     console.log('FORM IS VALID', formIsValid)
 
@@ -231,97 +231,105 @@ function Checkout(props) {
             <div className={styles.checkout__panel}>
                 <h3 className='black'>Checkout</h3>
                 <form>
-                    <div>
+                    <div className={styles.formGroup}>
                         <p className='coral'>BILLING DETAILS</p>
+                        <div className={styles.billing__formGroup}>
 
-                        <div className={enteredNameIsInvalid ? `${styles['checkout__inputGroup--error']}` : `${styles.checkout__inputGroup}`}>
-                            <div className={styles.checkout__labelError}>
-                                <label className='black' htmlFor='name'>Name</label>
-                                {enteredNameIsInvalid && <p className={styles.error}>Please enter your name</p>}
+                            <div className={enteredNameIsInvalid ? `${styles['checkout__inputGroup--error']}` : `${styles.checkout__inputGroup}`}>
+                                <div className={styles.checkout__labelError}>
+                                    <label className='black' htmlFor='name'>Name</label>
+                                    {enteredNameIsInvalid && <p className={styles.error}>Please enter your name</p>}
+                                </div>
+                                <input onBlur={nameInputBlurHandler} onChange={nameInputChangeHandler} type='text' value={enteredName} />
                             </div>
-                            <input onBlur={nameInputBlurHandler} onChange={nameInputChangeHandler} type='text' value={enteredName} />
-                        </div>
 
-                        <div className={enteredEmailIsInvalid ? `${styles['checkout__inputGroup--error']}` : `${styles.checkout__inputGroup}`}>
-                            <div className={styles.checkout__labelError}>
-                                <label className='black' htmlFor='name'>Email Address</label>
-                                {enteredEmailIsInvalid && <p className={styles.error}>Please enter valid email</p>}
+                            <div className={enteredEmailIsInvalid ? `${styles['checkout__inputGroup--error']}` : `${styles.checkout__inputGroup}`}>
+                                <div className={styles.checkout__labelError}>
+                                    <label className='black' htmlFor='name'>Email Address</label>
+                                    {enteredEmailIsInvalid && <p className={styles.error}>Please enter valid email</p>}
+                                </div>
+                                <input onBlur={emailInputBlurHandeler} type='text' onChange={emailInputChangeHandeler} value={enteredEmail} />
                             </div>
-                            <input onBlur={emailInputBlurHandeler} type='text' onChange={emailInputChangeHandeler} value={enteredEmail} />
-                        </div>
 
-                        <div className={enteredPhoneIsInvalid ? `${styles['checkout__inputGroup--error']}` : `${styles.checkout__inputGroup}`}>
-                            <div className={styles.checkout__labelError}>
-                                <label className='black' htmlFor='name'>Phone Number</label>
-                                {enteredPhoneIsInvalid && <p className={styles.error}>enter valid number</p>}
+                            <div className={enteredPhoneIsInvalid ? `${styles['checkout__inputGroup--error']}` : `${styles.checkout__inputGroup}`}>
+                                <div className={styles.checkout__labelError}>
+                                    <label className='black' htmlFor='name'>Phone Number</label>
+                                    {enteredPhoneIsInvalid && <p className={styles.error}>enter valid number</p>}
+                                </div>
+                                <input onBlur={phoneInputBlurHandeler} type='text' onChange={phoneInputChangeHandeler} value={enteredPhone} />
                             </div>
-                            <input onBlur={phoneInputBlurHandeler} type='text' onChange={phoneInputChangeHandeler} value={enteredPhone} />
                         </div>
                     </div>
 
-
-                    <p className='coral'>SHIPPING INFO</p>
-                    <div className={enteredAddressIsInvalid ? `${styles['checkout__inputGroup--error']}` : `${styles.checkout__inputGroup}`}>
-                        <div className={styles.checkout__labelError}>
-                            <label className='black' htmlFor='name'>Your Address</label>
-                            {enteredAddressIsInvalid && <p className={styles.error}>Please enter valid address</p>}
+                    <div className={styles.formGroup}>
+                        <p className='coral'>SHIPPING INFO</p>
+                        <div className={enteredAddressIsInvalid ? `${styles['checkout__inputGroup--error']}` : `${styles.checkout__inputGroup}`}>
+                            <div className={styles.checkout__labelError}>
+                                <label className='black' htmlFor='name'>Your Address</label>
+                                {enteredAddressIsInvalid && <p className={styles.error}>Please enter valid address</p>}
+                            </div>
+                            <input onBlur={addressInputBlurHandler} onChange={addressInputChangeHandler} value={enteredAddress} type='text' />
                         </div>
-                        <input onBlur={addressInputBlurHandler} onChange={addressInputChangeHandler} value={enteredAddress} type='text' />
+                        <div className={styles.shipping__formGroup}>
+
+                            <div className={enteredZipIsInvalid ? `${styles['checkout__inputGroup--error']}` : `${styles.checkout__inputGroup}`}>
+                                <div className={styles.checkout__labelError}>
+                                    <label className='black' htmlFor='name'>ZIP code</label>
+                                    {enteredZipIsInvalid && <p className={styles.error}>Please enter valid zipcode</p>}
+                                </div>
+                                <input onBlur={zipInputBlurHandler} onChange={zipInputChangeHandler} value={enteredZip} type='text' />
+                            </div>
+
+                            <div className={enteredCityIsInvalid ? `${styles['checkout__inputGroup--error']}` : `${styles.checkout__inputGroup}`}>
+                                <div className={styles.checkout__labelError}>
+                                    <label className='black' htmlFor='name'>City</label>
+                                    {enteredCityIsInvalid && <p className={styles.error}>Please enter valid city</p>}
+                                </div>
+                                <input onBlur={cityInputBlurHandler} onChange={cityInputChangeHandeler} value={enteredCity} type='text' />
+                            </div>
+
+                            <div className={enteredCountryIsInvalid ? `${styles['checkout__inputGroup--error']}` : `${styles.checkout__inputGroup}`}>
+                                <div className={styles.checkout__labelError}>
+                                    <label className='black' htmlFor='name'>Country</label>
+                                    {enteredCountryIsInvalid && <p className={styles.error}>Please enter valid country</p>}
+                                </div>
+                                <input onBlur={countryInputBlurHandeler} onChange={countryInputChangeHandeler} value={enteredCountry} type='text' />
+                            </div>
+                        </div>
                     </div>
 
-                    <div className={enteredZipIsInvalid ? `${styles['checkout__inputGroup--error']}` : `${styles.checkout__inputGroup}`}>
-                        <div className={styles.checkout__labelError}>
-                            <label className='black' htmlFor='name'>ZIP code</label>
-                            {enteredZipIsInvalid && <p className={styles.error}>Please enter valid zipcode</p>}
+                    <div className={styles.formGroup}>
+                        <p className='coral'>PAYMENT DETAILS</p>
+                        <div className={styles.payment__formGroup}>
+                            <legend className='black' htmlFor='name'>Payment Method</legend>
+                            <fieldset className={styles.radioSet}>
+                                <div className={styles.radial__field}>
+                                    <input type='radio' value='e-money' name='method' id='method1' />
+                                    <p className='black'>e-Money</p>
+                                </div>
+                                <div className={styles.radial__field}>
+                                    <input type='radio' value='cash' name='method' id='method2' />
+                                    <p className='black'>Cash on Delivery</p>
+                                </div>
+                            </fieldset>
+
+                            <div className={styles.checkout__inputGroup}>
+                                <div className={styles.checkout__labelError}>
+                                    <label className='black' htmlFor='name'>e-Money Number</label>
+                                    {enteredMoneyNumberIsInvalid && <p className={styles.error}>number error</p>}
+                                </div>
+                                <input onBlur={moneyNumInputBlurHandler} onChange={moneyNumInputChangeHandler} value={enteredMoneyNumber} type='text' />
+                            </div>
+
+                            <div className={styles.checkout__inputGroup}>
+                                <div className={styles.checkout__labelError}>
+                                    <label className='black' htmlFor='name'>e-Money PIN</label>
+                                    {enteredMoneyPinIsInvalid && <p className={styles.error}>Please enter valid country</p>}
+                                </div>
+                                <input onBlur={moneyPinInputBlurHandeler} onChange={moneyPinInputChangeHandler} value={enteredMoneyPin} type='text' />
+                            </div>
                         </div>
-                        <input onBlur={zipInputBlurHandler} onChange={zipInputChangeHandler} value={enteredZip} type='text' />
                     </div>
-
-                    <div className={enteredCityIsInvalid ? `${styles['checkout__inputGroup--error']}` : `${styles.checkout__inputGroup}`}>
-                        <div className={styles.checkout__labelError}>
-                            <label className='black' htmlFor='name'>City</label>
-                            {enteredCityIsInvalid && <p className={styles.error}>Please enter valid city</p>}
-                        </div>
-                        <input onBlur={cityInputBlurHandler} onChange={cityInputChangeHandeler} value={enteredCity} type='text' />
-                    </div>
-
-                    <div className={enteredCountryIsInvalid ? `${styles['checkout__inputGroup--error']}` : `${styles.checkout__inputGroup}`}>
-                        <div className={styles.checkout__labelError}>
-                            <label className='black' htmlFor='name'>Country</label>
-                            {enteredCountryIsInvalid && <p className={styles.error}>Please enter valid country</p>}
-                        </div>
-                        <input onBlur={countryInputBlurHandeler} onChange={countryInputChangeHandeler} value={enteredCountry} type='text' />
-                    </div>
-
-                    <p className='coral'>PAYMENT DETAILS</p>
-                    <fieldset>
-                        <legend className='black' htmlFor='name'>Payment Method</legend>
-                        <div className={styles.radial__field}>
-                            <input type='radio' value='e-money' name='method' id='method1' />
-                            <p className='black'>e-Money</p>
-                        </div>
-                        <div className={styles.radial__field}>
-                            <input type='radio' value='cash' name='method' id='method2' />
-                            <p className='black'>Cash on Delivery</p>
-                        </div>
-                    </fieldset>
-
-                    <div className={styles.checkout__inputGroup}>
-                        <div className={styles.checkout__labelError}>
-                            <label className='black' htmlFor='name'>e-Money Number</label>
-                            {enteredMoneyNumberIsInvalid && <p className={styles.error}>number error</p>}
-                        </div>
-                        <input onBlur={moneyNumInputBlurHandler} onChange={moneyNumInputChangeHandler} value={enteredMoneyNumber} type='text' />
-                    </div>
-
-                    <div className={styles.checkout__inputGroup}>
-                        <div className={styles.checkout__labelError}>
-                            <label className='black' htmlFor='name'>e-Money PIN</label>
-                            {enteredMoneyPinIsInvalid && <p className={styles.error}>Please enter valid country</p>}
-                        </div>
-                        <input onBlur={moneyPinInputBlurHandeler} onChange={moneyPinInputChangeHandler} value={enteredMoneyPin} type='text' />
-                    </div>
-
                 </form>
             </div>
 
@@ -329,7 +337,7 @@ function Checkout(props) {
                 <h3 className='black'>Summary</h3>
                 <CartSummary />
                 {formIsValid && <Button disabled={!formIsValid} onClick={submitHandler} stretch={true}>continue & pay</Button>}
-                
+
             </div>
         </main>
     )

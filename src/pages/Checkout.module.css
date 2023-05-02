@@ -8,6 +8,9 @@
 }
 
 .checkout__panel {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
     padding: 1.5rem;
     background-color: var(--clr-white);
     border-radius: 0.5rem;
@@ -51,4 +54,59 @@ fieldset {
 }
 
 
+.billing__formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.shipping__formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.payment__formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 2rem;
+}
+
+.radioSet {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .billing__formGroup {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .shipping__formGroup {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+
+    .payment__formGroup {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 1440px) {
+
+}  
 
