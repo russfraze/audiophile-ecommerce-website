@@ -33,7 +33,7 @@ function Cart(props) {
 
     const totalFormat = numberWithCommas(cartData.totalAmount)
     return (
-        <Modal hide={props.hide}>
+        <Modal hide={props.hide} isCart={props.isCart}>
             <div className={styles.numRemove}>
                 <p className={`${styles.cartLength} black`}>{`CART (${cartLength})`}</p>
                 <p className={`${styles.removeAll} black50`} onClick={cartRemoveAllHaldler}>Remove all</p>

@@ -44,3 +44,23 @@
     background-color: var(--clr-second-black);
     padding: 1rem;
 }
+
+@media (min-width: 768px) {
+
+
+    .yourOrder {
+        display: flex;
+    }
+
+    .yourOrder__list {
+        width: 60%;
+    }
+
+    .yourOrder__total {
+        width: 40%
+    }
+}
+
+@media (min-width: 1440px) {
+
+}  

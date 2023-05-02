@@ -6,8 +6,9 @@ const Backdrop = (props) => {
 }
 
 const ModalOverlay = (props) => {
-    return <div className={styles.modal}>
-        <div className={styles.content}>{props.children}</div>
+    const isCart = props.isCart
+    return <div className={ !isCart ? `${styles.modalThankYou}` : `${styles.modal}`}>
+        <div className={ !isCart && `${styles.contentThankYou}`}>{props.children}</div>
     </div>
 }
 
@@ -17,7 +18,7 @@ function Modal(props) {
     return (
         <>
             {ReactDOM.createPortal(<Backdrop onClick={props.hide}/>, portalElement)}
-            {ReactDOM.createPortal(<ModalOverlay>{props.children}</ModalOverlay>, portalElement)}
+            {ReactDOM.createPortal(<ModalOverlay isCart={props.isCart}>{props.children}</ModalOverlay>, portalElement)}
         </>
     )
 }

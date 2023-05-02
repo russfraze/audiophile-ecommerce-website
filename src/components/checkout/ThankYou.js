@@ -1,5 +1,5 @@
 import styles from './ThankYou.module.css'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import Modal from '../../UI/Modal'
 import Button from '../../UI/Button'
 import CheckoutItem from '../checkout/ CheckoutItem'
@@ -8,6 +8,7 @@ import { ReactComponent as CheckIcon } from '../../assets/checkout/icon-order-co
 
 function ThankYou(props) {
     const cartData = useContext(CartContext)
+    const [viewLess, setViewLess] = useState(true)
 
     const showOther = cartData.products.length > 1
     const otherCount = cartData.products.length - 1
@@ -32,7 +33,8 @@ function ThankYou(props) {
             <div className={styles.yourOrder}>
 
                 <div className={styles.yourOrder__list}>
-                    {/* {cartData.products.map(item =>
+
+                    {!viewLess && cartData.products.map(item =>
                         <CheckoutItem
                             name={item.name}
                             id={item.id}
@@ -40,16 +42,21 @@ function ThankYou(props) {
                             total={item.total}
                             amount={item.amount}
 
-                        />)} */}
-                    <CheckoutItem
+                        />)}
+                    {viewLess && <CheckoutItem
                         name={cartData.products[0].name}
                         id={cartData.products[0].id}
                         total={cartData.products[0].total}
                         amount={cartData.products[0].amount}
-                    />
+                    />}
                     <div className={styles.line}></div>
                     {showOther && <div className={styles.yourOrder__otherList}>
-                        <p className='black50'>and {otherCount} other item(s)</p>
+                        <p onClick={() => setViewLess(false)}className='black50'>and {otherCount} other item(s)</p>
+
+                        {/* fix this feature later */}
+                        {/* { viewLess ? <p onClick={() => setViewLess(false)}className='black50'>and {otherCount} other item(s)</p>
+                        : <p onClick={() => setViewLess(true)}className='black50'>View less</p>} */}
+
                     </div>}
                 </div>
                 <div className={styles.yourOrder__total}>
