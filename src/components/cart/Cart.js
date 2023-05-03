@@ -32,8 +32,10 @@ function Cart(props) {
     }
 
     const totalFormat = numberWithCommas(cartData.totalAmount)
+
+    console.log('isNavDrop from cart', props.isNavDrop)
     return (
-        <Modal hide={props.hide} isCart={props.isCart}>
+        <Modal hide={props.hide} isCart={props.isCart} isNavDrop={props.isNavDrop} isThank={props.isThank}>
             <div className={styles.numRemove}>
                 <p className={`${styles.cartLength} black`}>{`CART (${cartLength})`}</p>
                 <p className={`${styles.removeAll} black50`} onClick={cartRemoveAllHaldler}>Remove all</p>

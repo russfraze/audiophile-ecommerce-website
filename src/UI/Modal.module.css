@@ -1,3 +1,5 @@
+
+/* cart styles */
 .backdrop {
     position: fixed;
     top: 0;
@@ -19,6 +21,42 @@
     z-index: 9999;
 }
 
+
+
+.backdropNav {
+    position: fixed;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+
+
+
+
+/* edit this  */
+.modalNavDrop {
+    position: fixed;
+    width: 100%;
+    background-color: var(--clr-white);
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    z-index: 9999;
+    height: 100vh;
+    overflow-y: scroll;
+}
+.contentNavDrop {
+    height: 850px;
+    /* overflow-y: scroll; */
+}
+
+
+
+
 .modalThankYou {
     position: fixed;
     width: 90%;
@@ -37,7 +75,15 @@
 }  
 
 
+
+
 @media (min-width: 768px) {
+
+    .modalNavDrop {
+      
+        height: 430px;
+        
+    }
     .modalThankYou {
         position: fixed;
         top: 150px;

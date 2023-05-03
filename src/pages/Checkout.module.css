@@ -1,5 +1,11 @@
 @import '../vars.css';
 
+.goBack {
+    position: fixed;
+    top: 98px;
+    left: 300px;
+}
+
 .checkout {
     display: flex;
     margin-top: 90px;
@@ -107,6 +113,13 @@ fieldset {
 }
 
 @media (min-width: 1440px) {
+   .checkout {
+       flex-direction: row;
+       justify-content: center;
+   } 
 
+   .checkout__panel:nth-child(3) {
+       align-self: flex-start;
+   }
 }  
 

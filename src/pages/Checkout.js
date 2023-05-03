@@ -226,7 +226,13 @@ function Checkout(props) {
 
 
     return (
+
         <main className={styles.checkout}>
+            
+            <p className={`${styles.goBack} ${'black50'}`}>Go Back</p>
+
+
+            {/* add the goback css properties in module */}
 
             <div className={styles.checkout__panel}>
                 <h3 className='black'>Checkout</h3>
@@ -340,6 +346,7 @@ function Checkout(props) {
 
             </div>
         </main>
+
     )
 }
 

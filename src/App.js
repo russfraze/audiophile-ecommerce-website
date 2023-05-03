@@ -42,8 +42,8 @@ function App() {
 
   return (
     <CartProvider>
-        {showCart && <Cart hide={hideCartHandler} isCart={true}/>}
-        {showThankYou && <ThankYou hide={hideThankYouHandler} isCart={false}/>}
+        {showCart && <Cart hide={hideCartHandler} isCart={true} isThank={false} isNavDrop={false}/>}
+        {showThankYou && <ThankYou hide={hideThankYouHandler} isCart={false} isThank={true} isNavDrop={false}/>}
       <Router>
         <Navbar show={showCartHandler}/>
         <Routes>

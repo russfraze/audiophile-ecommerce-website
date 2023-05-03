@@ -1,13 +1,20 @@
 import { useState } from 'react'
-import { useNavigate} from 'react-router-dom' 
+import { useNavigate } from 'react-router-dom'
 import styles from './Navbar.module.css'
 import { ReactComponent as CartIcon } from '../assets/shared/desktop/icon-cart.svg'
 import { ReactComponent as Burger } from '../assets/shared/tablet/icon-hamburger.svg'
 import { ReactComponent as Logo } from '../assets/shared/desktop/logo.svg'
 
+import Modal from '../UI/Modal'
+
+import Zx9Thumb from '../assets/shared/desktop/image-category-thumbnail-speakers.png'
+import headphonesOne from '../assets/shared/desktop/image-category-thumbnail-headphones.png'
+import earphonesCase from '../assets/shared/desktop/image-category-thumbnail-earphones.png'
+import ShopBtn from '../UI/ShopBtn'
 
 
-function Navbar({show}) {
+
+function Navbar({ show }) {
     const [navIsOpen, setNavIsOpen] = useState(false)
 
     const navigate = useNavigate()
@@ -32,15 +39,33 @@ function Navbar({show}) {
 
             </nav>
             { navIsOpen ? <div className={styles.dropdown} >
-                <div className={styles.dummyObject}>
+                <Modal isNavDrop={true} isCart={false} isThank={false}>
+                    <article className={styles.categories}>
+                        <div className={styles.container}>
+                            <div className={`${styles.headphones} ${'bG_grey'} ${'flex_group_column'}`}>
+                                <img className={styles.headphonesImage} src={headphonesOne} />
+                                <h6 className='black'>headphones</h6>
+                                <ShopBtn />
+                            </div>
+                        </div>
+                        <div className={styles.container}>
+                            <div className={`${styles.speakers} ${'bG_grey'} ${'flex_group_column'}`}>
+                                <img className={styles.speakersImage} src={Zx9Thumb} />
+                                <h6 className='black'>speakers</h6>
+                                <ShopBtn />
+                            </div>
+                        </div>
+                        <div className={styles.container}>
+                            <div className={`${styles.earphones} ${'bG_grey'} ${'flex_group_column'}`}>
+                                <img className={styles.earphonesCase} src={earphonesCase} />
+                                <h6 className='black'>earphones</h6>
+                                <ShopBtn />
+                            </div>
+                        </div>
 
-                </div>
-                <div className={styles.dummyObject}>
 
-                </div>
-                <div className={styles.dummyObject}>
-
-                </div>
+                    </article>
+                </Modal>
             </div> : ''}
         </>
     )

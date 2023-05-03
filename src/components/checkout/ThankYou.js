@@ -21,7 +21,7 @@ function ThankYou(props) {
     const totalFormat = numberWithCommas(cartData.totalAmount + 50)
 
     return (
-        <Modal hide={props.hide}>
+        <Modal hide={props.hide} isCart={props.isCart} isThank={props.isThank} isDropNav={props.isDropNav} >
             {/* <div className={styles.numRemove}>
                 <p className={`${styles.cartLength} black`}>{`CART (${cartLength})`}</p>
                 <p className={`${styles.removeAll} black50`}>Remove all</p>
