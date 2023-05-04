@@ -36,12 +36,6 @@
     overflow-y: scroll;
 }
 
-.dummyObject {
-    height: 250px;
-    width: 150px;
-
-    background-color: var(--clr-dark-grey);
-}
 
 
 

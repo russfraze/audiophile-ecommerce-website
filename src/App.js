@@ -17,11 +17,13 @@ import Zx7 from './pages/Zx7'
 import Earphones from './pages/Earphones'
 import Yx1 from './pages/Yx1';
 import ThankYou from './components/checkout/ThankYou';
+import NavDropdown from './UI/NavDropdown';
    
 
 function App() {
   const [showCart, setShowCart] = useState(false)
   const [showThankYou, setShowThankYou] = useState(false)
+  const [showDropdown, setShowDropdown] = useState(false)
 
   const hideCartHandler = () => {
     setShowCart(false)
@@ -39,13 +41,21 @@ function App() {
     setShowThankYou(true)
   }
 
+  const showDropdownHandler = () => {
+      setShowDropdown(!showDropdown)
+      console.log('please let me not be losing my mind', showDropdown)
+  }
+
+  console.log('show dropdown from app',showDropdown)
+  
 
   return (
     <CartProvider>
         {showCart && <Cart hide={hideCartHandler} isCart={true} isThank={false} isNavDrop={false}/>}
         {showThankYou && <ThankYou hide={hideThankYouHandler} isCart={false} isThank={true} isNavDrop={false}/>}
+        {showDropdown && <NavDropdown />}
       <Router>
-        <Navbar show={showCartHandler}/>
+        <Navbar show={showCartHandler} drop={showDropdownHandler}/>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/headphones' element={<Headphones />} />

@@ -4,6 +4,7 @@ import styles from './Navbar.module.css'
 import { ReactComponent as CartIcon } from '../assets/shared/desktop/icon-cart.svg'
 import { ReactComponent as Burger } from '../assets/shared/tablet/icon-hamburger.svg'
 import { ReactComponent as Logo } from '../assets/shared/desktop/logo.svg'
+import NavDropdown from '../UI/NavDropdown'
 
 import Modal from '../UI/Modal'
 
@@ -14,20 +15,26 @@ import ShopBtn from '../UI/ShopBtn'
 
 
 
-function Navbar({ show }) {
-    const [navIsOpen, setNavIsOpen] = useState(false)
+function Navbar({ show, drop }) {
+    // const [navIsOpen, setNavIsOpen] = useState(false)
 
     const navigate = useNavigate()
 
-    const burgerClick = () => {
-        setNavIsOpen(!navIsOpen)
-        console.log(navIsOpen)
-    }
+    // const burgerClick = () => {
+    //     setNavIsOpen(!navIsOpen)
+    //     console.log(navIsOpen)
+    // }
+
+    // const burgerClick = () => {
+    //     setNavIsOpen(!navIsOpen)
+    //     console.log('nav is open from navbar', navIsOpen)
+    //     drop(navIsOpen)
+    // }
 
     return (
         <>
             <nav className={styles.navBar}>
-                <Burger onClick={burgerClick} className={styles.burger} />
+                <Burger onClick={drop} className={styles.burger} />
                 <Logo className={styles.logo} />
                 <ul>
                     <li onClick={() => navigate('/')} >home</li>
@@ -38,7 +45,7 @@ function Navbar({ show }) {
                 <CartIcon onClick={show} className={styles.cart} />
 
             </nav>
-            { navIsOpen ? <div className={styles.dropdown} >
+            {/* { navIsOpen ? <div className={styles.dropdown} >
                 <Modal isNavDrop={true} isCart={false} isThank={false}>
                     <article className={styles.categories}>
                         <div className={styles.container}>
@@ -65,8 +72,9 @@ function Navbar({ show }) {
 
 
                     </article>
-                </Modal>
-            </div> : ''}
+                </Modal> 
+                <NavDropdown />
+            </div> : ''} */}
         </>
     )
 }
