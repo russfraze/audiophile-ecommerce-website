@@ -39,112 +39,6 @@
 
 
 
-/* from catigories module */
-
-.categories {
-  /* margin-top: 40px; */
-  height: 850px;
-  width: 100%;
-  padding: 4rem 1.5rem 1.5rem;
-  /* overflow-y: scroll; */
-}
-
-
-.container {
-   display: flex;
-   flex-direction: column;
-   width: 100%; 
-   margin-bottom: 9%;
-}
-
-
-
-
-.headphones {
-   justify-content: flex-end;
-   position: relative;
-   margin-top: 30px;
-   height: 165px;
-   width: 100%;
-   border-radius: 0.5rem;
-}
-
-.headphonesImage {
-   position: relative;
-   z-index: 9998;
-   bottom: 50px;
-   height: 140px;
-}
-
-.headphones h6 {
-   position: absolute;
-   bottom: 45px;
-   z-index: 9998;
-}
-
-.headphones button {
-   position: relative;
-   bottom: 10px;
-   z-index: 9998;
-}
-
-
-.speakers {
-   justify-content: flex-end;
-   position: relative;
-   margin-top: 30px;
-   height: 165px;
-   border-radius: 0.5rem;
-}
-
-.speakersImage {
-   position: relative;
-   z-index: 9998;
-   bottom: 50px;
-   height: 135px;
-}
-
-.speakers h6 {
-   position: absolute;
-   bottom: 45px;
-   z-index: 9998;
-}
-
-.speakers button {
-   position: relative;
-   bottom: 10px;
-   z-index: 9998;
-}
-
-
-
-
-.earphones {
-   justify-content: flex-end;
-   position: relative;
-   margin-top: 30px;
-   height: 165px;
-   border-radius: 0.5rem;
-}
-
-.earphonesCase {
-   position: relative;
-   z-index: 9997;
-   height: 140px;
-   bottom: 40px;
-}
-
-.earphones h6 {
-   position: absolute;
-   bottom: 45px;
-   z-index: 9998;
-}
-
-.earphones button {
-   position: relative;
-   bottom: 10px;
-   z-index: 9998;
-}
 
 
 @media (min-width: 768px) {
@@ -182,4 +76,5 @@
     color: var(--clr-dark-coral);
     cursor: pointer;
   }
-}  
+}
+

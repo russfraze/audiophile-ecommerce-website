@@ -16,66 +16,25 @@ import ShopBtn from '../UI/ShopBtn'
 
 
 function Navbar({ show, drop }) {
-    // const [navIsOpen, setNavIsOpen] = useState(false)
 
     const navigate = useNavigate()
 
-    // const burgerClick = () => {
-    //     setNavIsOpen(!navIsOpen)
-    //     console.log(navIsOpen)
-    // }
-
-    // const burgerClick = () => {
-    //     setNavIsOpen(!navIsOpen)
-    //     console.log('nav is open from navbar', navIsOpen)
-    //     drop(navIsOpen)
-    // }
-
     return (
-        <>
-            <nav className={styles.navBar}>
-                <Burger onClick={drop} className={styles.burger} />
-                <Logo className={styles.logo} />
-                <ul>
-                    <li onClick={() => navigate('/')} >home</li>
-                    <li onClick={() => navigate('/headphones')}>headphones</li>
-                    <li onClick={() => navigate('/speakers')}>speakers</li>
-                    <li onClick={() => navigate('/earphones')}>earphones</li>
-                </ul>
-                <CartIcon onClick={show} className={styles.cart} />
 
-            </nav>
-            {/* { navIsOpen ? <div className={styles.dropdown} >
-                <Modal isNavDrop={true} isCart={false} isThank={false}>
-                    <article className={styles.categories}>
-                        <div className={styles.container}>
-                            <div className={`${styles.headphones} ${'bG_grey'} ${'flex_group_column'}`}>
-                                <img className={styles.headphonesImage} src={headphonesOne} />
-                                <h6 className='black'>headphones</h6>
-                                <ShopBtn />
-                            </div>
-                        </div>
-                        <div className={styles.container}>
-                            <div className={`${styles.speakers} ${'bG_grey'} ${'flex_group_column'}`}>
-                                <img className={styles.speakersImage} src={Zx9Thumb} />
-                                <h6 className='black'>speakers</h6>
-                                <ShopBtn />
-                            </div>
-                        </div>
-                        <div className={styles.container}>
-                            <div className={`${styles.earphones} ${'bG_grey'} ${'flex_group_column'}`}>
-                                <img className={styles.earphonesCase} src={earphonesCase} />
-                                <h6 className='black'>earphones</h6>
-                                <ShopBtn />
-                            </div>
-                        </div>
+        <nav className={styles.navBar}>
+            <Burger onClick={drop} className={styles.burger} />
+            <Logo className={styles.logo} />
+            <ul>
+                <li onClick={() => navigate('/')} >home</li>
+                <li onClick={() => navigate('/headphones')}>headphones</li>
+                <li onClick={() => navigate('/speakers')}>speakers</li>
+                <li onClick={() => navigate('/earphones')}>earphones</li>
+            </ul>
+            <CartIcon onClick={show} className={styles.cart} />
+
+        </nav>
 
 
-                    </article>
-                </Modal> 
-                <NavDropdown />
-            </div> : ''} */}
-        </>
     )
 }
 

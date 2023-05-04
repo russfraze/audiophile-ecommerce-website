@@ -43,7 +43,7 @@
     width: 100%;
     background-color: var(--clr-white);
     padding: 0;
-    margin: 0;
+    margin-top: 90px;
     border-radius: 0;
     z-index: 9999;
     height: 100vh;
@@ -82,7 +82,7 @@
     .modalNavDrop {
       
         height: 430px;
-        
+        margin-top: 90px;
     }
     .modalThankYou {
         position: fixed;

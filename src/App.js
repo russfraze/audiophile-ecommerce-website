@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import CartProvider from './context/CartProvider'
 import './vars.css';
 import Cart from './components/cart/Cart'
@@ -46,9 +46,24 @@ function App() {
       console.log('please let me not be losing my mind', showDropdown)
   }
 
-  console.log('show dropdown from app',showDropdown)
-  
 
+  
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 1439){
+        setShowDropdown(false)
+        console.log("aaaaaaaaaaaaaaaaa")
+      } 
+    }
+      window.addEventListener('resize', handleResize)
+
+      return () => {
+        window.removeEventListener('resize', handleResize)
+      }
+    
+  },[])
+  
+  
   return (
     <CartProvider>
         {showCart && <Cart hide={hideCartHandler} isCart={true} isThank={false} isNavDrop={false}/>}
