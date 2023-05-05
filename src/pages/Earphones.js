@@ -1,5 +1,6 @@
-import styles from './Earphones.module.css'
 import { useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
+import styles from './Earphones.module.css'
 import yx1 from '../assets/product-yx1-earphones/mobile/image-product.jpg'
 import yx1Tab from '../assets/product-yx1-earphones/tablet/image-category-page-preview.jpg'
 import yx1Desk from '../assets/product-yx1-earphones/desktop/image-category-page-preview.jpg'
@@ -10,6 +11,10 @@ import BestAudio from '../components/BestAudio'
 
 function Earphones() {
     const navigate = useNavigate()
+
+    useEffect(() => {
+        window.scrollTo({top: 0, behavior: 'smooth'})
+    },[])
 
     return (
         <>

@@ -1,5 +1,6 @@
-import styles from './Speakers.module.css'
 import { useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
+import styles from './Speakers.module.css'
 import zx9 from '../assets/product-zx9-speaker/mobile/image-product.jpg'
 import zx9Tab from '../assets/product-zx9-speaker/tablet/image-category-page-preview.jpg'
 import zx9Desk from '../assets/product-zx9-speaker/desktop/image-category-page-preview.jpg'
@@ -12,6 +13,10 @@ import BestAudio from '../components/BestAudio'
 
 function Speakers() {
     const navigate = useNavigate()
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    }, [])
 
     return (
         <>

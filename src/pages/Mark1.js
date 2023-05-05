@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
 import styles from './Mark1.module.css'
 import Mark1Image from '../assets/product-xx99-mark-one-headphones/mobile/image-product.jpg'
 import Mark1ImageTab from '../assets/product-xx99-mark-one-headphones/tablet/image-product.jpg'
@@ -32,6 +33,11 @@ import ProductForm from '../components/ProductForm'
 function Mark1() {
     const navigate = useNavigate()
     console.log(productData[2])
+
+    useEffect(() => {
+        window.scrollTo({top: 0, behavior: 'smooth'})
+    },[])
+    
     return (
         <main className={styles.mark1}>
             <p onClick={() => navigate('/headphones')} className={`${styles.goBack} ${'black50'}`} >Go Back</p>

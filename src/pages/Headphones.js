@@ -1,5 +1,6 @@
-import styles from '../pages/Headphones.module.css'
 import { useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
+import styles from '../pages/Headphones.module.css'
 import markTwo from '../assets/product-xx99-mark-two-headphones/mobile/image-product.jpg'
 import markTwoTab from '../assets/product-xx99-mark-two-headphones/tablet/image-category-page-preview.jpg'
 import markTwoDesk from '../assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg'
@@ -16,12 +17,13 @@ import { productData } from '../data'
 
 
 
-
-
-
 function Headphones() {
     console.log(productData[3].categoryImage.tablet)
     const navigate = useNavigate()
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    }, [])
 
     const mark2Tab = productData[3].categoryImage.tablet
 
