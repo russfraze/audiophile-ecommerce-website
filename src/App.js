@@ -43,7 +43,6 @@ function App() {
 
   const showDropdownHandler = () => {
       setShowDropdown(!showDropdown)
-      console.log('please let me not be losing my mind', showDropdown)
   }
 
 
