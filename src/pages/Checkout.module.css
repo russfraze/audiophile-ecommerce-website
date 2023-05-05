@@ -1,19 +1,24 @@
 @import '../vars.css';
 
+.checkoutBody {
+    background-color: var(--clr-dark-grey);
+}
 .goBack {
-    position: fixed;
-    top: 98px;
-    left: 300px;
+    position: absolute;
+    top: -45px;
+    left: 0;
 }
 
 .checkout {
     display: flex;
     margin-top: 90px;
+    padding-top: 80px;
     width: 100%;
     background-color: var(--clr-dark-grey);
 }
 
 .checkout__panel {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -92,6 +97,18 @@ fieldset {
 }
 
 @media (min-width: 768px) {
+
+    .goBack {
+        position: absolute;
+        top: -45px;
+        left: 0;
+    }
+    
+    .checkout {
+        margin-top: 90px;
+        padding-top: 100px;
+    }
+
     .billing__formGroup {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -118,7 +135,20 @@ fieldset {
        justify-content: center;
    } 
 
-   .checkout__panel:nth-child(3) {
+   .goBack {
+       top: -45px;
+       left: 0;
+   }
+
+   .checkout__panel {
+       position: relative;
+   }
+
+   .checkout__panel:nth-child(1){
+       width: 550px;
+   }
+
+   .checkout__panel:nth-child(2) {
        align-self: flex-start;
    }
 }  
