@@ -1,3 +1,4 @@
+import {useEffect} from 'react'
 import styles from './Modal.module.css'
 import ReactDOM from 'react-dom'
 
@@ -7,6 +8,9 @@ const Backdrop = (props) => {
 }
 
 const ModalOverlay = (props) => {
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    }, [])
     const isCart = props.isCart
     const isNavDrop = props.isNavDrop
     const isThank = props.isThank
@@ -24,10 +28,10 @@ const portalElement = document.getElementById('overlays')
 
 function Modal(props) {
     return (
-        <div className={styles.modalContainer}>
+        <>
             {ReactDOM.createPortal(<Backdrop onClick={props.hide} isNavDrop={props.isNavDrop}/>, portalElement)}
             {ReactDOM.createPortal(<ModalOverlay isCart={props.isCart} isNavDrop={props.isNavDrop} isThank={props.isThank} >{props.children}</ModalOverlay>, portalElement)}
-        </div>
+        </>
     )
 }
 
