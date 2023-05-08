@@ -12,7 +12,7 @@ function BestAudio() {
                 <picture>
                     <source media="(min-width:1440px)" srcset={bestGearDesk} />
                     <source media="(min-width:768px)" srcset={bestGearTab} />
-                    <img src={bestGear} />
+                    <img src={bestGear} alt=''/>
                 </picture>
             </div>
 

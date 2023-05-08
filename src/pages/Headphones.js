@@ -25,8 +25,6 @@ function Headphones() {
         window.scrollTo({ top: 0, behavior: 'smooth' })
     }, [])
 
-    const mark2Tab = productData[3].categoryImage.tablet
-
     return (
         <>
             <header className={styles.headphonesHeader}>
@@ -38,7 +36,7 @@ function Headphones() {
                     <picture>
                         <source media="(min-width:1440px)" srcset={markTwoDesk} />
                         <source media="(min-width:768px)" srcset={markTwoTab} />
-                        <img src={markTwo} />
+                        <img src={markTwo} alt='mark 2 headphones'/>
                     </picture>
 
                     <div className={styles.product__info}>
@@ -57,7 +55,7 @@ function Headphones() {
                     <picture className={styles.imageB}>
                         <source media="(min-width:1440px)" srcset={markOneDesk} />
                         <source media="(min-width:768px)" srcset={markOneTab} />
-                        <img  src={markOne} />
+                        <img  src={markOne} alt='mark one headphones'/>
                     </picture>
 
                     <div className={styles.product__infoB}>
@@ -75,7 +73,7 @@ function Headphones() {
                     <picture>
                         <source media="(min-width:1440px)" srcset={xx59Desk} />
                         <source media="(min-width:768px)" srcset={xx59Tab} />
-                        <img src={xx59} />
+                        <img src={xx59} alt='xx59 headphones'/>
                     </picture>
 
                     <div className={styles.product__info}>

@@ -4,7 +4,6 @@ import CartContext from './CartContext'
 
 const cartDefault = JSON.parse(localStorage.getItem('localCart'))
 
-console.log('CART DEFAULT', cartDefault)
 
 const cartReducer = (state, action) => {
 
@@ -13,9 +12,7 @@ const cartReducer = (state, action) => {
 
         const newTotalAmount = state.totalAmount + action.product.price * action.product.amount
 
-        const newProductAmount = action.product.price * action.product.amount
-
-        const existingCartProductsIndex = state.products.findIndex(product => product.id == action.product.id)
+        const existingCartProductsIndex = state.products.findIndex(product => product.id === action.product.id)
         
         const existingCartProduct = state.products[existingCartProductsIndex]
       

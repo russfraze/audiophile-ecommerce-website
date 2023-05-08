@@ -17,10 +17,10 @@ const ModalOverlay = (props) => {
     
     console.log('props check from inside ModalOverlay function', isCart, isNavDrop, isThank)
     
-    return <div className={ isCart && `${styles.modal}` || isThank && `${styles.modalThankYou}` 
-    || isNavDrop && `${styles.modalNavDrop}`}>
+    return <div className={ (isCart && `${styles.modal}`) || (isThank && `${styles.modalThankYou}`) 
+    || (isNavDrop && `${styles.modalNavDrop}`)}>
 
-        <div className={ isThank && `${styles.contentThankYou}` || isNavDrop && `${styles.contentNavDrop}`}>{props.children}</div>
+        <div className={ (isThank && `${styles.contentThankYou}`) || (isNavDrop && `${styles.contentNavDrop}`)}>{props.children}</div>
     </div>
 }
 

@@ -29,7 +29,7 @@ function Speakers() {
                     <picture>
                         <source media="(min-width:1440px)" srcSet={zx9Desk} />
                         <source media="(min-width:768px)" srcSet={zx9Tab} />
-                        <img src={zx9} />
+                        <img src={zx9} alt='zx9 speaker'/>
                     </picture>
 
                     <div className={styles.product__info}>
@@ -47,7 +47,7 @@ function Speakers() {
                     <picture className={styles.imageB}>
                         <source media="(min-width:1440px)" srcset={zx7Desk} />
                         <source media="(min-width:768px)" srcset={zx7Tab} />
-                        <img src={zx7} />
+                        <img src={zx7} alt='zx7 speaker'/>
                     </picture>
 
                     <div className={styles.product__infoB}>

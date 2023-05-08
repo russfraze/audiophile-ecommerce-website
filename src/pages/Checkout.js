@@ -79,7 +79,7 @@ function Checkout(props) {
         setEnteredName(e.target.value)
     }
 
-    const nameInputBlurHandler = (e) => {
+    const nameInputBlurHandler = () => {
         setNameTouched(true)
     }
 
@@ -89,7 +89,7 @@ function Checkout(props) {
         setEnteredEmail(e.target.value)
     }
 
-    const emailInputBlurHandeler = (e) => {
+    const emailInputBlurHandeler = () => {
         setEmailTouched(true)
     }
 
@@ -99,7 +99,7 @@ function Checkout(props) {
         setEnteredPhone(e.target.value)
     }
 
-    const phoneInputBlurHandeler = (e) => {
+    const phoneInputBlurHandeler = () => {
         setPhoneTouched(true)
     }
 

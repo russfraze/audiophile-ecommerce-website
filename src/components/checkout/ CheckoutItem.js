@@ -73,7 +73,7 @@ function CheckoutItem({ total, id, amount }) {
         <li className={styles.cartItem}>
 
             <div className={styles.imageName}>
-                <img className={styles.cartItem__image} src={cartImage} />
+                <img className={styles.cartItem__image} src={cartImage} alt='' />
                 <div>
                     <p className={styles.name}>{cartName}</p>
                     <p className={styles.total}>{`$${totalFormat}`}</p>

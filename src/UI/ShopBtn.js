@@ -5,7 +5,7 @@ function ShopBtn(props) {
     return (
         <button className={styles.ShopBtn} onClick={props.onClick}>
             <p>shop</p>
-            <img src={arrow} />
+            <img src={arrow} alt=''/>
         </button>
     )
 }

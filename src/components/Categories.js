@@ -11,21 +11,21 @@ function Categories() {
         <article className={styles.categories}>
                 <div className={styles.container} onClick={() => navigate('/headphones')}>
                     <div className={`${styles.headphones} ${'bG_grey'} ${'flex_group_column'}`}>
-                        <img className={styles.headphonesImage} src={headphonesOne} />
+                        <img className={styles.headphonesImage} src={headphonesOne} alt='headphones'/>
                         <h6 className='black'>headphones</h6>
                         <ShopBtn />
                     </div>
                 </div>
                 <div className={styles.container} onClick={() => navigate('/speakers')}>
                     <div className={`${styles.speakers} ${'bG_grey'} ${'flex_group_column'}`}>
-                        <img className={styles.speakersImage} src={Zx9Thumb} />
+                        <img className={styles.speakersImage} src={Zx9Thumb} alt='speakers'/>
                         <h6 className='black'>speakers</h6>
                         <ShopBtn />
                     </div>
                 </div>
                 <div className={styles.container} onClick={() => navigate('/earphones')}>
                     <div className={`${styles.earphones} ${'bG_grey'} ${'flex_group_column'}`}>
-                        <img className={styles.earphonesCase} src={earphonesCase} />
+                        <img className={styles.earphonesCase} src={earphonesCase} alt='earphones'/>
                         <h6 className='black'>earphones</h6>
                         <ShopBtn />
                     </div>

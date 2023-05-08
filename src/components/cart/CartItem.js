@@ -5,6 +5,7 @@ import mark1Cart from '../../assets/cart/image-xx99-mark-one-headphones.jpg'
 import mark2Cart from '../../assets/cart/image-xx99-mark-two-headphones.jpg'
 import zx7Cart from '../../assets/cart/image-zx7-speaker.jpg'
 import zx9Cart from '../../assets/cart/image-zx9-speaker.jpg'
+import NumberFormat from '../../helpers/NumberFormat'
 
 const cartImages = [
     {
@@ -38,8 +39,7 @@ function CartItem({ total, id, amount, onRemove, onAdd }) {
     let cartImage
     let cartName
 
-    console.log('rrr', cartImages[1].name)
-    console.log('sss', id)
+    const totalFormat = NumberFormat(total)
 
     if (id === 1) {
         cartImage = yx1Cart
@@ -69,10 +69,10 @@ function CartItem({ total, id, amount, onRemove, onAdd }) {
     return (
         <li className={styles.cartItem}>
             
-            <img className={styles.cartItem__image} src={cartImage} />
+            <img className={styles.cartItem__image} src={cartImage} alt=''/>
             <div>
                 <p className={styles.name}>{cartName}</p>
-                <p className={styles.total}>{total}</p>
+                <p className={styles.total}>{`$${totalFormat}`}</p>
             </div>
 
             {/* <CartForm name={name} amount={amount} id={id}/> */}
