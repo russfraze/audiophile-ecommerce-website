@@ -13,7 +13,6 @@
 .modal {
     position: fixed;
     width: 90%;
-    
     background-color: white;
     padding: 2rem;
     margin: 5%;
@@ -38,7 +37,7 @@
     width: 100%;
     background-color: var(--clr-white);
     padding: 0;
-    margin-top: 0px;
+    margin-top: 90px;
     border-bottom-left-radius: 0.75rem;
     border-bottom-right-radius: 0.75rem;
     z-index: 9999;
@@ -73,7 +72,6 @@
 @media (min-width: 768px) {
 
     .modal {
-        
         width: 377px;
         right: 3rem;
         background-color: white;
@@ -81,10 +79,9 @@
     }
 
     .modalNavDrop {
-      
         height: 430px;
-        
     }
+    
     .modalThankYou {
         position: fixed;
         top: 150px;

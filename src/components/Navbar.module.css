@@ -22,7 +22,7 @@
 }
 
 
-.dropdown {
+/* .dropdown {
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -34,7 +34,7 @@
     background-color: var(--clr-white);
     width: 100%;
     overflow-y: scroll;
-}
+} */
 
 
 

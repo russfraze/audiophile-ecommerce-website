@@ -39,7 +39,7 @@ function Mark2() {
     return (
         
         <main className={styles.mark2}>
-            <p onClick={() => navigate('/headphones')}className={`${styles.goBack} ${'black50'}`}>Go Back</p>
+            <p onClick={() => navigate(-1)}className={`${styles.goBack} ${'black50'}`}>Go Back</p>
 
             <div className={styles.purchaseInfo}>
                 <picture>
