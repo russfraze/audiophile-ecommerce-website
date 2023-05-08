@@ -44,7 +44,7 @@ function Mark2() {
                 <picture>
                     <source media="(min-width:1440px)" srcset={Mark2ImageDesk} />
                     <source media="(min-width:768px)" srcset={Mark2ImageTab} />
-                    <img className='card' src={Mark2Image} />
+                    <img className='card' src={Mark2Image} alt='mark 2 headphones'/>
                 </picture>
 
                 <div className={styles.addToCart}>
@@ -119,13 +119,13 @@ function Mark2() {
                     <picture>
                         <source media="(min-width:1440px)" srcset={gallery1Desk} />
                         <source media="(min-width:768px)" srcset={gallery1Tab} />
-                        <img className='card' src={gallery1} />
+                        <img className='card' src={gallery1} alt=''/>
                     </picture>
 
                     <picture>
                         <source media="(min-width:1440px)" srcset={gallery2Desk} />
                         <source media="(min-width:768px)" srcset={gallery2Tab} />
-                        <img className='card' src={gallery2} />
+                        <img className='card' src={gallery2} alt=''/>
                     </picture>
 
                 </div>
@@ -133,7 +133,7 @@ function Mark2() {
                 <picture>
                     <source media="(min-width:1440px)" srcset={gallery3Desk} />
                     <source media="(min-width:768px)" srcset={gallery3Tab} />
-                    <img className='card' src={gallery3} />
+                    <img className='card' src={gallery3} alt=''/>
                 </picture>
             </section>
 
@@ -144,7 +144,7 @@ function Mark2() {
                         <picture>
                             <source media="(min-width:1440px)" srcset={markIDesk} />
                             <source media="(min-width:768px)" srcset={markITab} />
-                            <img className='card' src={markI} />
+                            <img className='card' src={markI} alt='mark 1 headphones'/>
                         </picture>
                         <h5 className='black'>xx99 mark I</h5>
                         <Button onClick={() => navigate('/headphones/markI')}>see product</Button>
@@ -154,7 +154,7 @@ function Mark2() {
                         <picture>
                             <source media="(min-width:1440px)" srcset={xx59Desk} />
                             <source media="(min-width:768px)" srcset={xx59Tab} />
-                            <img className='card' src={xx59} />
+                            <img className='card' src={xx59} alt='xx59 headphones'/>
                         </picture>
                         <h5 className='black'>xx59</h5>
                         <Button onClick={() => navigate('/headphones/xx59')}>see product</Button>
@@ -164,7 +164,7 @@ function Mark2() {
                         <picture>
                             <source media="(min-width:1440px)" srcset={zx7Desk} />
                             <source media="(min-width:768px)" srcset={zx7Tab} />
-                            <img className='card' src={zx7} />
+                            <img className='card' src={zx7} alt='zx7 speaker'/>
                         </picture>
                         <h5 className='black'>zx9 speaker</h5>
                         <Button onClick={() => navigate('/speakers/zx9')}>see product</Button>

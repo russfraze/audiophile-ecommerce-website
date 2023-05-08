@@ -44,7 +44,7 @@ function Zx7() {
                 <picture>
                     <source media="(min-width:1440px)" srcset={zx7ImageDesk} />
                     <source media="(min-width:768px)" srcset={zx7ImageTab} />
-                    <img className={styles.zx7__image} src={zx7Image} />
+                    <img className={styles.zx7__image} src={zx7Image} alt='zx7 speaker'/>
                 </picture>
 
                 <div className={styles.addToCart}> 
@@ -113,13 +113,13 @@ function Zx7() {
                     <picture>
                         <source media="(min-width:1440px)" srcset={gallery1Desk} />
                         <source media="(min-width:768px)" srcset={gallery1Tab} />
-                        <img className='card' src={gallery1} />
+                        <img className='card' src={gallery1} alt=''/>
                     </picture>
 
                     <picture>
                         <source media="(min-width:1440px)" srcset={gallery2Desk} />
                         <source media="(min-width:768px)" srcset={gallery2Tab} />
-                        <img className='card' src={gallery2} />
+                        <img className='card' src={gallery2} alt=''/>
                     </picture>
 
                 </div>
@@ -127,7 +127,7 @@ function Zx7() {
                 <picture>
                     <source media="(min-width:1440px)" srcset={gallery3Desk} />
                     <source media="(min-width:768px)" srcset={gallery3Tab} />
-                    <img className='card' src={gallery3} />
+                    <img className='card' src={gallery3} alt=''/>
                 </picture>
             </section>
 
@@ -139,7 +139,7 @@ function Zx7() {
                         <picture>
                             <source media="(min-width:1440px)" srcset={zx9Desk} />
                             <source media="(min-width:768px)" srcset={zx9Tab} />
-                            <img className='card' src={zx9} />
+                            <img className='card' src={zx9} alt='zx9 speaker'/>
                         </picture>
                         <h5 className='black'>zx9 speaker</h5>
                         <Button onClick={() => navigate('/speakers/zx9')}>see product</Button>
@@ -149,7 +149,7 @@ function Zx7() {
                         <picture>
                             <source media="(min-width:1440px)" srcset={markIDesk} />
                             <source media="(min-width:768px)" srcset={markITab} />
-                            <img className='card' src={markI} />
+                            <img className='card' src={markI} alt='mark 1 headphones'/>
                         </picture>
                         <h5 className='black'>xx99 mark I</h5>
                         <Button onClick={() => navigate('/headphones/markI')}>see product</Button>
@@ -159,7 +159,7 @@ function Zx7() {
                         <picture>
                             <source media="(min-width:1440px)" srcset={xx59Desk} />
                             <source media="(min-width:768px)" srcset={xx59Tab} />
-                            <img className='card' src={xx59} />
+                            <img className='card' src={xx59} alt='xx59 headphones'/>
                         </picture>
                         <h5 className='black'>xx59</h5>
                         <Button onClick={() => navigate('/headphones/xx59')}>see product</Button>

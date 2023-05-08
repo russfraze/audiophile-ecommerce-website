@@ -16,7 +16,7 @@ function Checkout(props) {
     const enteredEmailIsInvalid = !emailIsValid && emailTouched
     const [enteredPhone, setEnteredPhone] = useState('')
     const [phoneTouched, setPhoneTouched] = useState(false)
-    const phoneIsValid = enteredPhone.trim().length == 10
+    const phoneIsValid = enteredPhone.trim().length === 10
     const enteredPhoneIsInvalid = !phoneIsValid && phoneTouched
 
 
@@ -27,7 +27,7 @@ function Checkout(props) {
 
     const [enteredZip, setEnteredZip] = useState('')
     const [zipTouched, setZipTouched] = useState(false)
-    const zipIsValid = enteredZip.trim().length == 5
+    const zipIsValid = enteredZip.trim().length === 5
     const enteredZipIsInvalid = !zipIsValid && zipTouched
 
     const [enteredCity, setEnteredCity] = useState('')
@@ -44,14 +44,14 @@ function Checkout(props) {
 
     const [enteredMoneyNumber, setEnteredMoneyNumber] = useState('')
     const [moneyNumberTouched, setMoneyNumberTouched] = useState(false)
-    const moneyNumberIsValid = enteredMoneyNumber.trim().length == 9 || payMethodCash
+    const moneyNumberIsValid = enteredMoneyNumber.trim().length === 9 || payMethodCash
     const enteredMoneyNumberIsInvalid = !moneyNumberIsValid && moneyNumberTouched
 
     const [payMethod, setPayMethod] = useState('')
 
     const [enteredMoneyPin, setEnteredMoneyPin] = useState('')
     const [moneyPinTouched, setMoneyPinTouched] = useState(false)
-    const moneyPinIsValid = enteredMoneyPin.trim().length == 4 || payMethodCash
+    const moneyPinIsValid = enteredMoneyPin.trim().length === 4 || payMethodCash
     const enteredMoneyPinIsInvalid = !moneyPinIsValid && moneyPinTouched
 
     const [formIsValid, setFormIsValid] = useState(false)
@@ -144,7 +144,7 @@ function Checkout(props) {
 
         setPayMethod(e.target.value)
 
-        if (e.target.value == 'cash') {
+        if (e.target.value === 'cash') {
             setPayMethodCash(true)
         } else {
             setPayMethodCash(false)
