@@ -23,7 +23,6 @@ import xx59 from '../assets/shared/mobile/image-xx59-headphones.jpg'
 import xx59Tab from '../assets/shared/tablet/image-xx59-headphones.jpg'
 import xx59Desk from '../assets/shared/desktop/image-xx59-headphones.jpg'
 import Button from '../UI/Button'
-import NumberButton from '../UI/NumberButton'
 import Categories from '../components/Categories'
 import BestAudio from '../components/BestAudio'
 import { productData } from '../data'
@@ -144,7 +143,7 @@ function Zx9() {
                             <img className='card' src={zx7} />
                         </picture>
                         <h5 className='black'>zx7 speaker</h5>
-                        <Button>see product</Button>
+                        <Button onClick={() => navigate('/speakers/zx7')}>see product</Button>
                     </div>
 
                     <div className={styles.alsoLike__product}>
@@ -154,7 +153,7 @@ function Zx9() {
                             <img className='card' src={markI} />
                         </picture>
                         <h5 className='black'>xx99 mark I</h5>
-                        <Button>see product</Button>
+                        <Button onClick={() => navigate('/headphones/markI')}>see product</Button>
                     </div>
 
                     <div className={styles.alsoLike__product}>
@@ -164,7 +163,7 @@ function Zx9() {
                             <img className='card' src={xx59} />
                         </picture>
                         <h5 className='black'>xx59</h5>
-                        <Button>see product</Button>
+                        <Button onClick={() => navigate('/headphones/xx59')}>see product</Button>
                     </div>
                 </div>
             </section>

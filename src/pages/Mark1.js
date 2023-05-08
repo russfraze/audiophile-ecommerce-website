@@ -23,7 +23,6 @@ import markIIDesk from '../assets/shared/desktop/image-xx99-mark-two-headphones.
 import xx59Desk from '../assets/shared/desktop/image-xx59-headphones.jpg'
 import zx7Desk from '../assets/shared/desktop/image-zx9-speaker.jpg'
 import Button from '../UI/Button'
-import NumberButton from '../UI/NumberButton'
 import Categories from '../components/Categories'
 import BestAudio from '../components/BestAudio'
 import { productData } from '../data'
@@ -40,7 +39,7 @@ function Mark1() {
     
     return (
         <main className={styles.mark1}>
-            <p onClick={() => navigate('/headphones')} className={`${styles.goBack} ${'black50'}`} >Go Back</p>
+            <p onClick={() => navigate(-1)} className={`${styles.goBack} ${'black50'}`} >Go Back</p>
 
             <div className={styles.purchaseInfo}>
                 <picture>
@@ -138,7 +137,7 @@ function Mark1() {
                             <img className='card' src={markII} />
                         </picture>
                         <h5 className='black'>xx99 mark II</h5>
-                        <Button>see product</Button>
+                        <Button onClick={() => navigate('/headphones/markII')}>see product</Button>
                     </div>
 
                     <div className={styles.alsoLike__product}>
@@ -148,7 +147,7 @@ function Mark1() {
                             <img className='card' src={xx59} />
                         </picture>
                         <h5 className='black'>xx59</h5>
-                        <Button>see product</Button>
+                        <Button onClick={() => navigate('/headphones/xx59')}>see product</Button>
                     </div>
 
                     <div className={styles.alsoLike__product}>
@@ -158,7 +157,7 @@ function Mark1() {
                             <img className='card' src={zx7} />
                         </picture>
                         <h5 className='black'>zx9 speaker</h5>
-                        <Button>see product</Button>
+                        <Button onClick={() => navigate('/speakers/zx9')}>see product</Button>
                     </div>
                 </div>
             </section>

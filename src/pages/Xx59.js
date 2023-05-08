@@ -37,7 +37,7 @@ function Xx59() {
 
     return (
         <main className={styles.xx59}>
-            <p onClick={() => navigate('/headphones')} className={`${styles.goBack} ${'black50'}`} >Go Back</p>
+            <p onClick={() => navigate(-1)} className={`${styles.goBack} ${'black50'}`} >Go Back</p>
 
             <div className={styles.purchaseInfo}>
                 <picture>

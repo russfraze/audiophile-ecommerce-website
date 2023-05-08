@@ -16,8 +16,8 @@
 
 .checkout {
     display: flex;
-    margin-top: 90px;
-    padding-top: 80px;
+    
+    padding-top: 155px;
     width: 100%;
     background-color: var(--clr-dark-grey);
 }
@@ -122,8 +122,7 @@ fieldset {
     }
     
     .checkout {
-        margin-top: 90px;
-        padding-top: 100px;
+        padding-top: 155px;
     }
 
     .billing__formGroup {

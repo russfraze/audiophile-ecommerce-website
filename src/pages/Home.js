@@ -31,7 +31,7 @@ function Home() {
                 <picture>
                     <source media="(min-width:1440px)" srcset={headerImageDesk} />
                     <source media="(min-width:768px)" srcset={headerImageTab} />
-                    <img className={styles.headerImage__hide} src={headerImage} />
+                    <img className={styles.headerImage__hide} src={headerImage} alt='Mark 2 headphones' />
                 </picture>
                 <div className={styles.headerImage_content}>
                     <p className='overline'>New product</p>
@@ -50,9 +50,9 @@ function Home() {
                     <div className={styles.zx9Speaker__content}>
                         <picture>
                             <source media="(min-width:1440px)" srcset={speakerZx9Desktop} />
-                            <img className={styles.zx9Speaker__image} src={speakerZx9} />
+                            <img className={styles.zx9Speaker__image} src={speakerZx9} alt='zx9 speaker'/>
                         </picture>
-                        <img className={styles.circles} src={circles} />
+                        <img className={styles.circles} src={circles} alt=''/>
                         <div className={styles.zx9Speaker__Txt}>
                             <h1>zx9<br />speaker</h1>
                             <p className={'white75'}>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
@@ -66,7 +66,7 @@ function Home() {
                     <picture>
                         <source media="(min-width:1440px)" srcset={speakerZx7Desktop} />
                         <source media="(min-width:768px)" srcset={speakerZx7Tab} />
-                        <img src={speakerZx7} />
+                        <img src={speakerZx7} alt='zx7 speaker'/>
                     </picture>
                     <div className={styles.zx7Speaker__content}>
                         <h4>zx7 speaker</h4>
@@ -79,7 +79,7 @@ function Home() {
                     <picture className={styles.earphonesImage}>
                         <source media="(min-width:1440px)" srcset={earphonesDesk} />
                         <source media="(min-width:768px)" srcset={earphonesTab} />
-                        <img src={earphones} />
+                        <img src={earphones} alt='yx1 earphones'/>
                     </picture>
 
                     <div className={`${styles.earphones__content} ${'card'} ${'bG_grey'}`}>

@@ -1,3 +1,8 @@
+.formGroup {
+    display: flex;
+    gap: 1rem;
+}
+
 .inputGroup {
     display: flex;
     align-items: center;

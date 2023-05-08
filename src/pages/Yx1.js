@@ -23,7 +23,6 @@ import xx59 from '../assets/shared/mobile/image-xx59-headphones.jpg'
 import xx59Tab from '../assets/shared/tablet/image-xx59-headphones.jpg'
 import xx59Desk from '../assets/shared/desktop/image-xx59-headphones.jpg'
 import Button from '../UI/Button'
-import NumberButton from '../UI/NumberButton'
 import Categories from '../components/Categories'
 import BestAudio from '../components/BestAudio'
 import { productData } from '../data'
@@ -38,7 +37,7 @@ function Yx1() {
 
     return (
         <main className={styles.yx1}>
-            <p onClick={() => navigate('/earphones')} className={`${styles.goBack} ${'black50'}`} >Go Back</p>
+            <p onClick={() => navigate(-1)} className={`${styles.goBack} ${'black50'}`} >Go Back</p>
 
             <div className={styles.purchaseInfo}>
                 <picture>

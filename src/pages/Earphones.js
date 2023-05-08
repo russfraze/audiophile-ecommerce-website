@@ -28,7 +28,7 @@ function Earphones() {
                     <picture>
                         <source media="(min-width:1440px)" srcset={yx1Desk} />
                         <source media="(min-width:768px)" srcset={yx1Tab} />
-                        <img src={yx1} />
+                        <img src={yx1} alt='yx1 earphones'/>
                     </picture>
 
                     <div className={styles.product__info}>

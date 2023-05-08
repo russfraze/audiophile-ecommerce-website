@@ -59,6 +59,10 @@ function Checkout(props) {
     const navigate = useNavigate()
 
     useEffect(() => {
+        window.scrollTo({top: 0, behavior: 'smooth'})
+    },[])
+
+    useEffect(() => {
         if (nameIsValid && emailIsValid && phoneIsValid && addressIsValid && zipIsValid
             && cityIsValid && countryIsValid && moneyNumberIsValid && moneyPinIsValid) {
             setFormIsValid(true)

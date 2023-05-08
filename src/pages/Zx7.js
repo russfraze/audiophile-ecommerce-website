@@ -23,7 +23,6 @@ import xx59 from '../assets/shared/mobile/image-xx59-headphones.jpg'
 import xx59Tab from '../assets/shared/tablet/image-xx59-headphones.jpg'
 import xx59Desk from '../assets/shared/desktop/image-xx59-headphones.jpg'
 import Button from '../UI/Button'
-import NumberButton from '../UI/NumberButton'
 import Categories from '../components/Categories'
 import BestAudio from '../components/BestAudio'
 import { productData } from '../data'
@@ -39,7 +38,7 @@ function Zx7() {
 
     return (
         <main className={styles.zx7}>
-            <p onClick={() => navigate('/speakers')} className={`${styles.goBack} ${'black50'}`} >Go Back</p>
+            <p onClick={() => navigate(-1)} className={`${styles.goBack} ${'black50'}`} >Go Back</p>
 
             <div className={styles.purchaseInfo}>
                 <picture>
@@ -142,8 +141,8 @@ function Zx7() {
                             <source media="(min-width:768px)" srcset={zx9Tab} />
                             <img className='card' src={zx9} />
                         </picture>
-                        <h5 className='black'>zx7 speaker</h5>
-                        <Button>see product</Button>
+                        <h5 className='black'>zx9 speaker</h5>
+                        <Button onClick={() => navigate('/speakers/zx9')}>see product</Button>
                     </div>
 
                     <div className={styles.alsoLike__product}>
@@ -153,7 +152,7 @@ function Zx7() {
                             <img className='card' src={markI} />
                         </picture>
                         <h5 className='black'>xx99 mark I</h5>
-                        <Button>see product</Button>
+                        <Button onClick={() => navigate('/headphones/markI')}>see product</Button>
                     </div>
 
                     <div className={styles.alsoLike__product}>
@@ -163,7 +162,7 @@ function Zx7() {
                             <img className='card' src={xx59} />
                         </picture>
                         <h5 className='black'>xx59</h5>
-                        <Button>see product</Button>
+                        <Button onClick={() => navigate('/headphones/xx59')}>see product</Button>
                     </div>
                 </div>
             </section>
