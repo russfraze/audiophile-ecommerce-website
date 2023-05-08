@@ -1,3 +1,4 @@
+import {useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
 import styles from './Zx9.module.css'
 import zx9Image from '../assets/product-zx9-speaker/mobile/image-product.jpg'
@@ -31,9 +32,13 @@ function Zx9() {
     const navigate = useNavigate()
     console.log(productData[1].image.tablet)
 
+    useEffect(() => {
+        window.scrollTo({top: 0, behavior: 'smooth'})
+    },[])
+
     return (
         <main className={styles.zx9}>
-            <p onClick={() => navigate('/speakers')} className={`${styles.goBack} ${'black50'}`} >Go Back</p>
+            <p onClick={() => navigate(-1)} className={`${styles.goBack} ${'black50'}`} >Go Back</p>
 
             <div className={styles.purchaseInfo}>
                 <picture>

@@ -195,7 +195,8 @@ body {
     flex-direction: column;
     padding: 2.5rem;
     gap: 2rem;
-    
+    max-width: 769px;
+    margin: auto;
   }
 
 

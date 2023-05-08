@@ -1,3 +1,4 @@
+import {useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
 import styles from './Yx1.module.css'
 import Yx1Image from '../assets/product-yx1-earphones/mobile/image-product.jpg'
@@ -29,7 +30,10 @@ import { productData } from '../data'
 
 function Yx1() {
     const navigate = useNavigate()
-    console.log(productData[5].image.tablet)
+
+    useEffect(() => {
+        window.scrollTo({top: 0, behavior: 'smooth'})
+    },[])
 
     return (
         <main className={styles.yx1}>
@@ -135,14 +139,14 @@ function Yx1() {
                 <h3 className='black'>you may also like</h3>
                 <div className={styles.alsoLike__products}>
                 
-                    <div className={styles.alsoLike__product}>
+                    <div className={styles.alsoLike__product} >
                         <picture>
                             <source media="(min-width:1440px)" srcset={markIDesk} />
                             <source media="(min-width:768px)" srcset={markITab} />
                             <img className='card' src={markI} />
                         </picture>
                         <h5 className='black'>xx99 mark I</h5>
-                        <Button>see product</Button>
+                        <Button onClick={() => navigate('/headphones/markI')}>see product</Button>
                     </div>
 
                     <div className={styles.alsoLike__product}>
@@ -152,7 +156,7 @@ function Yx1() {
                             <img className='card' src={xx59} />
                         </picture>
                         <h5 className='black'>xx59</h5>
-                        <Button>see product</Button>
+                        <Button onClick={() => navigate('/headphones/xx59')}>see product</Button>
                     </div>
 
                     <div className={styles.alsoLike__product}>
@@ -162,7 +166,7 @@ function Yx1() {
                             <img className='card' src={zx9} />
                         </picture>
                         <h5 className='black'>zx7 speaker</h5>
-                        <Button>see product</Button>
+                        <Button onClick={() => navigate('/speakers/zx9')}>see product</Button>
                     </div>
                 </div>
             </section>

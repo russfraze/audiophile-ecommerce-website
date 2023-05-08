@@ -1,3 +1,4 @@
+import {useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
 import styles from './Zx7.module.css'
 import zx7Image from '../assets/product-zx7-speaker/mobile/image-product.jpg'
@@ -31,6 +32,10 @@ function Zx7() {
     const navigate = useNavigate()
     console.log(productData[1].image.tablet)
 
+    useEffect(() => {
+        window.scrollTo({top: 0, behavior: 'smooth'})
+    },[])
+
     return (
         <main className={styles.zx7}>
             <p onClick={() => navigate('/speakers')} className={`${styles.goBack} ${'black50'}`} >Go Back</p>
@@ -42,9 +47,8 @@ function Zx7() {
                     <img className={styles.zx7__image} src={zx7Image} />
                 </picture>
 
-                <div className={styles.addToCart}>
-                    <p className='overline coral'>new product</p>
-                    <h2 className='black'>{productData[4].name}</h2>
+                <div className={styles.addToCart}> 
+                    <h2 className='black'>zx7 <br/> speaker</h2>
                     <p className='black50'>Stream high quality sound wirelessly with minimal to no loss. 
                     The ZX7 speaker uses high-end audiophile components that represents the top of the line 
                     powered speakers for home or studio use.

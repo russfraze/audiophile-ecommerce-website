@@ -9,6 +9,11 @@
     left: 0;
 }
 
+.goBack:hover {
+    cursor: pointer;
+    color: var(--clr-dark-coral);
+}
+
 .checkout {
     display: flex;
     margin-top: 90px;
@@ -25,6 +30,10 @@
     padding: 1.5rem;
     background-color: var(--clr-white);
     border-radius: 0.5rem;
+}
+
+.moneyNums .checkout__inputGroup{
+    padding: 0.5rem 0;
 }
 
 .checkout__inputGroup input {
@@ -96,6 +105,14 @@ fieldset {
     gap: 1rem;
 }
 
+.cashDel {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem 0;
+    align-items: center;
+}
+
 @media (min-width: 768px) {
 
     .goBack {
@@ -127,6 +144,40 @@ fieldset {
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
     }
+
+    .moneyNums {
+        display: flex;
+        /* width: 100%; */
+        gap: 1rem;
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+        
+    }
+
+    .moneyNums .checkout__inputGroup:nth-child(1){
+        width: 100%;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .moneyNums .checkout__inputGroup:nth-child(2){
+        width: 100%;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    .cashDel {
+        flex-direction: row;
+        gap: 2rem;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        padding: 1.5rem 0 0 0;
+    }
+
+    .cashDel p{
+       width: 80%
+    }
 }
 
 @media (min-width: 1440px) {
@@ -145,11 +196,13 @@ fieldset {
    }
 
    .checkout__panel:nth-child(1){
-       width: 550px;
+       width: 730px;
+       padding: 3rem;
    }
 
    .checkout__panel:nth-child(2) {
        align-self: flex-start;
+       width: 350px;
    }
 }  
 

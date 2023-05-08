@@ -1,3 +1,5 @@
+import {useEffect} from 'react'
+import {useNavigate} from 'react-router-dom'
 import styles from './Home.module.css'
 import Button from '../UI/Button'
 import headerImage from '../assets/home/mobile/image-header.jpg'
@@ -17,7 +19,11 @@ import Categories from '../components/Categories'
 
 
 function Home() {
+    const navigate = useNavigate()
 
+    useEffect(() => {
+        window.scrollTo({top: 0, behavior: 'smooth'})
+    },[])
 
     return (
         <>
@@ -31,7 +37,7 @@ function Home() {
                     <p className='overline'>New product</p>
                     <h1>XX99 Mark II Headphones</h1>
                     <p className={`${styles.headerBody} ${'white75'}`}>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
-                    <Button className={'buttonMain'}>see product</Button>
+                    <Button className={'buttonMain'} onClick={() => navigate('/headphones/markII')}>see product</Button>
                 </div>
 
             </header>
@@ -50,7 +56,7 @@ function Home() {
                         <div className={styles.zx9Speaker__Txt}>
                             <h1>zx9<br />speaker</h1>
                             <p className={'white75'}>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
-                            <Button rev={true} >see product</Button>
+                            <Button rev={true} onClick={() => navigate('/speakers/zx9')} >see product</Button>
                         </div>
                     </div>
                 </div>
@@ -64,7 +70,7 @@ function Home() {
                     </picture>
                     <div className={styles.zx7Speaker__content}>
                         <h4>zx7 speaker</h4>
-                        <Button alt={true}>see product</Button>
+                        <Button alt={true} onClick={() => navigate('/speakers/zx7')}>see product</Button>
                     </div>
                 </div>
 
@@ -78,7 +84,7 @@ function Home() {
 
                     <div className={`${styles.earphones__content} ${'card'} ${'bG_grey'}`}>
                         <h4>YX1 earphones</h4>
-                        <Button alt={true}>see product</Button>
+                        <Button alt={true} onClick={() => navigate('/earphones/yx1')}>see product</Button>
                     </div>
 
                 </section>

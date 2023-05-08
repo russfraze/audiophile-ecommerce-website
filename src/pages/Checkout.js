@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import styles from './Checkout.module.css'
 import Button from '../UI/Button'
 import CartSummary from '../components/checkout/CartSummary'
+import { ReactComponent as CashDel } from '../assets/checkout/icon-cash-on-delivery.svg'
+
 function Checkout(props) {
     const [enteredName, setEnteredName] = useState('')
     const [nameTouched, setNameTouched] = useState(false)
@@ -37,17 +40,23 @@ function Checkout(props) {
     const countryIsValid = enteredCountry.trim() !== ''
     const enteredCountryIsInvalid = !countryIsValid && countryTouched
 
+    const [payMethodCash, setPayMethodCash] = useState(false)
+
     const [enteredMoneyNumber, setEnteredMoneyNumber] = useState('')
     const [moneyNumberTouched, setMoneyNumberTouched] = useState(false)
-    const moneyNumberIsValid = enteredMoneyNumber.trim().length == 9
+    const moneyNumberIsValid = enteredMoneyNumber.trim().length == 9 || payMethodCash
     const enteredMoneyNumberIsInvalid = !moneyNumberIsValid && moneyNumberTouched
+
+    const [payMethod, setPayMethod] = useState('')
 
     const [enteredMoneyPin, setEnteredMoneyPin] = useState('')
     const [moneyPinTouched, setMoneyPinTouched] = useState(false)
-    const moneyPinIsValid = enteredMoneyPin.trim().length == 4
+    const moneyPinIsValid = enteredMoneyPin.trim().length == 4 || payMethodCash
     const enteredMoneyPinIsInvalid = !moneyPinIsValid && moneyPinTouched
 
     const [formIsValid, setFormIsValid] = useState(false)
+
+    const navigate = useNavigate()
 
     useEffect(() => {
         if (nameIsValid && emailIsValid && phoneIsValid && addressIsValid && zipIsValid
@@ -125,6 +134,20 @@ function Checkout(props) {
     }
 
     //------------------------------------------PAYMENT
+
+
+    const methodChangeHandler = (e) => {
+
+        setPayMethod(e.target.value)
+
+        if (e.target.value == 'cash') {
+            setPayMethodCash(true)
+        } else {
+            setPayMethodCash(false)
+        }
+
+    }
+
 
     const moneyNumInputChangeHandler = (e) => {
         setEnteredMoneyNumber(e.target.value)
@@ -224,7 +247,7 @@ function Checkout(props) {
         props.show()
     }
 
-
+    console.log('value from event', payMethod)
     return (
         <body className={styles.checkoutBody}>
 
@@ -236,7 +259,7 @@ function Checkout(props) {
                 {/* add the goback css properties in module */}
 
                 <div className={styles.checkout__panel}>
-                    <p className={`${styles.goBack} ${'black50'}`}>Go Back</p>
+                    <p className={`${styles.goBack} ${'black50'}`} onClick={() => navigate(-1)}>Go Back</p>
                     <h3 className='black'>Checkout</h3>
                     <form>
                         <div className={styles.formGroup}>
@@ -310,7 +333,9 @@ function Checkout(props) {
                             <p className='coral'>PAYMENT DETAILS</p>
                             <div className={styles.payment__formGroup}>
                                 <legend className='black' htmlFor='name'>Payment Method</legend>
-                                <fieldset className={styles.radioSet}>
+
+
+                                <fieldset className={styles.radioSet} onChange={methodChangeHandler}>
                                     <div className={styles.radial__field}>
                                         <input type='radio' value='e-money' name='method' id='method1' />
                                         <p className='black'>e-Money</p>
@@ -321,28 +346,36 @@ function Checkout(props) {
                                     </div>
                                 </fieldset>
 
-                                <div className={styles.checkout__inputGroup}>
-                                    <div className={styles.checkout__labelError}>
-                                        <label className='black' htmlFor='name'>e-Money Number</label>
-                                        {enteredMoneyNumberIsInvalid && <p className={styles.error}>number error</p>}
+                                {!payMethodCash ? <div className={styles.moneyNums}>
+                                    <div className={styles.checkout__inputGroup}>
+                                        <div className={styles.checkout__labelError}>
+                                            <label className='black' htmlFor='name'>e-Money Number</label>
+                                            {enteredMoneyNumberIsInvalid && <p className={styles.error}>number error</p>}
+                                        </div>
+                                        <input onBlur={moneyNumInputBlurHandler} onChange={moneyNumInputChangeHandler} value={enteredMoneyNumber} type='text' />
                                     </div>
-                                    <input onBlur={moneyNumInputBlurHandler} onChange={moneyNumInputChangeHandler} value={enteredMoneyNumber} type='text' />
-                                </div>
 
-                                <div className={styles.checkout__inputGroup}>
-                                    <div className={styles.checkout__labelError}>
-                                        <label className='black' htmlFor='name'>e-Money PIN</label>
-                                        {enteredMoneyPinIsInvalid && <p className={styles.error}>Please enter valid country</p>}
+                                    <div className={styles.checkout__inputGroup}>
+                                        <div className={styles.checkout__labelError}>
+                                            <label className='black' htmlFor='name'>e-Money PIN</label>
+                                            {enteredMoneyPinIsInvalid && <p className={styles.error}>Please enter valid country</p>}
+                                        </div>
+                                        <input onBlur={moneyPinInputBlurHandeler} onChange={moneyPinInputChangeHandler} value={enteredMoneyPin} type='text' />
                                     </div>
-                                    <input onBlur={moneyPinInputBlurHandeler} onChange={moneyPinInputChangeHandler} value={enteredMoneyPin} type='text' />
-                                </div>
+                                </div> :
+                                    <div className={styles.cashDel}>
+                                        <CashDel />
+                                        <p className='black50'>The ‘Cash on Delivery’ option enables you to pay in cash when our delivery courier 
+                                        arrives at your residence. Just make sure your address is correct so that your order will not be cancelled.</p>
+                                    </div> }
+
                             </div>
                         </div>
                     </form>
                 </div>
 
                 <div className={styles.checkout__panel}>
-                    <h3 className='black'>Summary</h3>
+                    <h6 className='black'>Summary</h6>
                     <CartSummary />
                     {formIsValid && <Button disabled={!formIsValid} onClick={submitHandler} stretch={true}>continue & pay</Button>}
 

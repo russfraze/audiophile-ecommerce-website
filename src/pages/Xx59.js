@@ -1,3 +1,4 @@
+import {useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
 import styles from './Xx59.module.css'
 import Xx59Image from '../assets/product-xx59-headphones/mobile/image-product.jpg'
@@ -23,14 +24,16 @@ import zx9Tab from '../assets/shared/tablet/image-zx9-speaker.jpg'
 import zx9Desk from '../assets/shared/desktop/image-zx9-speaker.jpg'
 import Button from '../UI/Button'
 import ProductForm from '../components/ProductForm'
-import NumberButton from '../UI/NumberButton'
 import Categories from '../components/Categories'
 import BestAudio from '../components/BestAudio'
 import { productData } from '../data'
 
 function Xx59() {
     const navigate = useNavigate()
-    console.log(productData)
+    
+    useEffect(() => {
+        window.scrollTo({top: 0, behavior: 'smooth'})
+    },[])
 
     return (
         <main className={styles.xx59}>
@@ -133,7 +136,7 @@ function Xx59() {
                             <img className='card' src={markII} />
                         </picture>
                         <h5 className='black'>xx99 mark II</h5>
-                        <Button>see product</Button>
+                        <Button onClick={() => navigate('/headphones/markII')}>see product</Button>
                     </div>
 
                     <div className={styles.alsoLike__product}>
@@ -143,7 +146,7 @@ function Xx59() {
                             <img className='card' src={markI} />
                         </picture>
                         <h5 className='black'>xx99 mark I</h5>
-                        <Button>see product</Button>
+                        <Button onClick={() => navigate('/headphones/markI')}>see product</Button>
                     </div>
 
                     <div className={styles.alsoLike__product}>
@@ -153,7 +156,7 @@ function Xx59() {
                             <img className='card' src={zx9} />
                         </picture>
                         <h5 className='black'>zx9 speaker</h5>
-                        <Button>see product</Button>
+                        <Button onClick={() => navigate('/speakers/zx9')}>see product</Button>
                     </div>
                 </div>
             </section>
