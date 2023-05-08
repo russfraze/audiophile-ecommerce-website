@@ -27,6 +27,7 @@ import NumberButton from '../UI/NumberButton'
 import Categories from '../components/Categories'
 import BestAudio from '../components/BestAudio'
 import { productData } from '../data'
+import ProductForm from '../components/ProductForm'
 
 function Zx7() {
     const navigate = useNavigate()
@@ -55,11 +56,7 @@ function Zx7() {
                     </p>
                     <h6 className='black'>$ 3,500</h6>
 
-                    <div className={styles.btnGroup}>
-                        <NumberButton />
-
-                        <Button>add to cart</Button>
-                    </div>
+                    <ProductForm name={productData[4].name} price={productData[4].price} id={productData[4].id}/>
                 </div>
             </div>
 

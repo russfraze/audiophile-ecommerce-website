@@ -27,10 +27,11 @@ import NumberButton from '../UI/NumberButton'
 import Categories from '../components/Categories'
 import BestAudio from '../components/BestAudio'
 import { productData } from '../data'
+import ProductForm from '../components/ProductForm'
 
 function Yx1() {
     const navigate = useNavigate()
-
+    console.log(productData[0].name)
     useEffect(() => {
         window.scrollTo({top: 0, behavior: 'smooth'})
     },[])
@@ -55,11 +56,7 @@ function Yx1() {
                     </p>
                     <h6 className='black'>$ 599</h6>
 
-                    <div className={styles.btnGroup}>
-                        <NumberButton />
-
-                        <Button>add to cart</Button>
-                    </div>
+                    <ProductForm name={productData[0].name} price={productData[0].price} id={productData[0].id}/>
                 </div>
             </div>
 

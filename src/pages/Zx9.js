@@ -27,10 +27,11 @@ import NumberButton from '../UI/NumberButton'
 import Categories from '../components/Categories'
 import BestAudio from '../components/BestAudio'
 import { productData } from '../data'
+import ProductForm from '../components/ProductForm'
 
 function Zx9() {
     const navigate = useNavigate()
-    console.log(productData[1].image.tablet)
+    console.log(productData[5].name)
 
     useEffect(() => {
         window.scrollTo({top: 0, behavior: 'smooth'})
@@ -56,11 +57,7 @@ function Zx9() {
                     </p>
                     <h6 className='black'>$ 4,500</h6>
 
-                    <div className={styles.btnGroup}>
-                        <NumberButton />
-
-                        <Button>add to cart</Button>
-                    </div>
+                    <ProductForm name={productData[5].name} price={productData[5].price} id={productData[5].id}/>
                 </div>
             </div>
 
