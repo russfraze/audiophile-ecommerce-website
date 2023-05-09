@@ -39,9 +39,6 @@ function CheckoutItem({ total, id, amount }) {
     let cartImage
     let cartName
 
-    console.log('rrr', cartImages[1].name)
-    console.log('sss', id)
-
     const totalFormat = numberWithCommas(total)
 
     if (id === 1) {

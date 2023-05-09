@@ -41,8 +41,8 @@ function Xx59() {
 
             <div className={styles.purchaseInfo}>
                 <picture>
-                    <source media="(min-width:1440px)" srcset={Xx59ImageDesk} />
-                    <source media="(min-width:768px)" srcset={Xx59ImageTab} />
+                    <source media="(min-width:1440px)" srcSet={Xx59ImageDesk} />
+                    <source media="(min-width:768px)" srcSet={Xx59ImageTab} />
                     <img className={styles.xx59__image} src={Xx59Image} alt='xx59 headphones'/>
                 </picture>
 
@@ -106,22 +106,22 @@ function Xx59() {
 
                 <div className={styles.gallery__lifestyle}>
                     <picture>
-                        <source media="(min-width:1440px)" srcset={gallery1Desk} />
-                        <source media="(min-width:768px)" srcset={gallery1Tab} />
+                        <source media="(min-width:1440px)" srcSet={gallery1Desk} />
+                        <source media="(min-width:768px)" srcSet={gallery1Tab} />
                         <img className='card' src={gallery1} alt=''/>
                     </picture>
 
                     <picture>
-                        <source media="(min-width:1440px)" srcset={gallery2Desk} />
-                        <source media="(min-width:768px)" srcset={gallery2Tab} />
+                        <source media="(min-width:1440px)" srcSet={gallery2Desk} />
+                        <source media="(min-width:768px)" srcSet={gallery2Tab} />
                         <img className='card' src={gallery2} alt=''/>
                     </picture>
 
                 </div>
 
                 <picture>
-                    <source media="(min-width:1440px)" srcset={gallery3Desk} />
-                    <source media="(min-width:768px)" srcset={gallery3Tab} />
+                    <source media="(min-width:1440px)" srcSet={gallery3Desk} />
+                    <source media="(min-width:768px)" srcSet={gallery3Tab} />
                     <img className='card' src={gallery3} alt=''/>
                 </picture>
             </section>
@@ -131,8 +131,8 @@ function Xx59() {
                 <div className={styles.alsoLike__products}>
                     <div className={styles.alsoLike__product}>
                         <picture>
-                            <source media="(min-width:1440px)" srcset={markIIDesk} />
-                            <source media="(min-width:768px)" srcset={markIITab} />
+                            <source media="(min-width:1440px)" srcSet={markIIDesk} />
+                            <source media="(min-width:768px)" srcSet={markIITab} />
                             <img className='card' src={markII} alt='mark 2 headphones'/>
                         </picture>
                         <h5 className='black'>xx99 mark II</h5>
@@ -141,8 +141,8 @@ function Xx59() {
 
                     <div className={styles.alsoLike__product}>
                         <picture>
-                            <source media="(min-width:1440px)" srcset={markIDesk} />
-                            <source media="(min-width:768px)" srcset={markITab} />
+                            <source media="(min-width:1440px)" srcSet={markIDesk} />
+                            <source media="(min-width:768px)" srcSet={markITab} />
                             <img className='card' src={markI} alt='mark 1 headphones'/>
                         </picture>
                         <h5 className='black'>xx99 mark I</h5>
@@ -151,8 +151,8 @@ function Xx59() {
 
                     <div className={styles.alsoLike__product}>
                         <picture>
-                            <source media="(min-width:1440px)" srcset={zx9Desk} />
-                            <source media="(min-width:768px)" srcset={zx9Tab} />
+                            <source media="(min-width:1440px)" srcSet={zx9Desk} />
+                            <source media="(min-width:768px)" srcSet={zx9Tab} />
                             <img className='card' src={zx9} alt='zx9 speaker'/>
                         </picture>
                         <h5 className='black'>zx9 speaker</h5>

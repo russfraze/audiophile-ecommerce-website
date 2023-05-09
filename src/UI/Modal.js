@@ -16,9 +16,10 @@ const ModalOverlay = (props) => {
     const isThank = props.isThank
     
     console.log('props check from inside ModalOverlay function', isCart, isNavDrop, isThank)
-    
-    return <div className={ (isCart && `${styles.modal}`) || (isThank && `${styles.modalThankYou}`) 
-    || (isNavDrop && `${styles.modalNavDrop}`)}>
+    // eslint-disable-next-line
+    return <div className={ isCart && `${styles.modal}` || isThank && `${styles.modalThankYou}` 
+    // eslint-disable-next-line
+    || isNavDrop && `${styles.modalNavDrop}`}>
 
         <div className={ (isThank && `${styles.contentThankYou}`) || (isNavDrop && `${styles.contentNavDrop}`)}>{props.children}</div>
     </div>

@@ -34,8 +34,8 @@ function Headphones() {
 
                 <section className={styles.product}>
                     <picture>
-                        <source media="(min-width:1440px)" srcset={markTwoDesk} />
-                        <source media="(min-width:768px)" srcset={markTwoTab} />
+                        <source media="(min-width:1440px)" srcSet={markTwoDesk} />
+                        <source media="(min-width:768px)" srcSet={markTwoTab} />
                         <img src={markTwo} alt='mark 2 headphones'/>
                     </picture>
 
@@ -53,8 +53,8 @@ function Headphones() {
 
                 <section className={styles.product__b}>
                     <picture className={styles.imageB}>
-                        <source media="(min-width:1440px)" srcset={markOneDesk} />
-                        <source media="(min-width:768px)" srcset={markOneTab} />
+                        <source media="(min-width:1440px)" srcSet={markOneDesk} />
+                        <source media="(min-width:768px)" srcSet={markOneTab} />
                         <img  src={markOne} alt='mark one headphones'/>
                     </picture>
 
@@ -71,8 +71,8 @@ function Headphones() {
 
                 <section className={styles.product}>
                     <picture>
-                        <source media="(min-width:1440px)" srcset={xx59Desk} />
-                        <source media="(min-width:768px)" srcset={xx59Tab} />
+                        <source media="(min-width:1440px)" srcSet={xx59Desk} />
+                        <source media="(min-width:768px)" srcSet={xx59Tab} />
                         <img src={xx59} alt='xx59 headphones'/>
                     </picture>
 

@@ -45,8 +45,8 @@ function Speakers() {
 
                 <section className={styles.product__b}>
                     <picture className={styles.imageB}>
-                        <source media="(min-width:1440px)" srcset={zx7Desk} />
-                        <source media="(min-width:768px)" srcset={zx7Tab} />
+                        <source media="(min-width:1440px)" srcSet={zx7Desk} />
+                        <source media="(min-width:768px)" srcSet={zx7Tab} />
                         <img src={zx7} alt='zx7 speaker'/>
                     </picture>
 

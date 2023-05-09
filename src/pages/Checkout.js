@@ -253,7 +253,7 @@ function Checkout(props) {
 
     console.log('value from event', payMethod)
     return (
-        <body className={styles.checkoutBody}>
+        <div className={styles.checkoutBody}>
 
             <main className={styles.checkout}>
 
@@ -385,7 +385,7 @@ function Checkout(props) {
 
                 </div>
             </main>
-        </body>
+        </div>
     )
 }
 

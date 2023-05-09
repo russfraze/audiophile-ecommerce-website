@@ -48,6 +48,7 @@
   color: var(--clr-white);
   border: none;
   cursor: pointer;
+  z-index: 9998;
 }
 
 

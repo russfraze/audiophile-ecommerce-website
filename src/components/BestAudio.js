@@ -10,8 +10,8 @@ function BestAudio() {
 
             <div className={styles.bestAudio__image}>
                 <picture>
-                    <source media="(min-width:1440px)" srcset={bestGearDesk} />
-                    <source media="(min-width:768px)" srcset={bestGearTab} />
+                    <source media="(min-width:1440px)" srcSet={bestGearDesk} />
+                    <source media="(min-width:768px)" srcSet={bestGearTab} />
                     <img src={bestGear} alt=''/>
                 </picture>
             </div>

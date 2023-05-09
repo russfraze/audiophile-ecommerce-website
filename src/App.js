@@ -51,7 +51,6 @@ function App() {
     const handleResize = () => {
       if (window.innerWidth > 1439){
         setShowDropdown(false)
-        console.log("aaaaaaaaaaaaaaaaa")
       } 
     }
       window.addEventListener('resize', handleResize)

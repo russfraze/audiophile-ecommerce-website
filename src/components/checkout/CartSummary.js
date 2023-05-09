@@ -20,6 +20,7 @@ function CartSummary() {
                     <CheckoutItem
                         name={item.name}
                         id={item.id}
+                        key={item.id}
                         total={item.total}
                         amount={item.amount}
                     />)}

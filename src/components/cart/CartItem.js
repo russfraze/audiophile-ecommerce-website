@@ -82,7 +82,7 @@ function CartItem({ total, id, amount, onRemove, onAdd }) {
                 <div className={styles.inputGroup__btn}>
                     <button className={styles.numBtn} id='down' onClick={onRemove}><span>-</span></button>
                 </div>
-                <input className={styles.inputGroup__input} type='text' id='amount' value={amount} />
+                <input className={styles.inputGroup__input} type='text' id='amount' value={amount} readOnly={true}/>
                 <div className={styles.inputGroup__btn}>
                     <button className={styles.numBtn} id='up' onClick={onAdd}><span>+</span></button>
                 </div>
