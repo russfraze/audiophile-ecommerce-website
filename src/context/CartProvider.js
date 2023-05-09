@@ -14,7 +14,7 @@ const initializer = (initialValue = initialCart) =>
 
 
 // const cartDefault = JSON.parse(localStorage.getItem('localCart'))
-const cartDefault = JSON.parse(localStorage.getItem('localCart'))
+// const cartDefault = JSON.parse(localStorage.getItem('localCart'))
 
 const initialCartState = initializer()
 
