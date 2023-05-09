@@ -2,7 +2,11 @@ import {useReducer, useEffect} from 'react'
 import CartContext from './CartContext'
 
 
-const cartDefault = JSON.parse(localStorage.getItem('localCart'))
+// const cartDefault = JSON.parse(localStorage.getItem('localCart'))
+const cartDefault = {
+    products: [],
+    totalAmount: 0
+}
 
 
 const cartReducer = (state, action) => {
