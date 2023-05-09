@@ -9,7 +9,6 @@ function ProductForm({ name, price, id }) {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        // console.log('dis dat cart', numberInCart, name, id)
 
         cartData.addProduct({
             name: name,

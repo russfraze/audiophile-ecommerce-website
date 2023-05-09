@@ -2,31 +2,43 @@ import {useReducer, useEffect} from 'react'
 import CartContext from './CartContext'
 
 
+
+// const initialCart = {products: [], totalAmount: 0}
+const initialCart = {products: [], totalAmount: 0}
+
+
+
+
+const initializer = (initialValue = initialCart) => 
+    JSON.parse(localStorage.getItem('localCart')) || initialValue
+
+
 // const cartDefault = JSON.parse(localStorage.getItem('localCart'))
-const cartDefault = {
-    products: [],
-    totalAmount: 0
-}
+const cartDefault = JSON.parse(localStorage.getItem('localCart'))
+
+const initialCartState = initializer()
 
 
 const cartReducer = (state, action) => {
+
+ 
 
     if (action.type === 'ADD_PRODUCT') {
         console.log('add item', action.product.name, action.product.price, action.product.amount)
 
         const newTotalAmount = state.totalAmount + action.product.price * action.product.amount
-
+        console.log('state.products', state.products)
         const existingCartProductsIndex = state.products.findIndex(product => product.id === action.product.id)
-        
+        console.log('existing index from reducer', existingCartProductsIndex)
         const existingCartProduct = state.products[existingCartProductsIndex]
-      
+        console.log('existing cart product from reducer',existingCartProduct)
         
         let updatedProducts
 
         if (existingCartProduct) {
             const updatedProduct = {
                 ...existingCartProduct,
-                amount: existingCartProduct.amount + 1,
+                amount: existingCartProduct.amount + action.product.amount,
                 total: existingCartProduct.total + action.product.price
             }
             updatedProducts = [...state.products]
@@ -77,12 +89,17 @@ const cartReducer = (state, action) => {
             totalAmount: 0
         }
     }
-    return cartDefault
+    return initialCart
 }
 
 
 const CartProvider = ({children}) => {
-    const [cart, dispatchCart] = useReducer(cartReducer, cartDefault)
+
+    // if( localStorage.getItem('localCart') === null){
+    //     localStorage.setItem('localCart', JSON.stringify({ }))
+    // }
+
+    const [cart, dispatchCart] = useReducer(cartReducer, initialCartState)
 
     const addProductHandler = (product) => {
         console.log('add product', cart)
