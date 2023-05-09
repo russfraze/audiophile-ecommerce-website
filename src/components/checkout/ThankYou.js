@@ -1,5 +1,5 @@
-import styles from './ThankYou.module.css'
 import { useContext, useState } from 'react'
+import styles from './ThankYou.module.css'
 import Modal from '../../UI/Modal'
 import Button from '../../UI/Button'
 import CheckoutItem from '../checkout/ CheckoutItem'
@@ -65,7 +65,7 @@ function ThankYou(props) {
                 </div>
             </div>
 
-            <a href='/checkout'>
+            <a href='/'>
                 <Button stretch={true}>back to home</Button>
             </a>
 
