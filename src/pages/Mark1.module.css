@@ -5,6 +5,7 @@
 
 .goBack:hover {
     cursor: pointer;
+    color: var(--clr-dark-coral);
 }
 
 .mark1__image {

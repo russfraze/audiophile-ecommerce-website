@@ -13,7 +13,7 @@ function Navbar({ show, drop }) {
 
     return (
 
-        <nav className={styles.navBar}>
+        <nav className={styles.navBar} onClick={() => navigate('/')}>
             <Burger onClick={drop} className={styles.burger} />
             <Logo className={styles.logo} />
             <ul>

@@ -251,16 +251,10 @@ function Checkout(props) {
         props.show()
     }
 
-    console.log('value from event', payMethod)
     return (
         <div className={styles.checkoutBody}>
 
             <main className={styles.checkout}>
-
-
-
-
-                {/* add the goback css properties in module */}
 
                 <div className={styles.checkout__panel}>
                     <p className={`${styles.goBack} ${'black50'}`} onClick={() => navigate(-1)}>Go Back</p>

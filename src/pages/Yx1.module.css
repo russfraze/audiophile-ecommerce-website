@@ -4,6 +4,7 @@
 
 .goBack:hover {
     cursor: pointer;
+    color: var(--clr-dark-coral);
 }
 
 .zx7__image {
@@ -35,15 +36,12 @@
     gap: 1rem;
 }
 
-
-
 .features {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     padding: 20px 0;
 }
-
 
 .inBox {
     display: flex;

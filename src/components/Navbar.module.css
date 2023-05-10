@@ -22,23 +22,9 @@
 }
 
 
-/* .dropdown {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-
-    height: 100vh;
-    position: fixed;
-    z-index: 9998;
-    top: 90px;
-    background-color: var(--clr-white);
-    width: 100%;
-    overflow-y: scroll;
-} */
-
-
-
-
+.logo {
+  cursor: pointer;
+}
 
 
 @media (min-width: 768px) {

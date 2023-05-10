@@ -4,6 +4,7 @@
 
 .goBack:hover {
     cursor: pointer;
+    color: var(--clr-dark-coral);
 }
 
 .xx59__image {
