@@ -47,7 +47,7 @@ function Checkout(props) {
     const moneyNumberIsValid = enteredMoneyNumber.trim().length === 9 || payMethodCash
     const enteredMoneyNumberIsInvalid = !moneyNumberIsValid && moneyNumberTouched
 
-    const [payMethod, setPayMethod] = useState('')
+    // const [payMethod, setPayMethod] = useState('')
 
     const [enteredMoneyPin, setEnteredMoneyPin] = useState('')
     const [moneyPinTouched, setMoneyPinTouched] = useState(false)
@@ -142,7 +142,7 @@ function Checkout(props) {
 
     const methodChangeHandler = (e) => {
 
-        setPayMethod(e.target.value)
+        // setPayMethod(e.target.value)
 
         if (e.target.value === 'cash') {
             setPayMethodCash(true)
