@@ -13,16 +13,18 @@ function Navbar({ show, drop }) {
 
     return (
 
-        <nav className={styles.navBar} onClick={() => navigate('/')}>
-            <Burger onClick={drop} className={styles.burger} />
-            <Logo className={styles.logo} />
-            <ul>
-                <li onClick={() => navigate('/')} >home</li>
-                <li onClick={() => navigate('/headphones')}>headphones</li>
-                <li onClick={() => navigate('/speakers')}>speakers</li>
-                <li onClick={() => navigate('/earphones')}>earphones</li>
-            </ul>
-            <CartIcon onClick={show} className={styles.cart} />
+        <nav className={styles.navBar}>
+            <div className={styles.navBar__nav}>
+                <Burger onClick={drop} className={styles.burger} />
+                <Logo className={styles.logo} onClick={() => navigate('/')} />
+                <ul>
+                    <li onClick={() => navigate('/')} >home</li>
+                    <li onClick={() => navigate('/headphones')}>headphones</li>
+                    <li onClick={() => navigate('/speakers')}>speakers</li>
+                    <li onClick={() => navigate('/earphones')}>earphones</li>
+                </ul>
+                <CartIcon onClick={show} className={styles.cart} />
+            </div>
 
         </nav>
 

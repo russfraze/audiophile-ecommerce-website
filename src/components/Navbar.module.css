@@ -4,18 +4,18 @@
 
 .navBar {
     position: fixed;
-    top: 0;
     z-index: 9999;
     width: 100vw;
     height: 90px;
     background-color: var(--clr-first-black);
-    padding: 2rem;
+    padding: 2rem 2.5rem;
+}
 
+.navBar__nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
 
 .navBar ul {
     display: none;
@@ -35,17 +35,27 @@
 }
 
 @media (min-width: 1440px) {
+
+  .navBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navBar__nav {
+    position: fixed;
+    width: 1110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
   .burger {
       display: none;
   }
 
   .logo {
     position: static;
-  }
-
-  .cart {
-      /* position: fixed;
-      right: 50px; */
   }
 
   .navBar ul {
