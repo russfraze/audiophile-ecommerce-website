@@ -1,5 +1,5 @@
-import {useEffect} from 'react'
-import {useNavigate} from 'react-router-dom'
+import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import styles from './Home.module.css'
 import Button from '../UI/Button'
 import headerImage from '../assets/home/mobile/image-header.jpg'
@@ -22,22 +22,24 @@ function Home() {
     const navigate = useNavigate()
 
     useEffect(() => {
-        window.scrollTo({top: 0, behavior: 'smooth'})
-    },[])
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    }, [])
 
     return (
         <>
-            <header className={`${styles.headerImage} `}>
+            <header className={styles.headerImage}>
                 <picture>
                     <source media="(min-width:1440px)" srcSet={headerImageDesk} />
                     <source media="(min-width:768px)" srcSet={headerImageTab} />
                     <img className={styles.headerImage__hide} src={headerImage} alt='Mark 2 headphones' />
                 </picture>
-                <div className={styles.headerImage_content}>
-                    <p className='overline'>New product</p>
-                    <h1>XX99 Mark II Headphones</h1>
-                    <p className={`${styles.headerBody} ${'white75'}`}>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
-                    <Button className={'buttonMain'} onClick={() => navigate('/headphones/markII')}>see product</Button>
+                <div className={styles.header_center}>
+                    <div className={styles.headerImage_content}>
+                        <p className='overline'>New product</p>
+                        <h1>XX99 Mark II Headphones</h1>
+                        <p className={`${styles.headerBody} ${'white75'}`}>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
+                        <Button className={'buttonMain'} onClick={() => navigate('/headphones/markII')}>see product</Button>
+                    </div>
                 </div>
 
             </header>
@@ -50,14 +52,14 @@ function Home() {
                     <div className={styles.zx9Speaker__content}>
                         <picture>
                             <source media="(min-width:1440px)" srcSet={speakerZx9Desktop} />
-                            <img className={styles.zx9Speaker__image} src={speakerZx9} alt='zx9 speaker'/>
+                            <img className={styles.zx9Speaker__image} src={speakerZx9} alt='zx9 speaker' />
                         </picture>
                         <div className={styles.zx9Speaker__Txt}>
                             <h1>zx9<br />speaker</h1>
                             <p className={'white75'}>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
                             <Button rev={true} onClick={() => navigate('/speakers/zx9')} >see product</Button>
                         </div>
-                        <img className={styles.circles} src={circles} alt=''/>
+                        <img className={styles.circles} src={circles} alt='' />
                     </div>
                 </div>
 
@@ -66,7 +68,7 @@ function Home() {
                     <picture>
                         <source media="(min-width:1440px)" srcSet={speakerZx7Desktop} />
                         <source media="(min-width:768px)" srcSet={speakerZx7Tab} />
-                        <img src={speakerZx7} alt='zx7 speaker'/>
+                        <img src={speakerZx7} alt='zx7 speaker' />
                     </picture>
                     <div className={styles.zx7Speaker__content}>
                         <h4>zx7 speaker</h4>
@@ -79,7 +81,7 @@ function Home() {
                     <picture className={styles.earphonesImage}>
                         <source media="(min-width:1440px)" srcSet={earphonesDesk} />
                         <source media="(min-width:768px)" srcSet={earphonesTab} />
-                        <img src={earphones} alt='yx1 earphones'/>
+                        <img src={earphones} alt='yx1 earphones' />
                     </picture>
 
                     <div className={`${styles.earphones__content} ${'card'} ${'bG_grey'}`}>
