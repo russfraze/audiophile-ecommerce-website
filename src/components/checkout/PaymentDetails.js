@@ -2,7 +2,7 @@ import styles from '../../pages/Checkout.module.css'
 import { ReactComponent as CashDel } from '../../assets/checkout/icon-cash-on-delivery.svg'
 
 function PaymentDetails(props) {
-    
+
     const methodChangeHandler = (e) => {
 
         if (e.target.value === 'cash') {
@@ -28,7 +28,7 @@ function PaymentDetails(props) {
     const moneyPinInputBlurHandeler = () => {
         props.pinTouched(true)
     }
-
+    console.log('invalid from PDC', props.numberInvalid)
     return (
         <div className={styles.formGroup}>
             <p className='coral'>PAYMENT DETAILS</p>
@@ -48,15 +48,15 @@ function PaymentDetails(props) {
                 </fieldset>
 
                 {!props.payCash ? <div className={styles.moneyNums}>
-                    <div className={styles.checkout__inputGroup}>
+                    <div className={props.numberInvalid ? `${styles['checkout__inputGroup--error']}` : `${styles.checkout__inputGroup}`}>
                         <div className={styles.checkout__labelError}>
                             <label className='black' htmlFor='name'>e-Money Number</label>
-                            {props.moneyInvalid && <p className={styles.error}>number error</p>}
+                            {props.numberInvalid && <p className={styles.error}>number error</p>}
                         </div>
                         <input onBlur={moneyNumInputBlurHandler} onChange={moneyNumInputChangeHandler} value={props.enteredNumber} type='text' />
                     </div>
 
-                    <div className={styles.checkout__inputGroup}>
+                    <div className={props.pinInvalid ? `${styles['checkout__inputGroup--error']}` : `${styles.checkout__inputGroup}`}>
                         <div className={styles.checkout__labelError}>
                             <label className='black' htmlFor='name'>e-Money PIN</label>
                             {props.pinInvalid && <p className={styles.error}>enter 4 digit pin</p>}

@@ -135,7 +135,7 @@ function Checkout(props) {
 
         props.show()
     }
-
+    console.log(enteredMoneyNumberIsInvalid)
     return (
         <div className={styles.checkoutBody}>
             <main className={styles.checkout}>

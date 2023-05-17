@@ -36,6 +36,10 @@
     padding: 0.5rem 0;
 }
 
+.moneyNums .checkout__inputGroup--error{
+    padding: 0.5rem 0;
+}
+
 .checkout__inputGroup input {
     width: 100%;
     padding: 0.5rem;
@@ -160,7 +164,19 @@ fieldset {
         grid-column-end: 2;
     }
 
+    .moneyNums .checkout__inputGroup--error:nth-child(1){
+        width: 100%;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
     .moneyNums .checkout__inputGroup:nth-child(2){
+        width: 100%;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    .moneyNums .checkout__inputGroup--error:nth-child(2){
         width: 100%;
         grid-column-start: 2;
         grid-column-end: 3;
