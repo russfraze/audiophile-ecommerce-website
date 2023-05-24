@@ -30,8 +30,7 @@
     align-items: center;
     
     margin: 1rem 0;
-    
-    /* max-width: fit-content; */
+    padding: 0 12px;
     background-color: var(--clr-dark-grey);
 }
 
@@ -39,7 +38,8 @@
     border: none;
     background-color: var(--clr-dark-grey);
     color: gray;
-    margin: 0 15px;
+    /* take this away and on product form too */
+    margin: 0 0px;
 }
 
 .inputGroup__input {
@@ -47,5 +47,5 @@
     height: 48px;
     background-color: var(--clr-dark-grey);
     width: 15px;
-    
+    margin: 0 15px;
 }

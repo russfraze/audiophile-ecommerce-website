@@ -1,18 +1,19 @@
 .inputGroup {
     display: flex;
     align-items: center;
-    
+    padding: 0 12px;
 
     
-    /* max-width: fit-content; */
-    /* background-color: var(--clr-dark-grey); */
+    /* max-width: fit-content;
+    background-color: var(--clr-dark-grey); */
 }
 
 .numBtn {
     border: none;
     background-color: var(--clr-dark-grey);
     color: gray;
-    margin: 0 15px;
+    /* this, and can I take this away? */
+    margin: 0 0px;
 }
 
 .formGroup__input {
@@ -20,5 +21,6 @@
     height: 48px;
     background-color: var(--clr-dark-grey);
     width: 30px;
-    
+    /* this */
+    margin: 0 15px;
 }

@@ -18,7 +18,6 @@
 }
 
 .formGroup__input {
-    z-index: 9999;
     border: none;
     height: 48px;
     background-color: var(--clr-dark-grey);
