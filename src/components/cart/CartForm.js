@@ -19,7 +19,7 @@ function CartForm({name, price, id, amount }) {
     }
 
     function increment(){
-        setNumberInCart((prevState) =>  prevState + 1)
+        setNumberInCart((prevState) => prevState + 1)
         cartData.addProduct({
             name: name,
             price: price,
@@ -30,7 +30,7 @@ function CartForm({name, price, id, amount }) {
     }
 
     function decrement() {
-        setNumberInCart((prevState) => prevState - 1)
+        setNumberInCart(() => numberInCart - 1)
         cartData.removeProduct(id)
         return numberInCart
     }

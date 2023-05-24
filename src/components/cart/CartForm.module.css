@@ -4,8 +4,8 @@
     
 
     
-    max-width: fit-content;
-    background-color: var(--clr-dark-grey);
+    /* max-width: fit-content; */
+    /* background-color: var(--clr-dark-grey); */
 }
 
 .numBtn {
@@ -19,6 +19,6 @@
     border: none;
     height: 48px;
     background-color: var(--clr-dark-grey);
-    width: 15px;
+    width: 30px;
     
 }

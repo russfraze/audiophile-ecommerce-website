@@ -36,6 +36,7 @@ const cartReducer = (state, action) => {
         let updatedProducts
 
         if (existingCartProduct) {
+            console.log("FROM REDUCER ACTION AMOUNT", action.product.amount)
             const updatedProduct = {
                 ...existingCartProduct,
                 amount: existingCartProduct.amount + action.product.amount,

@@ -66,6 +66,8 @@ function CartItem({ total, id, amount, onRemove, onAdd }) {
         cartName = cartImages[5].name
     }
 
+    console.log('AMOUNT FROM CART ITEM', amount)
+
     return (
         <li className={styles.cartItem}>
             
@@ -87,6 +89,8 @@ function CartItem({ total, id, amount, onRemove, onAdd }) {
                     <button className={styles.numBtn} id='up' onClick={onAdd}><span>+</span></button>
                 </div>
             </div>
+
+            
         </li>
     )
 }

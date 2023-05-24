@@ -7,7 +7,6 @@ import CartContext from '../../context/CartContext'
 
 
 
-
 function Cart(props) {
     const cartData = useContext(CartContext)
 
@@ -20,7 +19,7 @@ function Cart(props) {
     }
 
     const cartProductAddHandler = (item) => {
-        cartData.addProduct(item)
+        cartData.addProduct({...item, amount: 1})
     }
 
     const cartRemoveAllHaldler = () => {
