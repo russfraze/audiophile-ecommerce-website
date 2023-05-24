@@ -4,7 +4,7 @@ import CartContext from '../context/CartContext'
 import Button from '../UI/Button'
 
 function ProductForm({ name, price, id }) {
-    const [numberInCart, setNumberInCart] = useState(0)
+    const [numberInCart, setNumberInCart] = useState(1)
     const cartData = useContext(CartContext)
 
     const handleSubmit = (e) => {
@@ -25,8 +25,10 @@ function ProductForm({ name, price, id }) {
     }
 
     function decrement() {
-        setNumberInCart(() => numberInCart - 1)
-        // return numberInCart
+        
+        if(numberInCart > 1){
+            setNumberInCart(() => numberInCart - 1)
+        }
     }
 
     console.log(numberInCart)
