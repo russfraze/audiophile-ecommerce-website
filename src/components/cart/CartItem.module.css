@@ -46,6 +46,7 @@
     border: none;
     height: 48px;
     background-color: var(--clr-dark-grey);
-    width: 15px;
+    /* this is the last thing changed  */
+    width: 25px;
     margin: 0 15px;
 }
